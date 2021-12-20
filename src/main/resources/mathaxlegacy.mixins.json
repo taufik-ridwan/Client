@@ -1,7 +1,7 @@
 {
   "required": true,
   "package": "mathax.legacy.client.mixin",
-  "compatibilityLevel": "JAVA_17",
+  "compatibilityLevel": "JAVA_16",
   "plugin": "mathax.legacy.client.MixinPlugin",
   "client": [
     "AbstractBlockAccessor",
@@ -36,7 +36,6 @@
     "ChatHudAccessor",
     "ChatHudMixin",
     "ChatScreenMixin",
-    "ChunkAccessor",
     "ChunkOcclusionDataBuilderMixin",
     "ChunkSkyLightProviderMixin",
     "ClientConnectionAccessor",
@@ -158,7 +157,7 @@
     "Vec3dMixin",
     "WindowMixin",
     "WorldAccessor",
-    "ChunkAccessor",
+    "WorldChunkAccessor",
     "WorldRendererAccessor",
     "WorldRendererMixin"
   ],

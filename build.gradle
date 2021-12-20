@@ -1,10 +1,10 @@
 plugins {
-    id 'fabric-loom' version '0.10-SNAPSHOT'
+    id 'fabric-loom' version '0.9-SNAPSHOT'
     id 'maven-publish'
     id 'com.github.johnrengelman.shadow' version '7.1.1'
 }
 
-sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
+sourceCompatibility = targetCompatibility = JavaVersion.VERSION_16
 
 archivesBaseName = project.archives_base_name
 version = project.client_version
@@ -60,7 +60,7 @@ dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.minecraft_version}+${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-    implementation "net.fabricmc:fabric-installer:${project.installer_version}"
+    implementation "net.fabricmc:fabric-installer:${project.fabric_installer_version}"
 
     // Installer
     implementation "org.json:json:${project.json_version}"
@@ -71,7 +71,7 @@ dependencies {
     modCompileOnly("me.jellysquid.mods:sodium-fabric:${project.sodium_version}") {
         transitive = false
     }
-    modCompileOnly("io.vram:canvas-fabric-mc118:1.0.+") {
+    modCompileOnly("io.vram:canvas-fabric-mc117:1.0.+") {
         transitive = false
     }
 
@@ -84,8 +84,8 @@ dependencies {
     include "curse.maven:litematica-${project.litematica_project_id}:${project.litematica_file_id}"
 
     // Malilib for Litematica
-    modImplementation "fi.dy.masa.malilib:malilib-fabric-${project.minecraft_version}.0:${project.malilib_version}"
-    include "fi.dy.masa.malilib:malilib-fabric-${project.minecraft_version}.0:${project.malilib_version}"
+    modImplementation "fi.dy.masa.malilib:malilib-fabric-${project.minecraft_version}:${project.malilib_version}"
+    include "fi.dy.masa.malilib:malilib-fabric-${project.minecraft_version}:${project.malilib_version}"
 
     // Dependencies
     library "com.github.Vatuu:discord-rpc:${project.discord_version}"
@@ -135,7 +135,7 @@ jar {
     from "LICENSE"
 
     manifest {
-        attributes("Main-Class": "mathax.legacy.installer.Installer")
+        attributes("Main-Class": project.installer_class)
     }
 }
 

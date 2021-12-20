@@ -183,8 +183,8 @@ public class NewChunks extends Module {
             ChunkPos pos = new ChunkPos(packet.getX(), packet.getZ());
 
             if (!newChunks.contains(pos) && mc.world.getChunkManager().getChunk(packet.getX(), packet.getZ()) == null) {
-                WorldChunk chunk = new WorldChunk(mc.world, pos);
-                chunk.loadFromPacket(packet.getChunkData().getSectionsDataBuf(), new NbtCompound(), packet.getChunkData().getBlockEntities(packet.getX(), packet.getZ()));
+                WorldChunk chunk = new WorldChunk(mc.world, pos, null);
+                chunk.loadFromPacket(null, packet.getReadBuffer(), new NbtCompound(), packet.getVerticalStripBitmask());
 
                 for (int x = 0; x < 16; x++) {
                     for (int y = mc.world.getBottomY(); y < mc.world.getTopY(); y++) {

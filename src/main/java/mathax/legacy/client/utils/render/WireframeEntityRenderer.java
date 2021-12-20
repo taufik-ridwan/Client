@@ -320,7 +320,7 @@ public class WireframeEntityRenderer {
     }
 
     private static void render(Renderer3D renderer, ModelPart.Cuboid cuboid) {
-        Matrix4f matrix = matrices.peek().getPositionMatrix();
+        Matrix4f matrix = matrices.peek().getModel();
 
         for (ModelPart.Quad quad : cuboid.sides) {
             // Transform positions

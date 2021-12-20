@@ -38,7 +38,7 @@
     }
   },
   "depends": {
-    "java": ">=17",
+    "java": ">=16",
     "minecraft": ">=@mc_version@",
     "fabricloader": ">=0.12.11"
   },

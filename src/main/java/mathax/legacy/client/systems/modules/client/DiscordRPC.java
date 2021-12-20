@@ -360,7 +360,7 @@ public class DiscordRPC extends Module {
 
         // Singleplayer
         if (mc.isInSingleplayer()) {
-            File folder = ((MinecraftServerAccessor) mc.getServer()).getSession().getWorldDirectory(mc.world.getRegistryKey()).toFile();
+            File folder = ((MinecraftServerAccessor) mc.getServer()).getSession().getWorldDirectory(mc.world.getRegistryKey());
             if (folder.toPath().relativize(mc.runDirectory.toPath()).getNameCount() != 2) folder = folder.getParentFile();
 
             if (naked) {

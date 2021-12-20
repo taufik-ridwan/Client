@@ -21,7 +21,7 @@ public class CrackedAccount extends Account<CrackedAccount> {
     public boolean login() {
         super.login();
 
-        setSession(new Session(name, "", "", Optional.empty(), Optional.empty(), Session.AccountType.MOJANG));
+        setSession(new Session(name, "", "", "mojang"));
         return true;
     }
 

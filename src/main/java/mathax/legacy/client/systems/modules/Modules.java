@@ -632,11 +632,6 @@ public class Modules extends System<Modules> {
         }
 
         @Override
-        public int size() {
-            return Modules.get().getAll().size();
-        }
-
-        @Override
         public Identifier getId(Module entry) {
             return null;
         }

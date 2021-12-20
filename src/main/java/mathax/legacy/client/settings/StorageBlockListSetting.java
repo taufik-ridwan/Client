@@ -110,12 +110,7 @@ public class StorageBlockListSetting extends Setting<List<BlockEntityType<?>>> {
 
     private static class SRegistry extends Registry<BlockEntityType<?>> {
         public SRegistry() {
-            super(RegistryKey.ofRegistry(new Identifier("meteor-client", "storage-blocks")), Lifecycle.stable());
-        }
-
-        @Override
-        public int size() {
-            return STORAGE_BLOCKS.length;
+            super(RegistryKey.ofRegistry(new Identifier("mathax-legacy", "storage-blocks")), Lifecycle.stable());
         }
 
         @Nullable

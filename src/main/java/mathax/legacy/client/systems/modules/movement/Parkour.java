@@ -25,7 +25,7 @@ public class Parkour extends Module {
         Box box = mc.player.getBoundingBox();
         Box adjustedBox = box.offset(0, -0.5, 0).expand(-0.001, 0, -0.001);
 
-        Stream<VoxelShape> blockCollisions = Streams.stream(mc.world.getBlockCollisions(mc.player, adjustedBox));
+        Stream<VoxelShape> blockCollisions = mc.world.getBlockCollisions(mc.player, adjustedBox);
 
         if (blockCollisions.findAny().isPresent()) return;
 

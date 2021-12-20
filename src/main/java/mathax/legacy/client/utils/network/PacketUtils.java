@@ -371,11 +371,6 @@ public class PacketUtils {
         }
 
         @Override
-        public int size() {
-            return S2C_PACKETS.keySet().size() + C2S_PACKETS.keySet().size();
-        }
-
-        @Override
         public Identifier getId(Class<? extends Packet<?>> entry) {
             return null;
         }

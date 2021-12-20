@@ -289,7 +289,7 @@ public class Jesus extends Module {
         boolean foundLiquid = false;
         boolean foundSolid = false;
 
-        List<Box> blockCollisions = Streams.stream(mc.world.getBlockCollisions(mc.player, mc.player.getBoundingBox().offset(0, -0.5, 0))).map(VoxelShape::getBoundingBox).collect(Collectors.toCollection(ArrayList::new));
+        List<Box> blockCollisions = mc.world.getBlockCollisions(mc.player, mc.player.getBoundingBox().offset(0, -0.5, 0)).map(VoxelShape::getBoundingBox).collect(Collectors.toCollection(ArrayList::new));
 
         for (Box bb : blockCollisions) {
             blockPos.set(MathHelper.lerp(0.5D, bb.minX, bb.maxX), MathHelper.lerp(0.5D, bb.minY, bb.maxY), MathHelper.lerp(0.5D, bb.minZ, bb.maxZ));

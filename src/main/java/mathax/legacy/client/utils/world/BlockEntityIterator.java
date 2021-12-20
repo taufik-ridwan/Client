@@ -1,6 +1,6 @@
 package mathax.legacy.client.utils.world;
 
-import mathax.legacy.client.mixin.ChunkAccessor;
+import mathax.legacy.client.mixin.WorldChunkAccessor;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.chunk.Chunk;
@@ -22,7 +22,7 @@ public class BlockEntityIterator implements Iterator<BlockEntity> {
         while (true) {
             if (!chunks.hasNext()) break;
 
-            Map<BlockPos, BlockEntity> blockEntityMap = ((ChunkAccessor) chunks.next()).getBlockEntities();
+            Map<BlockPos, BlockEntity> blockEntityMap = ((WorldChunkAccessor) chunks.next()).getBlockEntities();
 
             if (blockEntityMap.size() > 0) {
                 blockEntities = blockEntityMap.values().iterator();

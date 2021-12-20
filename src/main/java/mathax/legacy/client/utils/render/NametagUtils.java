@@ -23,7 +23,7 @@ public class NametagUtils {
     private static double scale;
 
     public static void onRender(MatrixStack matrices, Matrix4f projection) {
-        model = matrices.peek().getPositionMatrix().copy();
+        model = matrices.peek().getModel().copy();
         NametagUtils.projection = projection;
 
         camera.set(mc.gameRenderer.getCamera().getPos());

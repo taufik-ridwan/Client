@@ -7,7 +7,7 @@ import mathax.legacy.client.systems.modules.render.NoRender;
 import mathax.legacy.client.systems.modules.world.Ambience;
 import mathax.legacy.client.systems.modules.Modules;
 import net.minecraft.block.Blocks;
-import net.minecraft.client.render.DimensionEffects;
+import net.minecraft.client.render.SkyProperties;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.Vec3d;
@@ -25,10 +25,10 @@ import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 @Mixin(ClientWorld.class)
 public abstract class ClientWorldMixin {
     @Unique
-    private final DimensionEffects endSky = new DimensionEffects.End();
+    private final SkyProperties endSky = new SkyProperties.End();
 
     @Unique
-    private final DimensionEffects customSky = new Ambience.Custom();
+    private final SkyProperties customSky = new Ambience.Custom();
 
     @Shadow @Nullable public abstract Entity getEntityById(int id);
 
@@ -45,8 +45,8 @@ public abstract class ClientWorldMixin {
     /**
      * @author Walaryne
      */
-    @Inject(method = "getDimensionEffects", at = @At("HEAD"), cancellable = true)
-    private void onGetSkyProperties(CallbackInfoReturnable<DimensionEffects> info) {
+    @Inject(method = "getSkyProperties", at = @At("HEAD"), cancellable = true)
+    private void onGetSkyProperties(CallbackInfoReturnable<SkyProperties> info) {
         Ambience ambience = Modules.get().get(Ambience.class);
 
         if (ambience.isActive() && ambience.endSky.get()) info.setReturnValue(ambience.customSkyColor.get() ? customSky : endSky);
@@ -55,8 +55,8 @@ public abstract class ClientWorldMixin {
     /**
      * @author Walaryne
      */
-    @Inject(method = "getSkyColor", at = @At("HEAD"), cancellable = true)
-    private void onGetSkyColor(Vec3d cameraPos, float tickDelta, CallbackInfoReturnable<Vec3d> info) {
+    @Inject(method = "method_23777", at = @At("HEAD"), cancellable = true)
+    private void onGetSkyColor(Vec3d vec3d, float f, CallbackInfoReturnable<Vec3d> info) {
         Ambience ambience = Modules.get().get(Ambience.class);
 
         if (ambience.isActive() && ambience.customSkyColor.get()) info.setReturnValue(ambience.skyColor.get().getVec3d());
@@ -72,7 +72,7 @@ public abstract class ClientWorldMixin {
         if (ambience.isActive() && ambience.customCloudColor.get()) info.setReturnValue(ambience.cloudColor.get().getVec3d());
     }
 
-    @ModifyArgs(method = "doRandomBlockDisplayTicks", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/world/ClientWorld;randomBlockDisplayTick(IIIILjava/util/Random;Lnet/minecraft/block/Block;Lnet/minecraft/util/math/BlockPos$Mutable;)V"))
+    @ModifyArgs(method = "doRandomBlockDisplayTicks", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/world/ClientWorld;randomBlockDisplayTick(IIIILjava/util/Random;Lnet/minecraft/client/world/ClientWorld$BlockParticle;Lnet/minecraft/util/math/BlockPos$Mutable;)V"))
     private void doRandomBlockDisplayTicks(Args args) {
         if (Modules.get().get(NoRender.class).noBarrierInvis()) args.set(5, Blocks.BARRIER);
     }

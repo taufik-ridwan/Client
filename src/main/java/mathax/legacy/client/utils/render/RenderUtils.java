@@ -46,9 +46,9 @@ public class RenderUtils {
                 MatrixStack bobViewMatrices = new MatrixStack();
 
                 bobView(bobViewMatrices);
-                bobViewMatrices.peek().getPositionMatrix().invert();
+                bobViewMatrices.peek().getModel().invert();
 
-                pos = ((IMatrix4f) (Object) bobViewMatrices.peek().getPositionMatrix()).mul(pos);
+                pos = ((IMatrix4f) (Object) bobViewMatrices.peek().getModel()).mul(pos);
             }
         }
 

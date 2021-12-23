@@ -1,7 +1,6 @@
 package mathax.legacy.client.systems.modules.movement;
 
 import baritone.api.BaritoneAPI;
-import com.google.common.collect.Streams;
 import mathax.legacy.client.events.entity.player.CanWalkOnFluidEvent;
 import mathax.legacy.client.events.packets.PacketEvent;
 import mathax.legacy.client.events.world.CollisionShapeEvent;

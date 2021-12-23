@@ -13,8 +13,6 @@ import mathax.legacy.client.utils.misc.NbtException;
 import net.minecraft.client.util.Session;
 import net.minecraft.nbt.NbtCompound;
 
-import java.util.Optional;
-
 import static mathax.legacy.client.MatHaxLegacy.mc;
 
 public class PremiumAccount extends Account<PremiumAccount> {

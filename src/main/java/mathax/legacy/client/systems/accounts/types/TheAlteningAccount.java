@@ -13,8 +13,6 @@ import mathax.legacy.client.systems.accounts.AccountType;
 import mathax.legacy.client.systems.accounts.AccountUtils;
 import net.minecraft.client.util.Session;
 
-import java.util.Optional;
-
 import static mathax.legacy.client.MatHaxLegacy.mc;
 
 public class TheAlteningAccount extends Account<TheAlteningAccount> {

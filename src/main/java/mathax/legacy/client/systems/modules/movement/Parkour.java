@@ -1,6 +1,5 @@
 package mathax.legacy.client.systems.modules.movement;
 
-import com.google.common.collect.Streams;
 import mathax.legacy.client.events.world.TickEvent;
 import mathax.legacy.client.systems.modules.Categories;
 import mathax.legacy.client.systems.modules.Module;

@@ -20,17 +20,16 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.function.IntSupplier;
 
+// TODO: Rewrite
+
 @Mixin(SplashOverlay.class)
 public abstract class SplashOverlayMixin {
-
-    // Logo
-
     @Mutable
     @Shadow
     @Final
     static Identifier LOGO;
 
-    private static Identifier MATHAX_LOGO = new Identifier("mathaxlegacy", "textures/splash/splash.png");
+    private static final Identifier MATHAX_LOGO = new Identifier("mathaxlegacy", "textures/splash/splash.png");
 
     @Inject(method = "init(Lnet/minecraft/client/MinecraftClient;)V", at = @At("HEAD"), cancellable = true)
     private static void init(MinecraftClient client, CallbackInfo info) {

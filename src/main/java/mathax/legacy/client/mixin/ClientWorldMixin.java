@@ -74,6 +74,6 @@ public abstract class ClientWorldMixin {
 
     @ModifyArgs(method = "doRandomBlockDisplayTicks", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/world/ClientWorld;randomBlockDisplayTick(IIIILjava/util/Random;Lnet/minecraft/client/world/ClientWorld$BlockParticle;Lnet/minecraft/util/math/BlockPos$Mutable;)V"))
     private void doRandomBlockDisplayTicks(Args args) {
-        if (Modules.get().get(NoRender.class).noBarrierInvis()) args.set(5, Blocks.BARRIER);
+        if (Modules.get().get(NoRender.class).noBarrierInvisible()) args.set(5, Blocks.BARRIER);
     }
 }

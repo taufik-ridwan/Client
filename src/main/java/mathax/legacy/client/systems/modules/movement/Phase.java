@@ -147,9 +147,7 @@ public class Phase extends Module {
 
     @EventHandler
     public void onSendPacket(PacketEvent.Send event) {
-        if (event.packet instanceof PlayerMoveC2SPacket && !(event.packet instanceof PlayerMoveC2SPacket.PositionAndOnGround)) {
-            event.cancel();
-        }
+        if (event.packet instanceof PlayerMoveC2SPacket && !(event.packet instanceof PlayerMoveC2SPacket.PositionAndOnGround)) event.cancel();
         if (event.packet instanceof PlayerMoveC2SPacket packet) {
             if (this.packets.contains(packet)) {
                 this.packets.remove(packet);

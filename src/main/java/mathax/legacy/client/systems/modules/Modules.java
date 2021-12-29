@@ -472,7 +472,6 @@ public class Modules extends System<Modules> {
         add(new Spider());
         add(new Sprint());
         add(new Step());
-        add(new Tower());
         add(new TridentBoost());
         add(new Velocity());
     }
@@ -602,7 +601,6 @@ public class Modules extends System<Modules> {
         add(new BookBot());
         add(new CoordinateLogger());
         add(new InventoryTweaks());
-        add(new MessageLagger());
         add(new MiddleClickExtra());
         add(new MultiTask());
         add(new NameProtect());

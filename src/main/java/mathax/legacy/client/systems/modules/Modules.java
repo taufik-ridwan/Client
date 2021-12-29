@@ -361,9 +361,7 @@ public class Modules extends System<Modules> {
     private void initCombat() {
         add(new AimAssist());
         add(new AnchorAura());
-        add(new AntiAnchor());
         add(new AntiAnvil());
-        add(new AntiBed());
         add(new ArrowDodge());
         add(new Auto32K());
         add(new AutoAnvil());
@@ -604,7 +602,6 @@ public class Modules extends System<Modules> {
         add(new BookBot());
         add(new CoordinateLogger());
         add(new InventoryTweaks());
-        add(new LitematicaPrinter());
         add(new MessageLagger());
         add(new MiddleClickExtra());
         add(new MultiTask());

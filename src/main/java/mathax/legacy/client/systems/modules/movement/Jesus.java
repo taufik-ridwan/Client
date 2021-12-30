@@ -2,17 +2,17 @@ package mathax.legacy.client.systems.modules.movement;
 
 import baritone.api.BaritoneAPI;
 import com.google.common.collect.Streams;
+import mathax.legacy.client.eventbus.EventHandler;
 import mathax.legacy.client.events.entity.player.CanWalkOnFluidEvent;
 import mathax.legacy.client.events.packets.PacketEvent;
 import mathax.legacy.client.events.world.CollisionShapeEvent;
 import mathax.legacy.client.events.world.TickEvent;
-import mathax.legacy.client.mixininterface.IVec3d;
 import mathax.legacy.client.mixin.LivingEntityAccessor;
+import mathax.legacy.client.mixininterface.IVec3d;
+import mathax.legacy.client.settings.*;
 import mathax.legacy.client.systems.modules.Categories;
 import mathax.legacy.client.systems.modules.Module;
 import mathax.legacy.client.utils.entity.EntityUtils;
-import mathax.legacy.client.eventbus.EventHandler;
-import mathax.legacy.client.settings.*;
 import net.minecraft.block.Material;
 import net.minecraft.enchantment.ProtectionEnchantment;
 import net.minecraft.entity.effect.StatusEffects;
@@ -141,7 +141,7 @@ public class Jesus extends Module {
     );
 
     public Jesus() {
-        super(Categories.Movement, Items.WATER_BUCKET, "jesus", "Walk on liquids and powder snow like Jesus.");
+        super(Categories.Movement, Items.IRON_BOOTS, "jesus", "Allows you to walk on liquids and powder snow like Jesus.");
     }
 
     @Override
@@ -157,10 +157,6 @@ public class Jesus extends Module {
     public void onDeactivate() {
         BaritoneAPI.getSettings().assumeWalkOnWater.value = preBaritoneAssumeWalkOnWater;
         BaritoneAPI.getSettings().assumeWalkOnLava.value = preBaritoneAssumeWalkOnLava;
-    }
-
-    public boolean canWalkOnPowderSnow() {
-        return isActive() && powderSnow.get();
     }
 
     @EventHandler
@@ -269,7 +265,7 @@ public class Jesus extends Module {
         boolean foundLiquid = false;
         boolean foundSolid = false;
 
-        List<Box> blockCollisions = Streams.stream(mc.world.getBlockCollisions(mc.player, mc.player.getBoundingBox().offset(0, -0.5, 0))).map(VoxelShape::getBoundingBox).collect(Collectors.toCollection(ArrayList::new));
+        List<Box> blockCollisions = mc.world.getBlockCollisions(mc.player, mc.player.getBoundingBox().offset(0, -0.5, 0)).map(VoxelShape::getBoundingBox).collect(Collectors.toCollection(ArrayList::new));
 
         for (Box bb : blockCollisions) {
             blockPos.set(MathHelper.lerp(0.5D, bb.minX, bb.maxX), MathHelper.lerp(0.5D, bb.minY, bb.maxY), MathHelper.lerp(0.5D, bb.minZ, bb.maxZ));
@@ -280,6 +276,10 @@ public class Jesus extends Module {
         }
 
         return foundLiquid && !foundSolid;
+    }
+
+    public boolean canWalkOnPowderSnow() {
+        return isActive() && powderSnow.get();
     }
 
     public enum Mode {

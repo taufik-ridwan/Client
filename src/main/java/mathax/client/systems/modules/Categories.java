@@ -1,7 +1,7 @@
 package mathax.client.systems.modules;
 
-import mathax.client.utils.render.color.Color;
 import mathax.client.MatHax;
+import mathax.client.utils.render.color.Color;
 import net.minecraft.item.Items;
 
 public class Categories {
@@ -19,6 +19,7 @@ public class Categories {
 
     public static void init() {
         REGISTERING = true;
+
         Modules.registerCategory(Combat);
         Modules.registerCategory(Movement);
         Modules.registerCategory(Render);
@@ -28,6 +29,7 @@ public class Categories {
         Modules.registerCategory(Chat);
         Modules.registerCategory(Misc);
         Modules.registerCategory(Client);
+
         REGISTERING = false;
     }
 }

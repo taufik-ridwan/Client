@@ -140,6 +140,7 @@ public class AutoLog extends Module {
                         if (toggleOff.get()) toggle();
                         break;
                 }
+
                 if (mc.player.distanceTo(entity) < 8 && instantDeath.get() && DamageUtils.getSwordDamage((PlayerEntity) entity, true)
                         > mc.player.getHealth() + mc.player.getAbsorptionAmount()) {
                     mc.player.networkHandler.onDisconnect(new DisconnectS2CPacket(new LiteralText("[AutoLog] Anti-32k measures.")));
@@ -147,6 +148,7 @@ public class AutoLog extends Module {
                     break;
                 }
             }
+
             if (entity instanceof EndCrystalEntity && mc.player.distanceTo(entity) < range.get() && crystalLog.get()) {
                 mc.player.networkHandler.onDisconnect(new DisconnectS2CPacket(new LiteralText("[AutoLog] End Crystal appeared within specified range.")));
                 if (toggleOff.get()) toggle();
@@ -158,10 +160,7 @@ public class AutoLog extends Module {
         @EventHandler
         private void healthListener(TickEvent.Post event) {
             if (isActive()) disableHealthListener();
-
-            else if (Utils.canUpdate()
-                    && !mc.player.isDead()
-                    && mc.player.getHealth() >= health.get()) {
+            else if (Utils.canUpdate() && !mc.player.isDead() && mc.player.getHealth() >= health.get()) {
                 toggle();
                 disableHealthListener();
            }
@@ -173,6 +172,7 @@ public class AutoLog extends Module {
     private void enableHealthListener(){
         MatHax.EVENT_BUS.subscribe(staticListener);
     }
+
     private void disableHealthListener(){
         MatHax.EVENT_BUS.unsubscribe(staticListener);
     }

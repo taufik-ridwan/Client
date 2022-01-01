@@ -5,7 +5,7 @@ import mathax.client.utils.render.color.Color;
 import net.minecraft.item.Items;
 
 public class Categories {
-    public static final Category Combat = new Category("Combat", Items.DIAMOND_SWORD,Color.fromRGBA(225, 0, 0, 255));
+    public static final Category Combat = new Category("Combat", Items.DIAMOND_SWORD, Color.fromRGBA(225, 0, 0, 255));
     public static final Category Movement = new Category("Movement", Items.DIAMOND_BOOTS, Color.fromRGBA(0, 125, 255, 255));
     public static final Category Render = new Category("Render", Items.TINTED_GLASS, Color.fromRGBA(125, 255, 255, 255));
     public static final Category Player = new Category("Player", Items.ARMOR_STAND, Color.fromRGBA(245, 255, 100, 255));
@@ -19,6 +19,7 @@ public class Categories {
 
     public static void init() {
         REGISTERING = true;
+
         Modules.registerCategory(Combat);
         Modules.registerCategory(Movement);
         Modules.registerCategory(Render);
@@ -28,6 +29,7 @@ public class Categories {
         Modules.registerCategory(Chat);
         Modules.registerCategory(Misc);
         Modules.registerCategory(Client);
+
         REGISTERING = false;
     }
 }

@@ -1,28 +1,36 @@
 package mathax.client.systems.modules.client;
 
 import mathax.client.MatHax;
+import mathax.client.gui.screens.HudElementScreen;
+import mathax.client.gui.screens.ProxiesScreen;
+import mathax.client.gui.screens.accounts.AccountsScreen;
+import mathax.client.gui.screens.accounts.AddAlteningAccountScreen;
+import mathax.client.gui.screens.accounts.AddCrackedAccountScreen;
+import mathax.client.gui.screens.accounts.AddPremiumAccountScreen;
+import mathax.client.gui.screens.clickgui.ModuleScreen;
+import mathax.client.gui.screens.clickgui.ModulesScreen;
 import mathax.client.gui.screens.music.PlaylistViewScreen;
 import mathax.client.gui.screens.music.PlaylistsScreen;
 import mathax.client.gui.screens.server.ProtocolScreen;
-import mathax.client.gui.screens.settings.*;
-import mathax.client.systems.modules.misc.NameProtect;
-import mathax.client.systems.modules.render.search.SBlockDataScreen;
-import mathax.client.utils.Utils;
-import mathax.client.utils.Version;
-import mathax.client.gui.screens.*;
-import mathax.client.gui.screens.accounts.*;
-import mathax.client.gui.screens.clickgui.*;
 import mathax.client.gui.screens.server.servermanager.*;
+import mathax.client.gui.screens.settings.*;
 import mathax.client.gui.tabs.builtin.*;
 import mathax.client.mixin.MinecraftServerAccessor;
-import mathax.client.settings.*;
+import mathax.client.settings.BoolSetting;
+import mathax.client.settings.EnumSetting;
+import mathax.client.settings.Setting;
+import mathax.client.settings.SettingGroup;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.systems.modules.Modules;
+import mathax.client.systems.modules.render.search.SBlockDataScreen;
+import mathax.client.utils.Utils;
+import mathax.client.utils.Version;
 import mathax.client.utils.misc.LastServerInfo;
 import mathax.client.utils.render.PeekScreen;
 import mathax.client.utils.render.prompts.OkPrompt;
 import mathax.client.utils.render.prompts.YesNoPrompt;
+import mathax.client.systems.modules.misc.NameProtect;
 import net.arikia.dev.drpc.DiscordEventHandlers;
 import net.arikia.dev.drpc.DiscordRichPresence;
 import net.minecraft.client.gui.screen.*;
@@ -71,7 +79,7 @@ public class DiscordRPC extends Module {
         .build()
     );
 
-    private final Setting<SmallImageMode> smallImageMode = sgGeneral.add(new EnumSetting.Builder<SmallImageMode>()
+    public final Setting<SmallImageMode> smallImageMode = sgGeneral.add(new EnumSetting.Builder<SmallImageMode>()
         .name("small-images")
         .description("Shows cats or dogs on MatHax rpc.")
         .defaultValue(SmallImageMode.Cats)
@@ -79,9 +87,7 @@ public class DiscordRPC extends Module {
     );
 
     public DiscordRPC() {
-        super(Categories.Client, Items.COMMAND_BLOCK, "discord-rpc", "Shows MatHax as your Discord status.");
-
-        runInMainMenu = true;
+        super(Categories.Client, Items.COMMAND_BLOCK, "discord-rpc", "Shows MatHax as your Discord status.", true);
     }
 
     @Override
@@ -391,18 +397,30 @@ public class DiscordRPC extends Module {
 
     private static void applySmallImage() {
         if (delay == 5) {
+            delay = 0;
+
             if (number == 16) number = 1;
 
             if (Modules.get().get(DiscordRPC.class).smallImageMode.get() == SmallImageMode.Dogs) rpc.smallImageKey = "dog-" + number;
             else rpc.smallImageKey = "cat-" + number;
 
-            ++number;
-            delay = 0;
-        } else ++delay;
+            number++;
+        } else delay++;
     }
 
     public enum SmallImageMode {
-        Cats,
-        Dogs
+        Cats("Cats"),
+        Dogs("Dogs");
+
+        private final String title;
+
+        SmallImageMode(String title) {
+            this.title = title;
+        }
+
+        @Override
+        public String toString() {
+            return title;
+        }
     }
 }

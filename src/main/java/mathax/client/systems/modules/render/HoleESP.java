@@ -1,20 +1,20 @@
 package mathax.client.systems.modules.render;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.render.Render3DEvent;
 import mathax.client.events.world.TickEvent;
-import mathax.client.eventbus.EventHandler;
 import mathax.client.mixin.AbstractBlockAccessor;
 import mathax.client.renderer.Renderer3D;
+import mathax.client.renderer.ShapeMode;
+import mathax.client.settings.*;
+import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
+import mathax.client.systems.modules.Modules;
 import mathax.client.utils.misc.Pool;
 import mathax.client.utils.render.color.Color;
 import mathax.client.utils.render.color.SettingColor;
 import mathax.client.utils.world.BlockIterator;
 import mathax.client.utils.world.Dir;
-import mathax.client.renderer.ShapeMode;
-import mathax.client.systems.modules.Categories;
-import mathax.client.systems.modules.Modules;
-import mathax.client.settings.*;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.Items;
@@ -40,7 +40,7 @@ public class HoleESP extends Module {
         .description("Horizontal radius in which to search for holes.")
         .defaultValue(10)
         .min(0)
-        .sliderMax(32)
+        .sliderRange(0, 32)
         .build()
     );
 
@@ -49,7 +49,7 @@ public class HoleESP extends Module {
         .description("Vertical radius in which to search for holes.")
         .defaultValue(5)
         .min(0)
-        .sliderMax(32)
+        .sliderRange(0, 32)
         .build()
     );
 
@@ -58,7 +58,7 @@ public class HoleESP extends Module {
         .description("Minimum hole height required to be rendered.")
         .defaultValue(3)
         .min(1)
-        .sliderMin(1)
+        .sliderRange(1, 5)
         .build()
     );
 
@@ -194,11 +194,8 @@ public class HoleESP extends Module {
                 }
             }
 
-            if (obsidian + bedrock == 5 && air == null) {
-                holes.add(holePool.get().set(blockPos, obsidian == 5 ? Hole.Type.Obsidian : (bedrock == 5 ? Hole.Type.Bedrock : Hole.Type.Mixed), NULL));
-            } else if (obsidian + bedrock == 8 && doubles.get() && air != null) {
-                holes.add(holePool.get().set(blockPos, obsidian == 8 ? Hole.Type.Obsidian : (bedrock == 8 ? Hole.Type.Bedrock : Hole.Type.Mixed), Dir.get(air)));
-            }
+            if (obsidian + bedrock == 5 && air == null) holes.add(holePool.get().set(blockPos, obsidian == 5 ? Hole.Type.Obsidian : (bedrock == 5 ? Hole.Type.Bedrock : Hole.Type.Mixed), NULL));
+            else if (obsidian + bedrock == 8 && doubles.get() && air != null) holes.add(holePool.get().set(blockPos, obsidian == 8 ? Hole.Type.Obsidian : (bedrock == 8 ? Hole.Type.Bedrock : Hole.Type.Mixed), Dir.get(air)));
         });
     }
 
@@ -297,9 +294,20 @@ public class HoleESP extends Module {
         }
 
         public enum Type {
-            Bedrock,
-            Obsidian,
-            Mixed
+            Bedrock("Bedrock"),
+            Obsidian("Obsidian"),
+            Mixed("Mixed");
+
+            private final String title;
+
+            Type(String title) {
+                this.title = title;
+            }
+
+            @Override
+            public String toString() {
+                return title;
+            }
         }
     }
 }

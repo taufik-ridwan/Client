@@ -5,6 +5,7 @@ import mathax.client.eventbus.EventHandler;
 import mathax.client.events.render.Render3DEvent;
 import mathax.client.events.world.TickEvent;
 import mathax.client.renderer.ShapeMode;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.misc.Pool;
@@ -15,7 +16,6 @@ import mathax.client.utils.player.Rotations;
 import mathax.client.utils.render.color.SettingColor;
 import mathax.client.utils.world.BlockIterator;
 import mathax.client.utils.world.BlockUtils;
-import mathax.client.settings.*;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.item.Items;
@@ -43,7 +43,7 @@ public class AutoWither extends Module {
         .description("Horizontal radius for placement")
         .defaultValue(4)
         .min(0)
-        .sliderMax(6)
+        .sliderRange(0, 6)
         .build()
     );
 
@@ -52,7 +52,7 @@ public class AutoWither extends Module {
         .description("Vertical radius for placement")
         .defaultValue(3)
         .min(0)
-        .sliderMax(6)
+        .sliderRange(0, 6)
         .build()
     );
 
@@ -186,7 +186,6 @@ public class AutoWither extends Module {
             return;
         }
 
-
         // Build
         if (blockDelay.get() == 0) {
             // All in 1 tick
@@ -303,9 +302,20 @@ public class AutoWither extends Module {
     }
 
     public enum Priority {
-        Closest,
-        Furthest,
-        Random
+        Closest("Closest"),
+        Furthest("Furthest"),
+        Random("Random");
+
+        private final String title;
+
+        Priority(String title) {
+            this.title = title;
+        }
+
+        @Override
+        public String toString() {
+            return title;
+        }
     }
 
     private static class Wither {

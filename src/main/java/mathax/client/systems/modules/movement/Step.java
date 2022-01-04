@@ -131,24 +131,36 @@ public class Step extends Module {
     }
 
     public enum Mode {
-        Normal,
-        NCP,
-        NCP_PLUS;
+        Normal("Normal"),
+        NCP("NCP"),
+        NCP_Plus("NCP+");
+
+        private final String title;
+
+        Mode(String title) {
+            this.title = title;
+        }
 
         @Override
         public String toString() {
-            return super.toString().replace("_PLUS", "+");
+            return title;
         }
     }
 
     public enum ActiveWhen {
-        Always,
-        Sneaking,
-        Not_Sneaking;
+        Always("Always"),
+        Sneaking("Sneaking"),
+        Not_Sneaking("Not Sneaking");
+
+        private final String title;
+
+        ActiveWhen(String title) {
+            this.title = title;
+        }
 
         @Override
         public String toString() {
-            return super.toString().replace("_", " ");
+            return title;
         }
     }
 }

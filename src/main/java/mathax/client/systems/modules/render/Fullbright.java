@@ -1,6 +1,7 @@
 package mathax.client.systems.modules.render;
 
 import mathax.client.MatHax;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.world.TickEvent;
 import mathax.client.settings.EnumSetting;
 import mathax.client.settings.IntSetting;
@@ -9,12 +10,13 @@ import mathax.client.settings.SettingGroup;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.systems.modules.Modules;
-import mathax.client.eventbus.EventHandler;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.item.Items;
 
 public class Fullbright extends Module {
     private final SettingGroup sgGeneral = settings.getDefaultGroup();
+
+    // General
 
     public final Setting<Mode> mode = sgGeneral.add(new EnumSetting.Builder<Mode>()
         .name("mode")
@@ -37,7 +39,7 @@ public class Fullbright extends Module {
             if (mc.worldRenderer != null) mc.worldRenderer.reload();
         })
         .range(0, 15)
-        .sliderMax(15)
+        .sliderRange(0, 15)
         .build()
     );
 
@@ -108,7 +110,18 @@ public class Fullbright extends Module {
     }
 
     public enum Mode {
-        Gamma,
-        Luminance
+        Gamma("Gamma"),
+        Luminance("Luminace");
+
+        private final String title;
+
+        Mode(String title) {
+            this.title = title;
+        }
+
+        @Override
+        public String toString() {
+            return title;
+        }
     }
 }

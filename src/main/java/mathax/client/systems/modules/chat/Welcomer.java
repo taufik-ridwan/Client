@@ -183,8 +183,8 @@ public class Welcomer extends Module {
                     }
 
                     sentWelcome = true;
-                }
             }
+        }
 
         if (packet.getAction() == PlayerListS2CPacket.Action.REMOVE_PLAYER) {
             for (PlayerListS2CPacket.Entry entry : entries) {

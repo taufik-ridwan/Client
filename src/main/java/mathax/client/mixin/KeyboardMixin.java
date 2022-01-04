@@ -1,11 +1,11 @@
 package mathax.client.mixin;
 
+import mathax.client.MatHax;
 import mathax.client.events.mathax.CharTypedEvent;
 import mathax.client.events.mathax.KeyEvent;
 import mathax.client.utils.Utils;
 import mathax.client.utils.misc.input.Input;
 import mathax.client.utils.misc.input.KeyAction;
-import mathax.client.MatHax;
 import mathax.client.gui.GuiKeyEvents;
 import mathax.client.gui.WidgetScreen;
 import net.minecraft.client.Keyboard;

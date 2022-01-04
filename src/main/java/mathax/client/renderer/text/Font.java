@@ -81,15 +81,15 @@ public class Font {
             float iph = 1f / 2048;
 
             charData[1][i] = new CharData(
-                    packedChar.xoff(),
-                    packedChar.yoff(),
-                    packedChar.xoff2(),
-                    packedChar.yoff2(),
-                    packedChar.x0() * ipw,
-                    packedChar.y0() * iph,
-                    packedChar.x1() * ipw,
-                    packedChar.y1() * iph,
-                    packedChar.xadvance()
+                packedChar.xoff(),
+                packedChar.yoff(),
+                packedChar.xoff2(),
+                packedChar.yoff2(),
+                packedChar.x0() * ipw,
+                packedChar.y0() * iph,
+                packedChar.x1() * ipw,
+                packedChar.y1() * iph,
+                packedChar.xadvance()
             );
         }
     }

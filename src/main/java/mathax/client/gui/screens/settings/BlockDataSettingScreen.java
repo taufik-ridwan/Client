@@ -1,11 +1,11 @@
 package mathax.client.gui.screens.settings;
 
 import mathax.client.gui.widgets.containers.WTable;
-import mathax.client.gui.widgets.input.WTextBox;
-import mathax.client.gui.widgets.pressable.WButton;
 import mathax.client.gui.GuiTheme;
 import mathax.client.gui.WindowScreen;
 import mathax.client.gui.renderer.GuiRenderer;
+import mathax.client.gui.widgets.input.WTextBox;
+import mathax.client.gui.widgets.pressable.WButton;
 import mathax.client.settings.BlockDataSetting;
 import mathax.client.settings.IBlockData;
 import mathax.client.utils.misc.IChangeable;

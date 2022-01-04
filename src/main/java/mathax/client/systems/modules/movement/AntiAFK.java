@@ -25,17 +25,14 @@ import java.util.Random;
 
 public class AntiAFK extends Module {
     private final List<String> messages = new ArrayList<>();
+    private int timer;
+    private int messageI;
+    private int strafeTimer = 0;
+    private boolean direction = false;
 
     private final Random random = new Random();
 
-    private boolean direction = false;
-
     private float prevYaw;
-
-    private int strafeTimer = 0;
-    private int messageI;
-    private int timer;
-
 
     private final SettingGroup sgActions = settings.createGroup("Actions");
     private final SettingGroup sgMessages = settings.createGroup("Messages");
@@ -62,7 +59,7 @@ public class AntiAFK extends Module {
         .description("The speed to spin you.")
         .defaultValue(15)
         .min(1)
-        .sliderRange(1, 100)
+        .sliderMax(100)
         .visible(spin::get)
         .build()
     );

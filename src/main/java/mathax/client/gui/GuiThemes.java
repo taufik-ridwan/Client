@@ -1,8 +1,8 @@
 package mathax.client.gui;
 
+import mathax.client.MatHax;
 import mathax.client.gui.themes.mathax.MatHaxGuiTheme;
 import mathax.client.gui.themes.meteor.MeteorGuiTheme;
-import mathax.client.MatHax;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtIo;
 

@@ -175,17 +175,17 @@ public class AutoTotem extends Module {
 
         switch (mode.get()) {
             case Strict, Smart:
-                if (totems <= 0) locked = false;
-                else if (ticks >= delay.get()) {
-                    locked = mode.get() == Mode.Strict || (mode.get() == Mode.Smart && (low || elytras));
+            if (totems <= 0) locked = false;
+            else if (ticks >= delay.get()) {
+                locked = mode.get() == Mode.Strict || (mode.get() == Mode.Smart && (low || elytras));
 
-                    if (locked && mc.player.getOffHandStack().getItem() != Items.TOTEM_OF_UNDYING) InvUtils.move().from(result.getSlot()).toOffhand();
+                if (locked && mc.player.getOffHandStack().getItem() != Items.TOTEM_OF_UNDYING) InvUtils.move().from(result.getSlot()).toOffhand();
 
-                    ticks = 0;
-                    return;
-                }
+                ticks = 0;
+                return;
+            }
 
-                ticks++;
+            ticks++;
             case Enhanced:
                 if (totems <= 0) locked = false;
 
@@ -218,7 +218,7 @@ public class AutoTotem extends Module {
                 if (totemID == -1 && !isHoldingTotem) return;
 
                 if (!canClickOffhand && closeScreen.get() && mc.player.getInventory().count(Items.TOTEM_OF_UNDYING) < 1) {
-                    mc.player.closeHandledScreen();
+                mc.player.closeHandledScreen();
                     canClickOffhand = true;
                 }
 

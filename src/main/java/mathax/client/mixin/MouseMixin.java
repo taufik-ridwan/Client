@@ -1,12 +1,12 @@
 package mathax.client.mixin;
 
+import mathax.client.MatHax;
 import mathax.client.events.mathax.MouseButtonEvent;
 import mathax.client.events.mathax.MouseScrollEvent;
 import mathax.client.mixininterface.ICamera;
 import mathax.client.systems.modules.Modules;
 import mathax.client.utils.misc.input.Input;
 import mathax.client.utils.misc.input.KeyAction;
-import mathax.client.MatHax;
 import mathax.client.systems.modules.render.FreeLook;
 import mathax.client.systems.modules.render.Freecam;
 import mathax.client.systems.modules.world.HighwayBuilder;

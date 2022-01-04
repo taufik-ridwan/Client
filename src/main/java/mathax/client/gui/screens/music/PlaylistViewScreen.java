@@ -2,13 +2,13 @@ package mathax.client.gui.screens.music;
 
 import com.sedmelluq.discord.lavaplayer.track.AudioPlaylist;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
+import mathax.client.gui.tabs.builtin.MusicTab;
 import mathax.client.gui.widgets.containers.WTable;
 import mathax.client.gui.widgets.music.WMusicWidget;
 import mathax.client.gui.widgets.music.WPaginationProvider;
 import mathax.client.gui.widgets.music.WPlaylistPage;
 import mathax.client.gui.GuiTheme;
 import mathax.client.gui.WindowScreen;
-import mathax.client.gui.tabs.builtin.MusicTab;
 import mathax.client.music.Music;
 import net.minecraft.client.gui.screen.Screen;
 

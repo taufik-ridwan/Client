@@ -1,7 +1,7 @@
 package mathax.client.mixin;
 
-import mathax.client.events.entity.player.CobwebEntityCollisionEvent;
 import mathax.client.MatHax;
+import mathax.client.events.entity.player.CobwebEntityCollisionEvent;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CobwebBlock;
 import net.minecraft.entity.Entity;

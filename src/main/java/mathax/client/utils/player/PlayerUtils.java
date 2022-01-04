@@ -6,15 +6,15 @@ import mathax.client.systems.config.Config;
 import mathax.client.systems.enemies.Enemies;
 import mathax.client.systems.friends.Friends;
 import mathax.client.systems.modules.Modules;
+import mathax.client.utils.entity.EntityUtils;
 import mathax.client.utils.misc.text.TextUtils;
 import mathax.client.utils.render.color.Color;
+import mathax.client.utils.world.BlockUtils;
+import mathax.client.utils.world.Dimension;
 import mathax.client.mixininterface.IVec3d;
 import mathax.client.systems.modules.movement.NoFall;
 import mathax.client.utils.misc.BaritoneUtils;
 import mathax.client.utils.Utils;
-import mathax.client.utils.entity.EntityUtils;
-import mathax.client.utils.world.BlockUtils;
-import mathax.client.utils.world.Dimension;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FluidBlock;
@@ -249,7 +249,8 @@ public class PlayerUtils {
     public static Color getPlayerColor(PlayerEntity entity, Color defaultColor) {
         if (Friends.get().isFriend(entity)) return color.set(Friends.get().color).a(defaultColor.a);
         if (Enemies.get().isEnemy(entity)) return color.set(Enemies.get().color).a(defaultColor.a);
-        if (!color.set(TextUtils.getMostPopularColor(entity.getDisplayName())).equals(WHITE) && Config.get().useTeamColor) return color.set(color).a(defaultColor.a);
+        if (!color.set(TextUtils.getMostPopularColor(entity.getDisplayName())).equals(WHITE) && Config.get().useTeamColor.get()) return color.set(color).a(defaultColor.a);
+
         return defaultColor;
     }
 

@@ -1,10 +1,10 @@
 package mathax.client.utils.entity;
 
-import mathax.client.utils.misc.Vec3;
 import mathax.client.mixininterface.IVec3d;
 import mathax.client.mixin.CrossbowItemAccessor;
 import mathax.client.utils.Utils;
 import mathax.client.utils.misc.MissHitResult;
+import mathax.client.utils.misc.Vec3;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.projectile.ProjectileUtil;
 import net.minecraft.fluid.FluidState;

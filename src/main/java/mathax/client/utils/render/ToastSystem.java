@@ -1,9 +1,9 @@
 package mathax.client.utils.render;
 
 import com.mojang.blaze3d.systems.RenderSystem;
+import mathax.client.MatHax;
 import mathax.client.systems.config.Config;
 import mathax.client.utils.render.color.Color;
-import mathax.client.MatHax;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.sound.PositionedSoundInstance;
 import net.minecraft.client.sound.SoundInstance;
@@ -74,7 +74,7 @@ public class ToastSystem implements Toast {
 
         if (icon != null) mc.getItemRenderer().renderInGui(icon, 8, 8);
 
-        if (!playedSound && Config.get().toastSound) {
+        if (!playedSound && Config.get().toastSound.get()) {
             mc.getSoundManager().play(getSound());
             playedSound = true;
         }

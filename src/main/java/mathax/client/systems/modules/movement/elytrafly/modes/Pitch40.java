@@ -28,8 +28,6 @@ public class Pitch40 extends ElytraFlightMode {
 
     @Override
     public void onTick() {
-        super.onTick();
-
         if (pitchingDown && MatHax.mc.player.getY() <= elytraFly.pitch40lowerBounds.get()) pitchingDown = false;
         else if (!pitchingDown && MatHax.mc.player.getY() >= elytraFly.pitch40upperBounds.get()) pitchingDown = true;
 

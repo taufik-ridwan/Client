@@ -1,7 +1,7 @@
 package mathax.client.utils.misc;
 
-import mathax.client.utils.render.prompts.OkPrompt;
 import mathax.client.MatHax;
+import mathax.client.utils.render.prompts.OkPrompt;
 import mathax.client.systems.System;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;

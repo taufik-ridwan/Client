@@ -1,7 +1,7 @@
 package mathax.client.utils.misc;
 
-import mathax.client.events.game.ResourcePacksReloadedEvent;
 import mathax.client.MatHax;
+import mathax.client.events.game.ResourcePacksReloadedEvent;
 import mathax.client.eventbus.EventHandler;
 import net.minecraft.block.Block;
 import net.minecraft.client.sound.WeightedSoundSet;

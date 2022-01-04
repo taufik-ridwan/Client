@@ -1,12 +1,12 @@
 package mathax.client.gui.screens.interactionmenu;
 
+import mathax.client.gui.widgets.containers.WSection;
 import mathax.client.MatHax;
 import mathax.client.eventbus.EventHandler;
 import mathax.client.events.world.TickEvent;
 import mathax.client.gui.GuiTheme;
 import mathax.client.gui.GuiThemes;
 import mathax.client.gui.WindowScreen;
-import mathax.client.gui.widgets.containers.WSection;
 import net.minecraft.client.resource.language.TranslationStorage;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;

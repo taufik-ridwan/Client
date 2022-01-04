@@ -1,12 +1,12 @@
 package mathax.client.utils.player;
 
-import mathax.client.events.game.GameJoinedEvent;
-import mathax.client.utils.entity.fakeplayer.FakePlayerEntity;
 import mathax.client.MatHax;
+import mathax.client.events.game.GameJoinedEvent;
+import mathax.client.utils.entity.EntityUtils;
+import mathax.client.utils.entity.fakeplayer.FakePlayerEntity;
 import mathax.client.mixininterface.IExplosion;
 import mathax.client.mixininterface.IRaycastContext;
 import mathax.client.mixininterface.IVec3d;
-import mathax.client.utils.entity.EntityUtils;
 import mathax.client.eventbus.EventHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;

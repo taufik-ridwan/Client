@@ -1,12 +1,12 @@
 package mathax.client.utils.render.prompts;
 
 import com.mojang.blaze3d.systems.RenderSystem;
+import mathax.client.gui.widgets.containers.WHorizontalList;
+import mathax.client.gui.widgets.pressable.WCheckbox;
 import mathax.client.gui.GuiTheme;
 import mathax.client.gui.GuiThemes;
 import mathax.client.gui.WindowScreen;
-import mathax.client.gui.widgets.containers.WHorizontalList;
 import mathax.client.gui.widgets.pressable.WButton;
-import mathax.client.gui.widgets.pressable.WCheckbox;
 import mathax.client.systems.config.Config;
 import net.minecraft.client.gui.screen.Screen;
 

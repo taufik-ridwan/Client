@@ -1,5 +1,7 @@
 package mathax.client.gui.screens;
 
+import mathax.client.gui.renderer.GuiRenderer;
+import mathax.client.gui.widgets.WLabel;
 import mathax.client.gui.widgets.containers.WHorizontalList;
 import mathax.client.gui.widgets.containers.WTable;
 import mathax.client.gui.widgets.input.WDropdown;
@@ -14,8 +16,6 @@ import mathax.client.systems.proxies.ProxyType;
 import mathax.client.utils.misc.NbtUtils;
 import mathax.client.gui.GuiTheme;
 import mathax.client.gui.WindowScreen;
-import mathax.client.gui.renderer.GuiRenderer;
-import mathax.client.gui.widgets.WLabel;
 
 import java.util.ArrayList;
 import java.util.List;

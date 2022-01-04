@@ -1,9 +1,9 @@
 package mathax.client.gui;
 
+import mathax.client.MatHax;
 import mathax.client.gui.renderer.GuiDebugRenderer;
 import mathax.client.gui.renderer.GuiRenderer;
 import mathax.client.gui.tabs.TabScreen;
-import mathax.client.gui.tabs.builtin.HudTab;
 import mathax.client.gui.utils.Cell;
 import mathax.client.gui.widgets.WRoot;
 import mathax.client.gui.widgets.WWidget;
@@ -12,7 +12,6 @@ import mathax.client.gui.widgets.input.WTextBox;
 import mathax.client.utils.Utils;
 import mathax.client.utils.misc.CursorStyle;
 import mathax.client.utils.misc.input.Input;
-import mathax.client.MatHax;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.math.MatrixStack;
@@ -64,7 +63,7 @@ public abstract class WidgetScreen extends Screen {
         if (parent != null) {
             animProgress = 1;
 
-            if (this instanceof TabScreen && parent instanceof TabScreen && !(this instanceof HudTab.HudScreen)) parent = ((TabScreen) parent).parent;
+            if (this instanceof TabScreen && parent instanceof TabScreen) parent = ((TabScreen) parent).parent;
         }
     }
 

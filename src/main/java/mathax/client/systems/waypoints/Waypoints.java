@@ -1,8 +1,8 @@
 package mathax.client.systems.waypoints;
 
+import mathax.client.MatHax;
 import mathax.client.renderer.text.TextRenderer;
 import mathax.client.utils.render.color.Color;
-import mathax.client.MatHax;
 import mathax.client.events.game.GameJoinedEvent;
 import mathax.client.events.game.GameLeftEvent;
 import mathax.client.events.render.Render2DEvent;

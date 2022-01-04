@@ -1,8 +1,8 @@
 package mathax.client.mixin;
 
+import mathax.client.MatHax;
 import mathax.client.events.render.RenderBossBarEvent;
 import mathax.client.systems.modules.Modules;
-import mathax.client.MatHax;
 import mathax.client.systems.modules.render.NoRender;
 import net.minecraft.client.gui.hud.BossBarHud;
 import net.minecraft.client.gui.hud.ClientBossBar;

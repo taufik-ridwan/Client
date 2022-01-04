@@ -1,7 +1,7 @@
 package mathax.client.mixin;
 
-import mathax.client.events.world.CollisionShapeEvent;
 import mathax.client.MatHax;
+import mathax.client.events.world.CollisionShapeEvent;
 import net.minecraft.block.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;

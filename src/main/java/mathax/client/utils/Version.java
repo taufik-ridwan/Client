@@ -1,9 +1,9 @@
 package mathax.client.utils;
 
+import mathax.client.MatHax;
 import mathax.client.utils.network.HTTP;
 import mathax.client.utils.render.prompts.OkPrompt;
 import mathax.client.utils.render.prompts.YesNoPrompt;
-import mathax.client.MatHax;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.SharedConstants;
 import net.minecraft.util.Util;

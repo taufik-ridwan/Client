@@ -27,18 +27,18 @@ public class AutoWalk extends Module {
         .description("Walking mode.")
         .defaultValue(Mode.Smart)
         .onChanged(mode -> {
-            if (isActive()) {
-                if (mode == Mode.Simple) {
-                    BaritoneAPI.getProvider().getPrimaryBaritone().getPathingBehavior().cancelEverything();
-                    goal = null;
-                } else {
-                    timer = 0;
-                    createGoal();
-                }
+                if (isActive()) {
+                    if (mode == Mode.Simple) {
+                        BaritoneAPI.getProvider().getPrimaryBaritone().getPathingBehavior().cancelEverything();
+                        goal = null;
+                    } else {
+                        timer = 0;
+                        createGoal();
+                    }
 
-                unpress();
-            }
-        })
+                    unpress();
+                }
+            })
         .build()
     );
 
@@ -47,8 +47,8 @@ public class AutoWalk extends Module {
         .description("The direction to walk in simple mode.")
         .defaultValue(Direction.Forward)
         .onChanged(direction1 -> {
-            if (isActive()) unpress();
-        })
+                if (isActive()) unpress();
+            })
         .visible(() -> mode.get() == Mode.Simple)
         .build()
     );
@@ -106,6 +106,7 @@ public class AutoWalk extends Module {
         goal = new GoalDirection(mc.player.getPos(), mc.player.getYaw());
         BaritoneAPI.getProvider().getPrimaryBaritone().getCustomGoalProcess().setGoalAndPath(goal);
     }
+
     public enum Mode {
         Simple("Simple"),
         Smart("Smart");

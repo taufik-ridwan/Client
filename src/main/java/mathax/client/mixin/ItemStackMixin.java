@@ -1,10 +1,10 @@
 package mathax.client.mixin;
 
+import mathax.client.MatHax;
 import mathax.client.events.entity.player.FinishUsingItemEvent;
 import mathax.client.events.entity.player.StoppedUsingItemEvent;
 import mathax.client.events.game.ItemStackTooltipEvent;
 import mathax.client.utils.Utils;
-import mathax.client.MatHax;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;

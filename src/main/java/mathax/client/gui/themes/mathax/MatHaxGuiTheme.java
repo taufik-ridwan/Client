@@ -1,5 +1,6 @@
 package mathax.client.gui.themes.mathax;
 
+import mathax.client.MatHax;
 import mathax.client.gui.renderer.packer.GuiTexture;
 import mathax.client.gui.themes.mathax.widgets.*;
 import mathax.client.gui.themes.mathax.widgets.pressable.*;
@@ -14,7 +15,6 @@ import mathax.client.gui.widgets.pressable.*;
 import mathax.client.settings.*;
 import mathax.client.utils.render.color.Color;
 import mathax.client.utils.render.color.SettingColor;
-import mathax.client.MatHax;
 import mathax.client.gui.DefaultSettingsWidgetFactory;
 import mathax.client.gui.GuiTheme;
 import mathax.client.gui.WidgetScreen;

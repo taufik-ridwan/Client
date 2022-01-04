@@ -13,6 +13,8 @@ import mathax.client.utils.misc.NbtException;
 import net.minecraft.client.util.Session;
 import net.minecraft.nbt.NbtCompound;
 
+import java.util.Optional;
+
 public class PremiumAccount extends Account<PremiumAccount> {
     private String password;
 

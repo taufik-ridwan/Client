@@ -3,11 +3,10 @@ package mathax.client.systems.commands.commands;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import mathax.client.systems.commands.Command;
+import mathax.client.systems.commands.arguments.WaypointArgumentType;
 import mathax.client.systems.waypoints.Waypoint;
 import mathax.client.systems.waypoints.Waypoints;
 import mathax.client.utils.player.PlayerUtils;
-import mathax.client.utils.world.Dimension;
-import mathax.client.systems.commands.arguments.WaypointArgumentType;
 import net.minecraft.command.CommandSource;
 import net.minecraft.util.Formatting;
 

@@ -1,11 +1,11 @@
 package mathax.client.gui.screens.settings;
 
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
-import mathax.client.gui.widgets.input.WIntEdit;
-import mathax.client.gui.widgets.input.WTextBox;
+import mathax.client.gui.widgets.containers.WTable;
 import mathax.client.gui.GuiTheme;
 import mathax.client.gui.WindowScreen;
-import mathax.client.gui.widgets.containers.WTable;
+import mathax.client.gui.widgets.input.WIntEdit;
+import mathax.client.gui.widgets.input.WTextBox;
 import mathax.client.settings.Setting;
 import mathax.client.utils.misc.Names;
 import net.minecraft.entity.effect.StatusEffect;

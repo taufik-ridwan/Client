@@ -1,9 +1,9 @@
 package mathax.client.utils.player;
 
+import mathax.client.MatHax;
 import mathax.client.events.entity.player.SendMovementPacketsEvent;
 import mathax.client.events.world.TickEvent;
 import mathax.client.systems.config.Config;
-import mathax.client.MatHax;
 import mathax.client.utils.entity.Target;
 import mathax.client.utils.misc.Pool;
 import mathax.client.eventbus.EventHandler;
@@ -83,7 +83,7 @@ public class Rotations {
 
             i++;
         } else if (lastRotation != null) {
-            if (lastRotationTimer >= Config.get().rotationHoldTicks) resetLastRotation();
+            if (lastRotationTimer >= Config.get().rotationHoldTicks.get()) resetLastRotation();
             else {
                 setupMovementPacketRotation(lastRotation);
                 sentLastRotation = true;

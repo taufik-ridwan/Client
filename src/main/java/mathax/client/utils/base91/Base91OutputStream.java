@@ -4,6 +4,8 @@ import java.io.FilterOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
+import static mathax.client.utils.base91.Base91.*;
+
 public class Base91OutputStream extends FilterOutputStream {
     private int ebq = 0;
     private int en = 0;
@@ -28,8 +30,8 @@ public class Base91OutputStream extends FilterOutputStream {
                 en -= 14;
             }
 
-            out.write(Base91.ENCODING_TABLE[ev % Base91.BASE]);
-            out.write(Base91.ENCODING_TABLE[ev / Base91.BASE]);
+            out.write(ENCODING_TABLE[ev % BASE]);
+            out.write(ENCODING_TABLE[ev / BASE]);
         }
     }
 
@@ -41,8 +43,8 @@ public class Base91OutputStream extends FilterOutputStream {
     @Override
     public void flush() throws IOException {
         if (en > 0) {
-            out.write(Base91.ENCODING_TABLE[ebq % Base91.BASE]);
-            if (en > 7 || ebq > 90) out.write(Base91.ENCODING_TABLE[ebq / Base91.BASE]);
+            out.write(ENCODING_TABLE[ebq % BASE]);
+            if (en > 7 || ebq > 90) out.write(ENCODING_TABLE[ebq / BASE]);
         }
     }
 }

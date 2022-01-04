@@ -1,11 +1,11 @@
 package mathax.client.mixin;
 
+import mathax.client.MatHax;
 import mathax.client.events.entity.LivingEntityMoveEvent;
 import mathax.client.events.entity.player.JumpVelocityMultiplierEvent;
 import mathax.client.events.entity.player.PlayerMoveEvent;
 import mathax.client.systems.modules.Modules;
 import mathax.client.utils.render.EntityShaders;
-import mathax.client.MatHax;
 import mathax.client.systems.modules.combat.Hitboxes;
 import mathax.client.systems.modules.movement.Moses;
 import mathax.client.systems.modules.movement.NoSlow;

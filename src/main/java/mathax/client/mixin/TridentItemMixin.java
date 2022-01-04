@@ -1,8 +1,8 @@
 package mathax.client.mixin;
 
 import mathax.client.systems.modules.Modules;
-import mathax.client.systems.modules.movement.TridentBoost;
 import mathax.client.utils.Utils;
+import mathax.client.systems.modules.movement.TridentBoost;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;

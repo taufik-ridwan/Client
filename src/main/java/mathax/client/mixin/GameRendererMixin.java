@@ -1,6 +1,7 @@
 package mathax.client.mixin;
 
 import com.mojang.blaze3d.systems.RenderSystem;
+import mathax.client.MatHax;
 import mathax.client.events.render.Render3DEvent;
 import mathax.client.events.render.RenderAfterWorldEvent;
 import mathax.client.mixininterface.IVec3d;
@@ -9,7 +10,6 @@ import mathax.client.systems.modules.Modules;
 import mathax.client.utils.Utils;
 import mathax.client.utils.render.NametagUtils;
 import mathax.client.utils.render.RenderUtils;
-import mathax.client.MatHax;
 import mathax.client.systems.modules.player.LiquidInteract;
 import mathax.client.systems.modules.player.NoMiningTrace;
 import mathax.client.systems.modules.player.Reach;

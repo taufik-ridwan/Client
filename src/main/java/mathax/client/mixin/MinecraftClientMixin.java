@@ -1,5 +1,6 @@
 package mathax.client.mixin;
 
+import mathax.client.MatHax;
 import mathax.client.events.entity.player.InteractEvent;
 import mathax.client.events.entity.player.ItemUseCrosshairTargetEvent;
 import mathax.client.events.game.GameLeftEvent;
@@ -11,7 +12,6 @@ import mathax.client.mixininterface.IMinecraftClient;
 import mathax.client.systems.modules.Modules;
 import mathax.client.systems.modules.render.UnfocusedCPU;
 import mathax.client.utils.Utils;
-import mathax.client.MatHax;
 import mathax.client.gui.WidgetScreen;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.Mouse;

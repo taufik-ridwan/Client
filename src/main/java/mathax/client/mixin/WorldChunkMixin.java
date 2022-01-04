@@ -1,7 +1,7 @@
 package mathax.client.mixin;
 
-import mathax.client.events.world.BlockUpdateEvent;
 import mathax.client.MatHax;
+import mathax.client.events.world.BlockUpdateEvent;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;

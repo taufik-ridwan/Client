@@ -1,9 +1,9 @@
 package mathax.client.mixin;
 
+import mathax.client.MatHax;
 import mathax.client.events.game.ChangePerspectiveEvent;
 import mathax.client.systems.modules.Modules;
 import mathax.client.utils.misc.input.KeyBinds;
-import mathax.client.MatHax;
 import mathax.client.systems.modules.render.Freecam;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.GameOptions;

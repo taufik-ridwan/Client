@@ -1,11 +1,11 @@
 package mathax.client.gui.widgets.input;
 
+import mathax.client.MatHax;
 import mathax.client.events.entity.player.InteractBlockEvent;
 import mathax.client.events.entity.player.StartBreakingBlockEvent;
-import mathax.client.MatHax;
-import mathax.client.eventbus.EventHandler;
 import mathax.client.gui.widgets.containers.WHorizontalList;
 import mathax.client.gui.widgets.pressable.WButton;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.systems.modules.Modules;
 import mathax.client.systems.modules.render.marker.Marker;
 import net.minecraft.client.gui.screen.Screen;

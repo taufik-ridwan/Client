@@ -5,6 +5,8 @@ import mathax.client.systems.accounts.AccountType;
 import mathax.client.systems.accounts.MicrosoftLogin;
 import net.minecraft.client.util.Session;
 
+import java.util.Optional;
+
 public class MicrosoftAccount extends Account<MicrosoftAccount> {
     public MicrosoftAccount(String refreshToken) {
         super(AccountType.Microsoft, refreshToken);

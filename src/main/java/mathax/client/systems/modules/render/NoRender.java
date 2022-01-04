@@ -448,6 +448,8 @@ public class NoRender extends Module {
         return isActive() && noBarrierInvisible.get();
     }
 
+    // Entity
+
     public boolean noEntity(Entity entity) {
         return isActive() && entities.get().getBoolean(entity.getType());
     }

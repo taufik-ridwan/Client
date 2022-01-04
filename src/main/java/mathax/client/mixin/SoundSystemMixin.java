@@ -1,7 +1,7 @@
 package mathax.client.mixin;
 
-import mathax.client.events.world.PlaySoundEvent;
 import mathax.client.MatHax;
+import mathax.client.events.world.PlaySoundEvent;
 import net.minecraft.client.sound.SoundInstance;
 import net.minecraft.client.sound.SoundSystem;
 import org.spongepowered.asm.mixin.Mixin;

@@ -1,9 +1,9 @@
 package mathax.client.mixin;
 
+import mathax.client.MatHax;
 import mathax.client.events.entity.DropItemsEvent;
 import mathax.client.events.entity.player.ClipAtLedgeEvent;
 import mathax.client.systems.modules.Modules;
-import mathax.client.MatHax;
 import mathax.client.systems.modules.movement.Anchor;
 import mathax.client.systems.modules.player.SpeedMine;
 import net.minecraft.block.BlockState;

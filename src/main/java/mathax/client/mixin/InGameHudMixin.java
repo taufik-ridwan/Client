@@ -1,10 +1,10 @@
 package mathax.client.mixin;
 
 import com.mojang.blaze3d.systems.RenderSystem;
+import mathax.client.MatHax;
 import mathax.client.events.render.Render2DEvent;
 import mathax.client.systems.modules.Modules;
 import mathax.client.utils.Utils;
-import mathax.client.MatHax;
 import mathax.client.systems.modules.render.Freecam;
 import mathax.client.systems.modules.render.MountHUD;
 import mathax.client.systems.modules.render.NoRender;

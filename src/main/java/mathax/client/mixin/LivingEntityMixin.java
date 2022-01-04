@@ -1,12 +1,11 @@
 package mathax.client.mixin;
 
+import mathax.client.MatHax;
 import mathax.client.events.entity.DamageEvent;
-import mathax.client.events.entity.TookDamageEvent;
 import mathax.client.events.entity.player.CanWalkOnFluidEvent;
 import mathax.client.events.entity.player.TeleportParticleEvent;
 import mathax.client.systems.modules.Modules;
 import mathax.client.utils.Utils;
-import mathax.client.MatHax;
 import mathax.client.systems.modules.movement.AntiLevitation;
 import mathax.client.systems.modules.crash.OffhandCrash;
 import mathax.client.systems.modules.movement.Moses;

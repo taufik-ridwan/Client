@@ -1,8 +1,8 @@
 package mathax.client.mixin;
 
+import mathax.client.MatHax;
 import mathax.client.events.world.AmbientOcclusionEvent;
 import mathax.client.events.world.CollisionShapeEvent;
-import mathax.client.MatHax;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;

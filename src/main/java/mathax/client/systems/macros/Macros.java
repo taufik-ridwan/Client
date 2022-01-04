@@ -1,7 +1,7 @@
 package mathax.client.systems.macros;
 
-import mathax.client.utils.misc.input.KeyAction;
 import mathax.client.MatHax;
+import mathax.client.utils.misc.input.KeyAction;
 import mathax.client.events.mathax.KeyEvent;
 import mathax.client.events.mathax.MouseButtonEvent;
 import mathax.client.systems.System;

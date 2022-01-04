@@ -40,12 +40,7 @@ public abstract class LivingEntityMixin extends Entity {
 
     @Inject(method = "damage", at = @At("HEAD"))
     private void onDamageHead(DamageSource source, float amount, CallbackInfoReturnable<Boolean> info) {
-        if (Utils.canUpdate()) MatHax.EVENT_BUS.post(DamageEvent.get((LivingEntity) (Object) this, source));
-    }
-
-    @Inject(method = "damage", at = @At("TAIL"))
-    private void onDamageTail(DamageSource source, float amount, CallbackInfoReturnable<Boolean> info) {
-        if (Utils.canUpdate()) MatHax.EVENT_BUS.post(TookDamageEvent.get((LivingEntity) (Object) this, source));
+        if (Utils.canUpdate() && world.isClient) MatHax.EVENT_BUS.post(DamageEvent.get((LivingEntity) (Object) this, source));
     }
 
     @Inject(method = "canWalkOnFluid", at = @At("HEAD"), cancellable = true)

@@ -1,12 +1,12 @@
 package mathax.client.systems.modules.world;
 
 import it.unimi.dsi.fastutil.objects.Object2BooleanMap;
-import mathax.client.eventbus.EventHandler;
 import mathax.client.events.world.TickEvent;
-import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.player.Rotations;
+import mathax.client.eventbus.EventHandler;
+import mathax.client.settings.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.passive.AnimalEntity;
@@ -88,11 +88,7 @@ public class AutoBreed extends Module {
             if (!(entity instanceof AnimalEntity)) continue;
             else animal = (AnimalEntity) entity;
 
-            if (!entities.get().getBoolean(animal.getType())
-                    || (animal.isBaby() && !ignoreBabies.get())
-                    || animalsFed.contains(animal)
-                    || mc.player.distanceTo(animal) > range.get()
-                    || !animal.isBreedingItem(hand.get() == Hand.Mainhand ? mc.player.getMainHandStack() : mc.player.getOffHandStack())) continue;
+            if (!entities.get().getBoolean(animal.getType()) || (animal.isBaby() && !ignoreBabies.get()) || animalsFed.contains(animal) || mc.player.distanceTo(animal) > range.get() || !animal.isBreedingItem(hand.get() == Hand.Mainhand ? mc.player.getMainHandStack() : mc.player.getOffHandStack())) continue;
 
             Rotations.rotate(Rotations.getYaw(entity), Rotations.getPitch(entity), -100, () -> {
                 mc.interactionManager.interactEntity(mc.player, animal, hand.get().hand);
@@ -105,13 +101,20 @@ public class AutoBreed extends Module {
     }
 
     public enum Hand {
-        Mainhand(net.minecraft.util.Hand.MAIN_HAND),
-        Offhand(net.minecraft.util.Hand.OFF_HAND);
+        Mainhand("Mainhand", net.minecraft.util.Hand.MAIN_HAND),
+        Offhand("Offhand", net.minecraft.util.Hand.OFF_HAND);
 
-        net.minecraft.util.Hand hand;
+        private final String title;
+        private final net.minecraft.util.Hand hand;
 
-        Hand(net.minecraft.util.Hand hand) {
+        Hand(String title, net.minecraft.util.Hand hand) {
+            this.title = title;
             this.hand = hand;
+        }
+
+        @Override
+        public String toString() {
+            return title;
         }
     }
 }

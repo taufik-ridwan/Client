@@ -4,15 +4,14 @@ import mathax.client.MatHax;
 import mathax.client.gui.renderer.GuiDebugRenderer;
 import mathax.client.gui.renderer.GuiRenderer;
 import mathax.client.gui.tabs.TabScreen;
-import mathax.client.gui.tabs.builtin.HudTab;
 import mathax.client.gui.utils.Cell;
 import mathax.client.gui.widgets.WRoot;
 import mathax.client.gui.widgets.WWidget;
 import mathax.client.gui.widgets.containers.WContainer;
 import mathax.client.gui.widgets.input.WTextBox;
+import mathax.client.utils.Utils;
 import mathax.client.utils.misc.CursorStyle;
 import mathax.client.utils.misc.input.Input;
-import mathax.client.utils.Utils;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.math.MatrixStack;
@@ -24,7 +23,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Consumer;
 
-import static mathax.client.utils.Utils.*;
 import static mathax.client.MatHax.mc;
 import static org.lwjgl.glfw.GLFW.*;
 
@@ -65,7 +63,7 @@ public abstract class WidgetScreen extends Screen {
         if (parent != null) {
             animProgress = 1;
 
-            if (this instanceof TabScreen && parent instanceof TabScreen && !(this instanceof HudTab.HudScreen)) parent = ((TabScreen) parent).parent;
+            if (this instanceof TabScreen && parent instanceof TabScreen) parent = ((TabScreen) parent).parent;
         }
     }
 
@@ -368,8 +366,8 @@ public abstract class WidgetScreen extends Screen {
 
         @Override
         protected void onCalculateSize() {
-            width = getWindowWidth();
-            height = getWindowHeight();
+            width = Utils.getWindowWidth();
+            height = Utils.getWindowHeight();
         }
 
         @Override

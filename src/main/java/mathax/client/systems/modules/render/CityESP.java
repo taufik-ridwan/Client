@@ -1,20 +1,20 @@
 package mathax.client.systems.modules.render;
 
 import mathax.client.MatHax;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.render.Render3DEvent;
 import mathax.client.events.world.TickEvent;
+import mathax.client.renderer.ShapeMode;
 import mathax.client.settings.ColorSetting;
 import mathax.client.settings.EnumSetting;
 import mathax.client.settings.Setting;
 import mathax.client.settings.SettingGroup;
-import mathax.client.renderer.ShapeMode;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.entity.EntityUtils;
 import mathax.client.utils.entity.SortPriority;
 import mathax.client.utils.entity.TargetUtils;
 import mathax.client.utils.render.color.SettingColor;
-import mathax.client.eventbus.EventHandler;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
 import net.minecraft.util.math.BlockPos;

@@ -1,12 +1,12 @@
 package mathax.client.systems.modules.misc;
 
-import mathax.client.events.world.TickEvent;
-import mathax.client.systems.modules.Module;
-import mathax.client.systems.modules.world.Timer;
-import mathax.client.systems.modules.Categories;
-import mathax.client.systems.modules.Modules;
-import mathax.client.utils.world.TickRate;
 import mathax.client.eventbus.EventHandler;
+import mathax.client.events.world.TickEvent;
+import mathax.client.systems.modules.Categories;
+import mathax.client.systems.modules.Module;
+import mathax.client.systems.modules.Modules;
+import mathax.client.systems.modules.world.Timer;
+import mathax.client.utils.world.TickRate;
 import net.minecraft.item.Items;
 
 public class TPSSync extends Module {

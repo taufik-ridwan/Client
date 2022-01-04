@@ -1,8 +1,8 @@
 package mathax.client.utils.tooltip;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import mathax.client.systems.modules.render.BetterTooltips;
 import mathax.client.systems.modules.Modules;
+import mathax.client.systems.modules.render.BetterTooltips;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.gui.tooltip.TooltipComponent;

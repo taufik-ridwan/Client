@@ -1,16 +1,16 @@
 package mathax.client.gui.renderer;
 
-import mathax.client.gui.GuiTheme;
 import mathax.client.gui.renderer.operations.TextOperation;
 import mathax.client.gui.renderer.packer.GuiTexture;
 import mathax.client.gui.renderer.packer.TexturePacker;
+import mathax.client.utils.misc.Pool;
+import mathax.client.utils.render.ByteTexture;
+import mathax.client.utils.render.color.Color;
+import mathax.client.gui.GuiTheme;
 import mathax.client.gui.widgets.WWidget;
 import mathax.client.renderer.GL;
 import mathax.client.renderer.Renderer2D;
 import mathax.client.renderer.Texture;
-import mathax.client.utils.misc.Pool;
-import mathax.client.utils.render.ByteTexture;
-import mathax.client.utils.render.color.Color;
 import mathax.client.utils.Utils;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;

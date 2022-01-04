@@ -1,8 +1,8 @@
 package mathax.client.systems.commands.commands;
 
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
-import mathax.client.systems.commands.arguments.ModuleArgumentType;
 import mathax.client.systems.commands.Command;
+import mathax.client.systems.commands.arguments.ModuleArgumentType;
 import mathax.client.systems.modules.Module;
 import net.minecraft.command.CommandSource;
 

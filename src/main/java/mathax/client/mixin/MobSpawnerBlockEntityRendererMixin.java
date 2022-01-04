@@ -1,7 +1,7 @@
 package mathax.client.mixin;
 
-import mathax.client.systems.modules.render.NoRender;
 import mathax.client.systems.modules.Modules;
+import mathax.client.systems.modules.render.NoRender;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

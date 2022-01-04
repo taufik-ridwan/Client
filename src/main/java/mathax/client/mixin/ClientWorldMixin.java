@@ -1,11 +1,11 @@
 package mathax.client.mixin;
 
-import mathax.client.MatHax;
 import mathax.client.events.entity.EntityAddedEvent;
 import mathax.client.events.entity.EntityRemovedEvent;
+import mathax.client.systems.modules.Modules;
+import mathax.client.MatHax;
 import mathax.client.systems.modules.render.NoRender;
 import mathax.client.systems.modules.world.Ambience;
-import mathax.client.systems.modules.Modules;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.render.DimensionEffects;
 import net.minecraft.client.world.ClientWorld;

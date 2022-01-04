@@ -1,5 +1,6 @@
 package mathax.client.systems.modules.movement;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.entity.LivingEntityMoveEvent;
 import mathax.client.mixininterface.IVec3d;
 import mathax.client.settings.BoolSetting;
@@ -9,7 +10,6 @@ import mathax.client.settings.SettingGroup;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.player.PlayerUtils;
-import mathax.client.eventbus.EventHandler;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.Items;
 import net.minecraft.util.math.Vec3d;

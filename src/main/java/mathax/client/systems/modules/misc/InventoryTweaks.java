@@ -1,14 +1,16 @@
 package mathax.client.systems.modules.misc;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.entity.DropItemsEvent;
 import mathax.client.events.game.OpenScreenEvent;
 import mathax.client.events.mathax.KeyEvent;
 import mathax.client.events.mathax.MouseButtonEvent;
 import mathax.client.events.packets.PacketEvent;
 import mathax.client.events.world.TickEvent;
-import mathax.client.eventbus.EventHandler;
 import mathax.client.mixin.CloseHandledScreenC2SPacketAccessor;
 import mathax.client.mixin.HandledScreenAccessor;
+import mathax.client.settings.*;
+import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.Utils;
 import mathax.client.utils.misc.KeyBind;
@@ -16,8 +18,6 @@ import mathax.client.utils.misc.input.KeyAction;
 import mathax.client.utils.network.MatHaxExecutor;
 import mathax.client.utils.player.InvUtils;
 import mathax.client.utils.player.InventorySorter;
-import mathax.client.systems.modules.Categories;
-import mathax.client.settings.*;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;

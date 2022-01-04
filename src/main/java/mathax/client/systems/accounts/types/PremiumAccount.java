@@ -6,16 +6,14 @@ import com.mojang.authlib.exceptions.AuthenticationUnavailableException;
 import com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService;
 import com.mojang.authlib.yggdrasil.YggdrasilUserAuthentication;
 import mathax.client.MatHax;
-import mathax.client.systems.accounts.AccountType;
 import mathax.client.mixin.MinecraftClientAccessor;
 import mathax.client.systems.accounts.Account;
+import mathax.client.systems.accounts.AccountType;
 import mathax.client.utils.misc.NbtException;
 import net.minecraft.client.util.Session;
 import net.minecraft.nbt.NbtCompound;
 
 import java.util.Optional;
-
-import static mathax.client.MatHax.mc;
 
 public class PremiumAccount extends Account<PremiumAccount> {
     private String password;
@@ -65,7 +63,7 @@ public class PremiumAccount extends Account<PremiumAccount> {
     }
 
     public YggdrasilUserAuthentication getAuth() {
-        YggdrasilUserAuthentication auth = (YggdrasilUserAuthentication) new YggdrasilAuthenticationService(((MinecraftClientAccessor) mc).getProxy(), "").createUserAuthentication(Agent.MINECRAFT);
+        YggdrasilUserAuthentication auth = (YggdrasilUserAuthentication) new YggdrasilAuthenticationService(((MinecraftClientAccessor) MatHax.mc).getProxy(), "").createUserAuthentication(Agent.MINECRAFT);
 
         auth.setUsername(name);
         auth.setPassword(password);

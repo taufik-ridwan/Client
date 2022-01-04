@@ -1,7 +1,7 @@
 package mathax.client.mixin;
 
-import mathax.client.systems.modules.render.NoRender;
 import mathax.client.systems.modules.Modules;
+import mathax.client.systems.modules.render.NoRender;
 import net.minecraft.block.entity.SignBlockEntity;
 import net.minecraft.client.render.block.entity.SignBlockEntityRenderer;
 import net.minecraft.text.OrderedText;

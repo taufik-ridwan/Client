@@ -1,11 +1,11 @@
 package mathax.client.systems.modules.combat;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.entity.player.AttackEntityEvent;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.player.InvUtils;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.settings.*;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityGroup;
 import net.minecraft.item.AxeItem;

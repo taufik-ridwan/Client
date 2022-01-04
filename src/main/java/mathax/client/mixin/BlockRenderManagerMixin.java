@@ -1,8 +1,8 @@
 package mathax.client.mixin;
 
+import mathax.client.systems.modules.Modules;
 import mathax.client.systems.modules.render.BreakIndicators;
 import mathax.client.systems.modules.render.NoRender;
-import mathax.client.systems.modules.Modules;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.block.BlockRenderManager;

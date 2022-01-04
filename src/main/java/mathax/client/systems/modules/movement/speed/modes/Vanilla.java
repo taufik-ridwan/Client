@@ -3,10 +3,10 @@ package mathax.client.systems.modules.movement.speed.modes;
 import mathax.client.events.entity.player.PlayerMoveEvent;
 import mathax.client.mixininterface.IVec3d;
 import mathax.client.systems.modules.Modules;
+import mathax.client.utils.player.PlayerUtils;
 import mathax.client.systems.modules.movement.Anchor;
 import mathax.client.systems.modules.movement.speed.SpeedMode;
 import mathax.client.systems.modules.movement.speed.SpeedModes;
-import mathax.client.utils.player.PlayerUtils;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.util.math.Vec3d;
 

@@ -1,13 +1,13 @@
 package mathax.client.systems.modules.movement;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.entity.player.InteractItemEvent;
 import mathax.client.events.world.TickEvent;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.Utils;
 import mathax.client.utils.misc.KeyBind;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.settings.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.projectile.FireworkRocketEntity;
 import net.minecraft.item.FireworkRocketItem;

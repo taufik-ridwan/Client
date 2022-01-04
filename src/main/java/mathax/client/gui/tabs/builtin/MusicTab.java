@@ -1,14 +1,14 @@
 package mathax.client.gui.tabs.builtin;
 
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
-import mathax.client.gui.GuiTheme;
-import mathax.client.gui.tabs.Tab;
-import mathax.client.gui.tabs.TabScreen;
-import mathax.client.gui.tabs.WindowTabScreen;
 import mathax.client.gui.widgets.containers.WTable;
 import mathax.client.gui.widgets.music.WCurrentTracksView;
 import mathax.client.gui.widgets.music.WMusicWidget;
 import mathax.client.gui.widgets.music.WSearchBar;
+import mathax.client.gui.GuiTheme;
+import mathax.client.gui.tabs.Tab;
+import mathax.client.gui.tabs.TabScreen;
+import mathax.client.gui.tabs.WindowTabScreen;
 import net.minecraft.client.gui.screen.Screen;
 
 import java.util.ArrayList;

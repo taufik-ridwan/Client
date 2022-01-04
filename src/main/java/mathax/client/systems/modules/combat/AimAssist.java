@@ -1,8 +1,10 @@
 package mathax.client.systems.modules.combat;
 
 import it.unimi.dsi.fastutil.objects.Object2BooleanMap;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.render.Render3DEvent;
 import mathax.client.events.world.TickEvent;
+import mathax.client.settings.*;
 import mathax.client.systems.friends.Friends;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
@@ -13,8 +15,6 @@ import mathax.client.utils.entity.Target;
 import mathax.client.utils.entity.TargetUtils;
 import mathax.client.utils.misc.Vec3;
 import mathax.client.utils.player.PlayerUtils;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.settings.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.PlayerEntity;

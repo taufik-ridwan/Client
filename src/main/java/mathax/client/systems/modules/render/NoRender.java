@@ -1,12 +1,12 @@
 package mathax.client.systems.modules.render;
 
 import it.unimi.dsi.fastutil.objects.Object2BooleanMap;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.world.ChunkOcclusionEvent;
 import mathax.client.events.world.ParticleEvent;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.settings.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Items;
@@ -447,6 +447,8 @@ public class NoRender extends Module {
     public boolean noBarrierInvisible() {
         return isActive() && noBarrierInvisible.get();
     }
+
+    // Entity
 
     public boolean noEntity(Entity entity) {
         return isActive() && entities.get().getBoolean(entity.getType());

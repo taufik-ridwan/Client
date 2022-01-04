@@ -1,13 +1,13 @@
 package mathax.client.gui.renderer;
 
+import mathax.client.gui.widgets.containers.WContainer;
+import mathax.client.utils.render.color.Color;
 import mathax.client.gui.utils.Cell;
 import mathax.client.gui.widgets.WWidget;
-import mathax.client.gui.widgets.containers.WContainer;
 import mathax.client.renderer.DrawMode;
 import mathax.client.renderer.Mesh;
 import mathax.client.renderer.ShaderMesh;
 import mathax.client.renderer.Shaders;
-import mathax.client.utils.render.color.Color;
 import net.minecraft.client.util.math.MatrixStack;
 
 public class GuiDebugRenderer {

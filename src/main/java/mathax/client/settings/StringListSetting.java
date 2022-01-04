@@ -1,11 +1,11 @@
 package mathax.client.settings;
 
-import mathax.client.gui.GuiTheme;
 import mathax.client.gui.widgets.containers.WTable;
 import mathax.client.gui.widgets.input.WTextBox;
 import mathax.client.gui.widgets.pressable.WButton;
 import mathax.client.gui.widgets.pressable.WMinus;
 import mathax.client.gui.widgets.pressable.WPlus;
+import mathax.client.gui.GuiTheme;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
 import net.minecraft.nbt.NbtList;

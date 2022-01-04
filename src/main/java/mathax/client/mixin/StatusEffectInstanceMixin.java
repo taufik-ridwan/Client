@@ -1,8 +1,8 @@
 package mathax.client.mixin;
 
-import mathax.client.systems.modules.player.PotionSaver;
 import mathax.client.systems.modules.Modules;
 import mathax.client.utils.Utils;
+import mathax.client.systems.modules.player.PotionSaver;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;

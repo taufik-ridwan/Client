@@ -1,5 +1,6 @@
 package mathax.client.systems.modules.world;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.world.TickEvent;
 import mathax.client.settings.BoolSetting;
 import mathax.client.settings.DoubleSetting;
@@ -10,7 +11,6 @@ import mathax.client.systems.modules.Module;
 import mathax.client.utils.player.FindItemResult;
 import mathax.client.utils.player.InvUtils;
 import mathax.client.utils.player.Rotations;
-import mathax.client.eventbus.EventHandler;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.item.Items;

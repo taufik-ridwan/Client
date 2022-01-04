@@ -74,7 +74,7 @@ public class ServerPinger implements IServerFinderDoneListener, IServerFinderDis
     }
 
     private boolean isOldSearch() {
-        return ServerFinderScreen.instance == null || ServerFinderScreen.instance.getState() == ServerFinderScreen.ServerFinderState.CANCELLED || ServerFinderScreen.getSearchNumber() != searchNumber;
+        return ServerFinderScreen.instance == null || ServerFinderScreen.instance.getState() == ServerFinderScreen.ServerFinderState.Cancelled || ServerFinderScreen.getSearchNumber() != searchNumber;
     }
 
     private void runPortIncrement(String ip) {

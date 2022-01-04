@@ -1,7 +1,7 @@
 package mathax.client.mixin;
 
-import mathax.client.systems.modules.render.BetterTooltips;
 import mathax.client.systems.modules.Modules;
+import mathax.client.systems.modules.render.BetterTooltips;
 import net.minecraft.block.ShulkerBoxBlock;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;

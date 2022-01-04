@@ -1,12 +1,12 @@
 package mathax.client.renderer.text;
 
-import mathax.client.systems.config.Config;
 import mathax.client.utils.render.color.Color;
+import mathax.client.systems.config.Config;
 import net.minecraft.client.util.math.MatrixStack;
 
 public interface TextRenderer {
     static TextRenderer get() {
-        return Config.get().customFont ? Fonts.CUSTOM_FONT : VanillaTextRenderer.INSTANCE;
+        return Config.get().customFont.get() ? Fonts.CUSTOM_FONT : VanillaTextRenderer.INSTANCE;
     }
 
     void setAlpha(double a);

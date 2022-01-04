@@ -1,7 +1,7 @@
 package mathax.client.mixin;
 
-import mathax.client.systems.modules.render.Freecam;
 import mathax.client.systems.modules.Modules;
+import mathax.client.systems.modules.render.Freecam;
 import net.minecraft.client.render.Camera;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;

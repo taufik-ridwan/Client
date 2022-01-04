@@ -1,19 +1,22 @@
 package mathax.client.systems.modules.combat;
 
 import mathax.client.MatHax;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.render.Render3DEvent;
 import mathax.client.events.world.TickEvent;
 import mathax.client.renderer.ShapeMode;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.entity.EntityUtils;
 import mathax.client.utils.entity.SortPriority;
 import mathax.client.utils.entity.TargetUtils;
-import mathax.client.utils.player.*;
+import mathax.client.utils.player.FindItemResult;
+import mathax.client.utils.player.InvUtils;
+import mathax.client.utils.player.PlayerUtils;
+import mathax.client.utils.player.Rotations;
 import mathax.client.utils.render.color.SettingColor;
 import mathax.client.utils.world.BlockUtils;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.settings.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
 import net.minecraft.network.packet.c2s.play.PlayerActionC2SPacket;

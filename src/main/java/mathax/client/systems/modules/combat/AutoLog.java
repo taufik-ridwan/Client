@@ -136,13 +136,13 @@ public class AutoLog extends Module {
         for (Entity entity : mc.world.getEntities()) {
             if (entity instanceof PlayerEntity && entity.getUuid() != mc.player.getUuid()) {
                 if (onlyTrusted.get() && entity != mc.player && !Friends.get().isFriend((PlayerEntity) entity)) {
-                        mc.player.networkHandler.onDisconnect(new DisconnectS2CPacket(new LiteralText("[AutoLog] A non-trusted player appeared in your render distance.")));
-                        if (toggleOff.get()) toggle();
-                        break;
+                    mc.player.networkHandler.onDisconnect(new DisconnectS2CPacket(new LiteralText("[AutoLog] A non-trusted player appeared in your render distance.")));
+                    if (toggleOff.get()) toggle();
+                    break;
                 }
 
                 if (mc.player.distanceTo(entity) < 8 && instantDeath.get() && DamageUtils.getSwordDamage((PlayerEntity) entity, true)
-                        > mc.player.getHealth() + mc.player.getAbsorptionAmount()) {
+                    > mc.player.getHealth() + mc.player.getAbsorptionAmount()) {
                     mc.player.networkHandler.onDisconnect(new DisconnectS2CPacket(new LiteralText("[AutoLog] Anti-32k measures.")));
                     if (toggleOff.get()) toggle();
                     break;
@@ -163,7 +163,7 @@ public class AutoLog extends Module {
             else if (Utils.canUpdate() && !mc.player.isDead() && mc.player.getHealth() >= health.get()) {
                 toggle();
                 disableHealthListener();
-           }
+            }
         }
     }
 

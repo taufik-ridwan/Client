@@ -1,8 +1,8 @@
 package mathax.client.mixin;
 
 import mathax.client.systems.modules.Modules;
-import mathax.client.systems.modules.misc.AutoReconnect;
 import mathax.client.utils.misc.LastServerInfo;
+import mathax.client.systems.modules.misc.AutoReconnect;
 import net.minecraft.client.gui.screen.DisconnectedScreen;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.ButtonWidget;

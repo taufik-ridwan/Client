@@ -1,9 +1,9 @@
 package mathax.client.gui.widgets.music;
 
+import mathax.client.gui.widgets.containers.WTable;
 import mathax.client.gui.GuiTheme;
 import mathax.client.gui.screens.music.PlaylistViewScreen;
 import mathax.client.gui.tabs.builtin.MusicTab;
-import mathax.client.gui.widgets.containers.WTable;
 import mathax.client.gui.widgets.input.WTextBox;
 import mathax.client.utils.music.SearchUtils;
 

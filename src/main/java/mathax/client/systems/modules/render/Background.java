@@ -1,17 +1,17 @@
 package mathax.client.systems.modules.render;
 
 import mathax.client.MatHax;
+import mathax.client.eventbus.listeners.ConsumerListener;
 import mathax.client.events.game.WindowResizedEvent;
 import mathax.client.events.render.RenderAfterWorldEvent;
 import mathax.client.gui.WidgetScreen;
-import mathax.client.settings.*;
-import mathax.client.systems.modules.Categories;
-import mathax.client.systems.modules.Module;
-import mathax.client.eventbus.listeners.ConsumerListener;
 import mathax.client.renderer.Framebuffer;
 import mathax.client.renderer.GL;
 import mathax.client.renderer.PostProcessRenderer;
 import mathax.client.renderer.Shader;
+import mathax.client.settings.*;
+import mathax.client.systems.modules.Categories;
+import mathax.client.systems.modules.Module;
 import net.minecraft.client.gui.screen.ChatScreen;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;

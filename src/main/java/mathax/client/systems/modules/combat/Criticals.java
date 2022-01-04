@@ -1,6 +1,7 @@
 package mathax.client.systems.modules.combat;
 
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.packets.PacketEvent;
 import mathax.client.events.world.TickEvent;
 import mathax.client.mixininterface.IPlayerInteractEntityC2SPacket;
@@ -13,7 +14,6 @@ import mathax.client.settings.SettingGroup;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.systems.modules.Modules;
-import mathax.client.eventbus.EventHandler;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.Items;

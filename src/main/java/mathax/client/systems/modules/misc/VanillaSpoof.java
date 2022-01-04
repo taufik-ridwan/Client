@@ -2,11 +2,11 @@ package mathax.client.systems.modules.misc;
 
 import io.netty.buffer.Unpooled;
 import mathax.client.MatHax;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.packets.PacketEvent;
 import mathax.client.mixin.ICustomPayloadC2SPacketAccessor;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
-import mathax.client.eventbus.EventHandler;
 import net.minecraft.item.Items;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.packet.c2s.play.CustomPayloadC2SPacket;

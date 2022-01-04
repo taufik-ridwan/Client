@@ -1,7 +1,7 @@
 package mathax.client.systems.accounts.types;
 
-import mathax.client.systems.accounts.AccountType;
 import mathax.client.systems.accounts.Account;
+import mathax.client.systems.accounts.AccountType;
 import net.minecraft.client.util.Session;
 
 import java.util.Optional;

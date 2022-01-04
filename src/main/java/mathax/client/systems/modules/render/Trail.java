@@ -1,7 +1,7 @@
 package mathax.client.systems.modules.render;
 
-import mathax.client.events.world.TickEvent;
 import mathax.client.eventbus.EventHandler;
+import mathax.client.events.world.TickEvent;
 import mathax.client.settings.BoolSetting;
 import mathax.client.settings.ParticleTypeListSetting;
 import mathax.client.settings.Setting;

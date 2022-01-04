@@ -1,10 +1,10 @@
 package mathax.client.mixin;
 
 import mathax.client.mixininterface.IEntityRenderer;
-import mathax.client.systems.modules.render.Nametags;
-import mathax.client.systems.modules.render.NoRender;
 import mathax.client.systems.modules.Modules;
 import mathax.client.utils.Utils;
+import mathax.client.systems.modules.render.Nametags;
+import mathax.client.systems.modules.render.NoRender;
 import net.minecraft.client.render.Frustum;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRenderer;

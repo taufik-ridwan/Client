@@ -1,14 +1,14 @@
 
 package mathax.client.systems.modules.movement;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.entity.player.PlayerMoveEvent;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.systems.modules.Modules;
-import mathax.client.systems.modules.world.Timer;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.settings.*;
 import mathax.client.utils.player.PlayerUtils;
+import mathax.client.systems.modules.world.Timer;
 import net.minecraft.item.Items;
 import net.minecraft.network.packet.c2s.play.PlayerMoveC2SPacket;
 import net.minecraft.util.shape.VoxelShape;
@@ -75,7 +75,7 @@ public class Step extends Module {
     @EventHandler
     private void onPlayerMove(PlayerMoveEvent event) {
         if ((activeWhen.get() == ActiveWhen.Sneaking && !mc.player.isSneaking()) || (activeWhen.get() == ActiveWhen.Not_Sneaking && mc.player.isSneaking()) || (!mc.player.isOnGround() && onlyOnGround.get())) return;
-        if (mode.get() == Mode.NCP_PLUS) mc.player.stepHeight = height.get().floatValue();
+        if (mode.get() == Mode.NCP_Plus) mc.player.stepHeight = height.get().floatValue();
         if (mode.get() == Mode.Normal) {
             mc.player.stepHeight = height.get().floatValue();
             return;

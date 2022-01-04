@@ -1,5 +1,10 @@
 package mathax.client.gui.tabs.builtin;
 
+import mathax.client.gui.widgets.containers.WTable;
+import mathax.client.gui.widgets.input.WTextBox;
+import mathax.client.gui.widgets.pressable.WButton;
+import mathax.client.gui.widgets.pressable.WMinus;
+import mathax.client.gui.widgets.pressable.WPlus;
 import mathax.client.eventbus.EventHandler;
 import mathax.client.eventbus.EventPriority;
 import mathax.client.events.mathax.KeyEvent;
@@ -11,11 +16,6 @@ import mathax.client.gui.tabs.Tab;
 import mathax.client.gui.tabs.TabScreen;
 import mathax.client.gui.tabs.WindowTabScreen;
 import mathax.client.gui.widgets.WKeyBind;
-import mathax.client.gui.widgets.containers.WTable;
-import mathax.client.gui.widgets.input.WTextBox;
-import mathax.client.gui.widgets.pressable.WButton;
-import mathax.client.gui.widgets.pressable.WMinus;
-import mathax.client.gui.widgets.pressable.WPlus;
 import mathax.client.systems.macros.Macro;
 import mathax.client.systems.macros.Macros;
 import mathax.client.utils.misc.NbtUtils;

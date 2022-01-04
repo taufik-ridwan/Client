@@ -1,9 +1,9 @@
 package mathax.client.settings;
 
 import mathax.client.systems.modules.Module;
-import mathax.client.utils.Utils;
 import mathax.client.utils.misc.IGetter;
 import mathax.client.utils.misc.ISerializable;
+import mathax.client.utils.Utils;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;

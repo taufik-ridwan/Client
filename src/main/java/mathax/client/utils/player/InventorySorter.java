@@ -1,7 +1,7 @@
 package mathax.client.utils.player;
 
-import mathax.client.mixininterface.ISlot;
 import mathax.client.utils.render.PeekScreen;
+import mathax.client.mixininterface.ISlot;
 import net.minecraft.client.gui.screen.ingame.CreativeInventoryScreen;
 import net.minecraft.client.gui.screen.ingame.GenericContainerScreen;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;

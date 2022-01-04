@@ -1,10 +1,10 @@
 package mathax.client.systems.modules.movement;
 
 import com.google.common.collect.Streams;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.world.TickEvent;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
-import mathax.client.eventbus.EventHandler;
 import net.minecraft.item.Items;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.shape.VoxelShape;

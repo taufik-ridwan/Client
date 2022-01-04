@@ -1,9 +1,9 @@
 package mathax.client.gui.tabs;
 
-import mathax.client.gui.GuiTheme;
-import mathax.client.gui.WidgetScreen;
 import mathax.client.gui.utils.Cell;
 import mathax.client.gui.widgets.WWidget;
+import mathax.client.gui.GuiTheme;
+import mathax.client.gui.WidgetScreen;
 
 public abstract class TabScreen extends WidgetScreen {
     public final Tab tab;

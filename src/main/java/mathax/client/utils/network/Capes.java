@@ -1,8 +1,8 @@
 package mathax.client.utils.network;
 
 import mathax.client.MatHax;
-import mathax.client.eventbus.EventHandler;
 import mathax.client.events.world.TickEvent;
+import mathax.client.eventbus.EventHandler;
 import net.minecraft.client.texture.NativeImage;
 import net.minecraft.client.texture.NativeImageBackedTexture;
 import net.minecraft.entity.player.PlayerEntity;

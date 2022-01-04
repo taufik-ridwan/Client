@@ -1,6 +1,5 @@
 package mathax.client.gui.widgets;
 
-import mathax.client.gui.WidgetScreen;
 import mathax.client.gui.widgets.containers.WHorizontalList;
 import mathax.client.gui.widgets.pressable.WButton;
 import mathax.client.gui.widgets.pressable.WMinus;
@@ -8,6 +7,7 @@ import mathax.client.systems.accounts.Account;
 import mathax.client.systems.accounts.Accounts;
 import mathax.client.utils.network.MatHaxExecutor;
 import mathax.client.utils.render.color.Color;
+import mathax.client.gui.WidgetScreen;
 
 import static mathax.client.MatHax.mc;
 

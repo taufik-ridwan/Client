@@ -3,13 +3,13 @@ package mathax.client.gui;
 import it.unimi.dsi.fastutil.ints.IntArrayList;
 import it.unimi.dsi.fastutil.ints.IntList;
 import mathax.client.gui.renderer.GuiRenderer;
+import mathax.client.gui.screens.settings.*;
 import mathax.client.gui.utils.SettingsWidgetFactory;
+import mathax.client.gui.widgets.*;
+import mathax.client.gui.widgets.containers.*;
 import mathax.client.gui.widgets.input.*;
 import mathax.client.gui.widgets.pressable.WButton;
 import mathax.client.gui.widgets.pressable.WCheckbox;
-import mathax.client.gui.screens.settings.*;
-import mathax.client.gui.widgets.*;
-import mathax.client.gui.widgets.containers.*;
 import mathax.client.settings.*;
 import org.apache.commons.lang3.StringUtils;
 

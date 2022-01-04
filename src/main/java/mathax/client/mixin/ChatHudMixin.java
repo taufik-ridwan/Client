@@ -1,12 +1,12 @@
 package mathax.client.mixin;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import mathax.client.MatHax;
-import mathax.client.systems.modules.client.ClientSpoof;
-import mathax.client.utils.misc.text.StringCharacterVisitor;
 import mathax.client.events.game.ReceiveMessageEvent;
 import mathax.client.mixininterface.IChatHud;
 import mathax.client.systems.modules.Modules;
+import mathax.client.utils.misc.text.StringCharacterVisitor;
+import mathax.client.MatHax;
+import mathax.client.systems.modules.client.ClientSpoof;
 import mathax.client.systems.modules.chat.BetterChat;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.gui.hud.ChatHud;

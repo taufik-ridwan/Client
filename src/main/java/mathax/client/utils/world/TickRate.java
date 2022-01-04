@@ -1,8 +1,8 @@
 package mathax.client.utils.world;
 
-import mathax.client.MatHax;
 import mathax.client.events.game.GameJoinedEvent;
 import mathax.client.events.packets.PacketEvent;
+import mathax.client.MatHax;
 import mathax.client.utils.Utils;
 import mathax.client.eventbus.EventHandler;
 import net.minecraft.network.packet.s2c.play.WorldTimeUpdateS2CPacket;

@@ -1,8 +1,8 @@
 package mathax.client.renderer;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import mathax.client.utils.Utils;
 import mathax.client.utils.render.color.Color;
+import mathax.client.utils.Utils;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.math.Vec3d;
 import org.lwjgl.BufferUtils;

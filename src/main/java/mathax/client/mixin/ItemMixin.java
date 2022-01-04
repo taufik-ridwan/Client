@@ -1,7 +1,7 @@
 package mathax.client.mixin;
 
-import mathax.client.MatHax;
 import mathax.client.events.render.TooltipDataEvent;
+import mathax.client.MatHax;
 import net.minecraft.client.item.TooltipData;
 import net.minecraft.item.*;
 import org.spongepowered.asm.mixin.Mixin;

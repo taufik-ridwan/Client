@@ -1,7 +1,7 @@
 package mathax.client.utils.player;
 
-import mathax.client.MatHax;
 import mathax.client.events.entity.player.PlayerMoveEvent;
+import mathax.client.MatHax;
 import mathax.client.eventbus.EventHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

@@ -1,13 +1,13 @@
 package mathax.client.systems.modules.movement;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.entity.player.CobwebEntityCollisionEvent;
 import mathax.client.events.world.TickEvent;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.systems.modules.Modules;
 import mathax.client.systems.modules.world.Timer;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.settings.*;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.Items;
 

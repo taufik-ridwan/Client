@@ -1,14 +1,14 @@
 package mathax.client.gui.screens.clickgui;
 
-import mathax.client.gui.GuiTheme;
-import mathax.client.gui.tabs.TabScreen;
-import mathax.client.gui.tabs.Tabs;
-import mathax.client.gui.utils.Cell;
 import mathax.client.gui.widgets.containers.WContainer;
 import mathax.client.gui.widgets.containers.WSection;
 import mathax.client.gui.widgets.containers.WVerticalList;
 import mathax.client.gui.widgets.containers.WWindow;
 import mathax.client.gui.widgets.input.WTextBox;
+import mathax.client.gui.GuiTheme;
+import mathax.client.gui.tabs.TabScreen;
+import mathax.client.gui.tabs.Tabs;
+import mathax.client.gui.utils.Cell;
 import mathax.client.systems.modules.Module;
 import mathax.client.systems.modules.Category;
 import mathax.client.systems.modules.Modules;

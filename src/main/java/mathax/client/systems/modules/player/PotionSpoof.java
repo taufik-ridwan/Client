@@ -1,15 +1,15 @@
 package mathax.client.systems.modules.player;
 
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.world.TickEvent;
+import mathax.client.mixin.StatusEffectInstanceAccessor;
 import mathax.client.settings.Setting;
 import mathax.client.settings.SettingGroup;
 import mathax.client.settings.StatusEffectAmplifierMapSetting;
-import mathax.client.mixin.StatusEffectInstanceAccessor;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.Utils;
-import mathax.client.eventbus.EventHandler;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.Items;

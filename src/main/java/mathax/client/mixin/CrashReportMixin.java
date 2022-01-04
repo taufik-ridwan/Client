@@ -1,9 +1,9 @@
 package mathax.client.mixin;
 
-import mathax.client.utils.Version;
-import mathax.client.systems.modules.Module;
 import mathax.client.systems.modules.Category;
+import mathax.client.systems.modules.Module;
 import mathax.client.systems.modules.Modules;
+import mathax.client.utils.Version;
 import net.minecraft.util.crash.CrashReport;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -37,7 +37,7 @@ public class CrashReportMixin {
                     sb.append("[").append(category).append("]:").append("\n");
 
                     for (Module module : modules) {
-                        if (module instanceof Module && module.isActive()) sb.append(module.title).append(" (").append(module.name).append(")\n");
+                        if (module != null && module.isActive()) sb.append(module.title).append(" (").append(module.name).append(")\n");
                     }
                 }
             }

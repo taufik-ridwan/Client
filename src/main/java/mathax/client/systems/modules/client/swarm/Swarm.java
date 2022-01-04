@@ -1,5 +1,6 @@
 package mathax.client.systems.modules.client.swarm;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.game.GameJoinedEvent;
 import mathax.client.events.game.GameLeftEvent;
 import mathax.client.events.world.TickEvent;
@@ -8,10 +9,9 @@ import mathax.client.gui.widgets.WWidget;
 import mathax.client.gui.widgets.containers.WHorizontalList;
 import mathax.client.gui.widgets.containers.WVerticalList;
 import mathax.client.gui.widgets.pressable.WButton;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.settings.*;
 import net.minecraft.item.Items;
 import net.minecraft.util.Util;
 

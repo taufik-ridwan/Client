@@ -1,5 +1,6 @@
 package mathax.client.systems.modules.combat;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.world.TickEvent;
 import mathax.client.settings.BoolSetting;
 import mathax.client.settings.IntSetting;
@@ -8,7 +9,6 @@ import mathax.client.settings.SettingGroup;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.player.InvUtils;
-import mathax.client.eventbus.EventHandler;
 import net.minecraft.item.ArrowItem;
 import net.minecraft.item.Items;
 

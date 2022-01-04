@@ -1,9 +1,9 @@
 package mathax.client.mixin;
 
 import com.mojang.blaze3d.systems.RenderSystem;
+import mathax.client.systems.modules.Modules;
 import mathax.client.systems.modules.render.NoRender;
 import mathax.client.systems.modules.render.Xray;
-import mathax.client.systems.modules.Modules;
 import net.minecraft.client.render.BackgroundRenderer;
 import net.minecraft.client.render.Camera;
 import org.spongepowered.asm.mixin.Mixin;

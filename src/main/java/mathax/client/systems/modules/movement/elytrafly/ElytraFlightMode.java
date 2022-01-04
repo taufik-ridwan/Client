@@ -1,5 +1,6 @@
 package mathax.client.systems.modules.movement.elytrafly;
 
+import mathax.client.MatHax;
 import mathax.client.events.entity.player.PlayerMoveEvent;
 import mathax.client.events.packets.PacketEvent;
 import mathax.client.systems.modules.Modules;
@@ -10,8 +11,6 @@ import net.minecraft.item.Items;
 import net.minecraft.network.packet.c2s.play.ClientCommandC2SPacket;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.Vec3d;
-
-import static mathax.client.MatHax.mc;
 
 public class ElytraFlightMode {
     private final ElytraFlightModes type;
@@ -45,7 +44,7 @@ public class ElytraFlightMode {
         }
 
         if (elytraFly.replace.get()) {
-            ItemStack chestStack = mc.player.getInventory().getArmorStack(2);
+            ItemStack chestStack = MatHax.mc.player.getInventory().getArmorStack(2);
 
             if (chestStack.getItem() == Items.ELYTRA) {
                 if (chestStack.getMaxDamage() - chestStack.getDamage() <= elytraFly.replaceDurability.get()) {
@@ -72,10 +71,10 @@ public class ElytraFlightMode {
     public void autoTakeoff() {
         if (incrementJumpTimer) jumpTimer++;
 
-        boolean jumpPressed = mc.options.keyJump.isPressed();
+        boolean jumpPressed = MatHax.mc.options.keyJump.isPressed();
 
         if (elytraFly.autoTakeOff.get() && jumpPressed) {
-            if (!lastJumpPressed && !mc.player.isFallFlying()) {
+            if (!lastJumpPressed && !MatHax.mc.player.isFallFlying()) {
                 jumpTimer = 0;
                 incrementJumpTimer = true;
             }
@@ -83,10 +82,10 @@ public class ElytraFlightMode {
             if (jumpTimer >= 8) {
                 jumpTimer = 0;
                 incrementJumpTimer = false;
-                mc.player.setJumping(false);
-                mc.player.setSprinting(true);
-                mc.player.jump();
-                mc.getNetworkHandler().sendPacket(new ClientCommandC2SPacket(mc.player, ClientCommandC2SPacket.Mode.START_FALL_FLYING));
+                MatHax.mc.player.setJumping(false);
+                MatHax.mc.player.setSprinting(true);
+                MatHax.mc.player.jump();
+                MatHax.mc.getNetworkHandler().sendPacket(new ClientCommandC2SPacket(MatHax.mc.player, ClientCommandC2SPacket.Mode.START_FALL_FLYING));
             }
         }
 
@@ -94,10 +93,10 @@ public class ElytraFlightMode {
     }
 
     public void handleAutopilot() {
-        if (!mc.player.isFallFlying()) return;
+        if (!MatHax.mc.player.isFallFlying()) return;
 
-        if (elytraFly.autoPilot.get() && mc.player.getY() > elytraFly.autoPilotMinimumHeight.get()) {
-            mc.options.keyForward.setPressed(true);
+        if (elytraFly.autoPilot.get() && MatHax.mc.player.getY() > elytraFly.autoPilotMinimumHeight.get()) {
+            MatHax.mc.options.keyForward.setPressed(true);
             lastForwardPressed = true;
         }
 
@@ -109,13 +108,13 @@ public class ElytraFlightMode {
                 if (!itemResult.found()) return;
 
                 if (itemResult.isOffhand()) {
-                    mc.interactionManager.interactItem(mc.player, mc.world, Hand.OFF_HAND);
-                    mc.player.swingHand(Hand.OFF_HAND);
+                    MatHax.mc.interactionManager.interactItem(MatHax.mc.player, MatHax.mc.world, Hand.OFF_HAND);
+                    MatHax.mc.player.swingHand(Hand.OFF_HAND);
                 } else {
                     InvUtils.swap(itemResult.getSlot(), true);
 
-                    mc.interactionManager.interactItem(mc.player, mc.world, Hand.MAIN_HAND);
-                    mc.player.swingHand(Hand.MAIN_HAND);
+                    MatHax.mc.interactionManager.interactItem(MatHax.mc.player, MatHax.mc.world, Hand.MAIN_HAND);
+                    MatHax.mc.player.swingHand(Hand.MAIN_HAND);
 
                     InvUtils.swapBack();
                 }
@@ -129,21 +128,21 @@ public class ElytraFlightMode {
         boolean a = false;
         boolean b = false;
 
-        if (mc.options.keyForward.isPressed()) {
+        if (MatHax.mc.options.keyForward.isPressed()) {
             velX += forward.x * elytraFly.horizontalSpeed.get() * 10;
             velZ += forward.z * elytraFly.horizontalSpeed.get() * 10;
             a = true;
-        } else if (mc.options.keyBack.isPressed()) {
+        } else if (MatHax.mc.options.keyBack.isPressed()) {
             velX -= forward.x * elytraFly.horizontalSpeed.get() * 10;
             velZ -= forward.z * elytraFly.horizontalSpeed.get() * 10;
             a = true;
         }
 
-        if (mc.options.keyRight.isPressed()) {
+        if (MatHax.mc.options.keyRight.isPressed()) {
             velX += right.x * elytraFly.horizontalSpeed.get() * 10;
             velZ += right.z * elytraFly.horizontalSpeed.get() * 10;
             b = true;
-        } else if (mc.options.keyLeft.isPressed()) {
+        } else if (MatHax.mc.options.keyLeft.isPressed()) {
             velX -= right.x * elytraFly.horizontalSpeed.get() * 10;
             velZ -= right.z * elytraFly.horizontalSpeed.get() * 10;
             b = true;
@@ -157,8 +156,8 @@ public class ElytraFlightMode {
     }
 
     public void handleVerticalSpeed(PlayerMoveEvent event) {
-        if (mc.options.keyJump.isPressed()) velY += 0.5 * elytraFly.verticalSpeed.get();
-        else if (mc.options.keySneak.isPressed()) velY -= 0.5 * elytraFly.verticalSpeed.get();
+        if (MatHax.mc.options.keyJump.isPressed()) velY += 0.5 * elytraFly.verticalSpeed.get();
+        else if (MatHax.mc.options.keySneak.isPressed()) velY -= 0.5 * elytraFly.verticalSpeed.get();
     }
 
     public void handleFallMultiplier() {

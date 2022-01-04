@@ -1,9 +1,9 @@
 package mathax.client.gui.widgets.music;
 
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
+import mathax.client.gui.widgets.containers.WTable;
 import mathax.client.gui.GuiTheme;
 import mathax.client.gui.tabs.builtin.MusicTab;
-import mathax.client.gui.widgets.containers.WTable;
 
 import java.util.List;
 import java.util.function.Consumer;

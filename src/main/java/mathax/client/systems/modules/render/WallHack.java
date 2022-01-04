@@ -1,11 +1,11 @@
 package mathax.client.systems.modules.render;
 
-import mathax.client.events.world.ChunkOcclusionEvent;
 import mathax.client.eventbus.EventHandler;
-import mathax.client.systems.modules.Module;
-import mathax.client.systems.modules.Categories;
-import mathax.client.systems.modules.Modules;
+import mathax.client.events.world.ChunkOcclusionEvent;
 import mathax.client.settings.*;
+import mathax.client.systems.modules.Categories;
+import mathax.client.systems.modules.Module;
+import mathax.client.systems.modules.Modules;
 import net.minecraft.block.Block;
 import net.minecraft.item.Items;
 

@@ -1,5 +1,6 @@
 package mathax.client.systems.modules.render;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.packets.PacketEvent;
 import mathax.client.events.world.TickEvent;
 import mathax.client.settings.DoubleSetting;
@@ -7,7 +8,6 @@ import mathax.client.settings.Setting;
 import mathax.client.settings.SettingGroup;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
-import mathax.client.eventbus.EventHandler;
 import net.minecraft.item.Items;
 import net.minecraft.network.packet.s2c.play.WorldTimeUpdateS2CPacket;
 

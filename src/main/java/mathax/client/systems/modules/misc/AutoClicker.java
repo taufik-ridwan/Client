@@ -1,5 +1,6 @@
 package mathax.client.systems.modules.misc;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.world.TickEvent;
 import mathax.client.settings.EnumSetting;
 import mathax.client.settings.IntSetting;
@@ -8,7 +9,6 @@ import mathax.client.settings.SettingGroup;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.Utils;
-import mathax.client.eventbus.EventHandler;
 import net.minecraft.item.Items;
 
 public class AutoClicker extends Module {

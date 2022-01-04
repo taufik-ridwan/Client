@@ -1,12 +1,12 @@
 package mathax.client.gui.tabs.builtin;
 
+import mathax.client.gui.widgets.containers.WTable;
+import mathax.client.gui.widgets.input.WDropdown;
 import mathax.client.gui.GuiTheme;
 import mathax.client.gui.GuiThemes;
 import mathax.client.gui.tabs.Tab;
 import mathax.client.gui.tabs.TabScreen;
 import mathax.client.gui.tabs.WindowTabScreen;
-import mathax.client.gui.widgets.containers.WTable;
-import mathax.client.gui.widgets.input.WDropdown;
 import mathax.client.utils.misc.NbtUtils;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.nbt.NbtCompound;

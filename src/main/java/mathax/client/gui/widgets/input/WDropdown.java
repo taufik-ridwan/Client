@@ -1,10 +1,10 @@
 package mathax.client.gui.widgets.input;
 
+import mathax.client.gui.widgets.containers.WVerticalList;
+import mathax.client.gui.widgets.pressable.WPressable;
 import mathax.client.gui.renderer.GuiRenderer;
 import mathax.client.gui.utils.Cell;
 import mathax.client.gui.widgets.WRoot;
-import mathax.client.gui.widgets.containers.WVerticalList;
-import mathax.client.gui.widgets.pressable.WPressable;
 import mathax.client.utils.Utils;
 
 public abstract class WDropdown<T> extends WPressable {

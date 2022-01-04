@@ -2,8 +2,8 @@ package mathax.client.settings;
 
 import it.unimi.dsi.fastutil.objects.Object2BooleanMap;
 import it.unimi.dsi.fastutil.objects.Object2BooleanOpenHashMap;
-import mathax.client.utils.Utils;
 import mathax.client.utils.entity.EntityUtils;
+import mathax.client.utils.Utils;
 import net.minecraft.entity.EntityType;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;

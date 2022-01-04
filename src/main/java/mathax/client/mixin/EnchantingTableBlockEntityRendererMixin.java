@@ -1,7 +1,7 @@
 package mathax.client.mixin;
 
-import mathax.client.systems.modules.render.NoRender;
 import mathax.client.systems.modules.Modules;
+import mathax.client.systems.modules.render.NoRender;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.block.entity.EnchantingTableBlockEntityRenderer;
 import net.minecraft.client.render.entity.model.BookModel;

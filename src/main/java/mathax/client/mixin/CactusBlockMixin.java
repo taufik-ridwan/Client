@@ -1,7 +1,7 @@
 package mathax.client.mixin;
 
-import mathax.client.systems.modules.world.AntiCactus;
 import mathax.client.systems.modules.Modules;
+import mathax.client.systems.modules.world.AntiCactus;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CactusBlock;
 import net.minecraft.block.ShapeContext;

@@ -3,6 +3,7 @@ package mathax.client.systems.modules.render;
 import baritone.api.BaritoneAPI;
 import baritone.api.IBaritone;
 import baritone.api.pathing.goals.GoalGetToBlock;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.game.OpenScreenEvent;
 import mathax.client.gui.GuiTheme;
 import mathax.client.gui.WindowScreen;
@@ -19,16 +20,16 @@ import mathax.client.gui.widgets.input.WTextBox;
 import mathax.client.gui.widgets.pressable.WButton;
 import mathax.client.gui.widgets.pressable.WCheckbox;
 import mathax.client.gui.widgets.pressable.WMinus;
-import mathax.client.systems.waypoints.Waypoint;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
-import mathax.client.utils.Utils;
-import mathax.client.utils.player.PlayerUtils;
+import mathax.client.systems.waypoints.Waypoint;
 import mathax.client.systems.waypoints.Waypoints;
+import mathax.client.utils.Utils;
+import mathax.client.utils.misc.ChatUtils;
+import mathax.client.utils.player.PlayerUtils;
 import mathax.client.utils.render.color.Color;
 import mathax.client.utils.world.Dimension;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.settings.*;
 import net.minecraft.client.gui.screen.DeathScreen;
 import net.minecraft.item.Items;
 import net.minecraft.text.BaseText;
@@ -39,8 +40,6 @@ import net.minecraft.util.math.Vec3d;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ListIterator;
-
-import static mathax.client.utils.misc.ChatUtils.formatCoords;
 
 public class WaypointsModule extends Module {
     private static final Color GRAY = new Color(200, 200, 200);
@@ -152,7 +151,7 @@ public class WaypointsModule extends Module {
         String time = dateFormat.format(new Date());
         if (dpChat.get()) {
             BaseText text = new LiteralText("Died at ");
-            text.append(formatCoords(deathPos));
+            text.append(ChatUtils.formatCoords(deathPos));
             text.append(String.format(" on %s.", time));
             info(text);
         }

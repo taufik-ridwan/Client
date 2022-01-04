@@ -2,10 +2,10 @@ package mathax.client.mixin.canvas;
 
 import grondag.canvas.render.world.CanvasWorldRenderer;
 import mathax.client.systems.modules.Modules;
+import mathax.client.utils.render.EntityShaders;
 import mathax.client.systems.modules.render.BlockSelection;
 import mathax.client.systems.modules.render.Fullbright;
 import mathax.client.utils.Utils;
-import mathax.client.utils.render.EntityShaders;
 import net.minecraft.client.render.Camera;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.render.LightmapTextureManager;

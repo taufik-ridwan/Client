@@ -1,11 +1,11 @@
 package mathax.client.utils.render;
 
 import mathax.client.events.render.Render3DEvent;
+import mathax.client.systems.modules.Modules;
+import mathax.client.utils.render.color.Color;
 import mathax.client.renderer.Renderer3D;
 import mathax.client.renderer.ShapeMode;
-import mathax.client.systems.modules.Modules;
 import mathax.client.systems.modules.render.Chams;
-import mathax.client.utils.render.color.Color;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.entity.*;

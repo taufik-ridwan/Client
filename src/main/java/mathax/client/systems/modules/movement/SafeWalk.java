@@ -1,5 +1,6 @@
 package mathax.client.systems.modules.movement;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.entity.player.ClipAtLedgeEvent;
 import mathax.client.events.world.CollisionShapeEvent;
 import mathax.client.settings.BlockListSetting;
@@ -8,7 +9,6 @@ import mathax.client.settings.Setting;
 import mathax.client.settings.SettingGroup;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
-import mathax.client.eventbus.EventHandler;
 import net.minecraft.block.*;
 import net.minecraft.item.Items;
 import net.minecraft.util.shape.VoxelShapes;

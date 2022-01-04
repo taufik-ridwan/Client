@@ -1,8 +1,8 @@
 package mathax.client.utils.player;
 
-import mathax.client.MatHax;
 import mathax.client.events.game.OpenScreenEvent;
 import mathax.client.events.world.BlockActivateEvent;
+import mathax.client.MatHax;
 import mathax.client.eventbus.EventHandler;
 import net.minecraft.block.EnderChestBlock;
 import net.minecraft.client.gui.screen.ingame.GenericContainerScreen;

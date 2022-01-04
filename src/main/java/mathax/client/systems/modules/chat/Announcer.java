@@ -1,8 +1,8 @@
 package mathax.client.systems.modules.chat;
 
 import mathax.client.MatHax;
-import mathax.client.events.entity.DropItemsEvent;
 import mathax.client.events.entity.player.BreakBlockEvent;
+import mathax.client.events.entity.DropItemsEvent;
 import mathax.client.events.entity.player.PickItemsEvent;
 import mathax.client.events.entity.player.PlaceBlockEvent;
 import mathax.client.events.game.OpenScreenEvent;

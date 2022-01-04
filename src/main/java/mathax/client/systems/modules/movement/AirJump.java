@@ -1,5 +1,6 @@
 package mathax.client.systems.modules.movement;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.mathax.KeyEvent;
 import mathax.client.events.world.TickEvent;
 import mathax.client.settings.BoolSetting;
@@ -8,9 +9,8 @@ import mathax.client.settings.SettingGroup;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.systems.modules.Modules;
-import mathax.client.systems.modules.render.Freecam;
 import mathax.client.utils.misc.input.KeyAction;
-import mathax.client.eventbus.EventHandler;
+import mathax.client.systems.modules.render.Freecam;
 import net.minecraft.item.Items;
 
 public class AirJump extends Module {

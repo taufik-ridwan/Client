@@ -1,5 +1,6 @@
 package mathax.client.systems.modules.world;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.game.OpenScreenEvent;
 import mathax.client.mixin.SignEditScreenAccessor;
 import mathax.client.settings.BoolSetting;
@@ -8,7 +9,6 @@ import mathax.client.settings.SettingGroup;
 import mathax.client.settings.StringSetting;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
-import mathax.client.eventbus.EventHandler;
 import mathax.client.utils.misc.Placeholders;
 import net.minecraft.block.entity.SignBlockEntity;
 import net.minecraft.client.gui.screen.ingame.SignEditScreen;

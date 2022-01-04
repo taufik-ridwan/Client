@@ -1,14 +1,15 @@
 package mathax.client.systems.modules.render;
 
 import com.google.common.reflect.TypeToken;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.render.Render2DEvent;
+import mathax.client.mixin.ProjectileEntityAccessor;
 import mathax.client.renderer.Renderer2D;
 import mathax.client.renderer.text.TextRenderer;
 import mathax.client.settings.BoolSetting;
 import mathax.client.settings.DoubleSetting;
 import mathax.client.settings.Setting;
 import mathax.client.settings.SettingGroup;
-import mathax.client.mixin.ProjectileEntityAccessor;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.misc.Vec3;
@@ -16,7 +17,6 @@ import mathax.client.utils.network.HTTP;
 import mathax.client.utils.network.MatHaxExecutor;
 import mathax.client.utils.render.NametagUtils;
 import mathax.client.utils.render.color.Color;
-import mathax.client.eventbus.EventHandler;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.passive.HorseBaseEntity;
 import net.minecraft.entity.passive.TameableEntity;

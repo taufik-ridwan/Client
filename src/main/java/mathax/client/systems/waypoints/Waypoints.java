@@ -1,11 +1,12 @@
 package mathax.client.systems.waypoints;
 
 import mathax.client.MatHax;
+import mathax.client.renderer.text.TextRenderer;
+import mathax.client.utils.render.color.Color;
 import mathax.client.events.game.GameJoinedEvent;
 import mathax.client.events.game.GameLeftEvent;
 import mathax.client.events.render.Render2DEvent;
 import mathax.client.renderer.Renderer2D;
-import mathax.client.renderer.text.TextRenderer;
 import mathax.client.systems.System;
 import mathax.client.systems.Systems;
 import mathax.client.systems.modules.Modules;
@@ -16,7 +17,6 @@ import mathax.client.utils.misc.NbtUtils;
 import mathax.client.utils.misc.Vec3;
 import mathax.client.utils.player.PlayerUtils;
 import mathax.client.utils.render.NametagUtils;
-import mathax.client.utils.render.color.Color;
 import mathax.client.utils.world.Dimension;
 import mathax.client.eventbus.EventHandler;
 import mathax.client.eventbus.EventPriority;

@@ -1,5 +1,6 @@
 package mathax.client.systems.modules.movement;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.world.TickEvent;
 import mathax.client.mixininterface.IVec3d;
 import mathax.client.settings.BoolSetting;
@@ -8,7 +9,6 @@ import mathax.client.settings.Setting;
 import mathax.client.settings.SettingGroup;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
-import mathax.client.eventbus.EventHandler;
 import mathax.client.systems.modules.Modules;
 import mathax.client.systems.modules.world.Timer;
 import net.minecraft.item.Items;

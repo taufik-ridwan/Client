@@ -1,12 +1,12 @@
 package mathax.client.systems.modules.render;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.render.RenderBlockEntityEvent;
 import mathax.client.events.world.AmbientOcclusionEvent;
 import mathax.client.events.world.ChunkOcclusionEvent;
 import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
-import mathax.client.eventbus.EventHandler;
 import mathax.client.systems.modules.Modules;
 import mathax.client.utils.world.BlockUtils;
 import net.minecraft.block.Block;

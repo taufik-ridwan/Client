@@ -4,10 +4,10 @@ import mathax.client.gui.GuiTheme;
 import mathax.client.gui.widgets.WWidget;
 import mathax.client.gui.widgets.containers.WHorizontalList;
 import mathax.client.gui.widgets.pressable.WButton;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.entity.fakeplayer.FakePlayerManager;
-import mathax.client.settings.*;
 import net.minecraft.item.Items;
 
 public class FakePlayer extends Module {

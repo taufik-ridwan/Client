@@ -3,7 +3,10 @@ package mathax.client.systems.modules.render;
 import mathax.client.MatHax;
 import mathax.client.eventbus.EventHandler;
 import mathax.client.events.render.Render3DEvent;
-import mathax.client.settings.*;
+import mathax.client.settings.BoolSetting;
+import mathax.client.settings.ColorSetting;
+import mathax.client.settings.Setting;
+import mathax.client.settings.SettingGroup;
 import mathax.client.systems.config.Config;
 import mathax.client.systems.enemies.Enemies;
 import mathax.client.systems.friends.Friends;
@@ -103,7 +106,7 @@ public class SkeletonESP extends Module {
             if (!(entity instanceof PlayerEntity player)) return;
             if (ignoreFriends.get() && Friends.get().isFriend((PlayerEntity) entity)) return;
             if (!firstPerson.get() && player == mc.player && mc.options.getPerspective() == Perspective.FIRST_PERSON && !Modules.get().isActive(Freecam.class) && !Modules.get().isActive(FreeLook.class)) return;
-            int rotationHoldTicks = Config.get().rotationHoldTicks;
+            int rotationHoldTicks = Config.get().rotationHoldTicks.get();
 
             Color color;
             if (distance.get()) color = getColorFromDistance(player);

@@ -2,7 +2,9 @@ package mathax.client.systems.modules.combat;
 
 import baritone.api.BaritoneAPI;
 import it.unimi.dsi.fastutil.objects.Object2BooleanMap;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.render.Render3DEvent;
+import mathax.client.settings.*;
 import mathax.client.systems.friends.Friends;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
@@ -12,8 +14,6 @@ import mathax.client.utils.entity.TargetUtils;
 import mathax.client.utils.player.InvUtils;
 import mathax.client.utils.player.PlayerUtils;
 import mathax.client.utils.player.Rotations;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.settings.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;

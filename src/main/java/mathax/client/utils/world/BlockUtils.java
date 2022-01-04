@@ -1,7 +1,7 @@
 package mathax.client.utils.world;
 
-import mathax.client.MatHax;
 import mathax.client.events.world.TickEvent;
+import mathax.client.MatHax;
 import mathax.client.mixininterface.IVec3d;
 import mathax.client.utils.player.FindItemResult;
 import mathax.client.utils.player.InvUtils;

@@ -1,10 +1,10 @@
 package mathax.client.systems.modules.player;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.packets.PacketEvent;
 import mathax.client.mixin.PlayerPositionLookS2CPacketAccessor;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
-import mathax.client.eventbus.EventHandler;
 import net.minecraft.item.Items;
 import net.minecraft.network.packet.s2c.play.PlayerPositionLookS2CPacket;
 

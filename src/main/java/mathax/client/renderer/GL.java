@@ -2,8 +2,8 @@ package mathax.client.renderer;
 
 import com.google.common.collect.ImmutableList;
 import com.mojang.blaze3d.platform.GlStateManager;
-import mathax.client.mixin.BufferRendererAccessor;
 import mathax.client.mixininterface.ICapabilityTracker;
+import mathax.client.mixin.BufferRendererAccessor;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Matrix4f;

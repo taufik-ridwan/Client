@@ -1,8 +1,8 @@
 package mathax.client.systems.modules.player;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.packets.PacketEvent;
 import mathax.client.events.world.TickEvent;
-import mathax.client.eventbus.EventHandler;
 import mathax.client.mixin.PlayerMoveC2SPacketAccessor;
 import mathax.client.settings.BoolSetting;
 import mathax.client.settings.Setting;

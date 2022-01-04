@@ -1,6 +1,7 @@
 package mathax.client.systems.modules.world;
 
 import mathax.client.MatHax;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.render.Render3DEvent;
 import mathax.client.events.world.TickEvent;
 import mathax.client.renderer.ShapeMode;
@@ -19,7 +20,6 @@ import mathax.client.utils.render.color.Color;
 import mathax.client.utils.render.color.SettingColor;
 import mathax.client.utils.world.BlockUtils;
 import mathax.client.utils.world.Dir;
-import mathax.client.eventbus.EventHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;

@@ -1,6 +1,5 @@
 package mathax.client.mixin;
 
-import mathax.client.MatHax;
 import mathax.client.events.entity.EntityDestroyEvent;
 import mathax.client.events.entity.player.PickItemsEvent;
 import mathax.client.events.game.GameJoinedEvent;
@@ -9,8 +8,9 @@ import mathax.client.events.packets.ContainerSlotUpdateEvent;
 import mathax.client.events.packets.PlaySoundPacketEvent;
 import mathax.client.events.world.ChunkDataEvent;
 import mathax.client.mixininterface.IExplosionS2CPacket;
-import mathax.client.systems.modules.movement.Velocity;
 import mathax.client.systems.modules.Modules;
+import mathax.client.MatHax;
+import mathax.client.systems.modules.movement.Velocity;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.client.world.ClientWorld;

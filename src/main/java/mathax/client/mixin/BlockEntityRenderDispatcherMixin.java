@@ -1,7 +1,7 @@
 package mathax.client.mixin;
 
-import mathax.client.MatHax;
 import mathax.client.events.render.RenderBlockEntityEvent;
+import mathax.client.MatHax;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.block.entity.BlockEntityRenderDispatcher;

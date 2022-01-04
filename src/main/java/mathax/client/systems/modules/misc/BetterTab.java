@@ -1,14 +1,14 @@
 package mathax.client.systems.modules.misc;
 
+import mathax.client.settings.*;
 import mathax.client.systems.enemies.Enemies;
 import mathax.client.systems.enemies.Enemy;
-import mathax.client.systems.modules.Module;
 import mathax.client.systems.friends.Friend;
 import mathax.client.systems.friends.Friends;
 import mathax.client.systems.modules.Categories;
+import mathax.client.systems.modules.Module;
 import mathax.client.utils.render.color.Color;
 import mathax.client.utils.render.color.SettingColor;
-import mathax.client.settings.*;
 import net.minecraft.client.network.PlayerListEntry;
 import net.minecraft.item.Items;
 import net.minecraft.text.LiteralText;

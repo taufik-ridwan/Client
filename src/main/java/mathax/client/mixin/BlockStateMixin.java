@@ -2,8 +2,8 @@ package mathax.client.mixin;
 
 import com.google.common.collect.ImmutableMap;
 import com.mojang.serialization.MapCodec;
-import mathax.client.MatHax;
 import mathax.client.events.world.BlockActivateEvent;
+import mathax.client.MatHax;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

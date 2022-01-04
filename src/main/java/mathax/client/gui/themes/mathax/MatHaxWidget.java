@@ -1,9 +1,9 @@
 package mathax.client.gui.themes.mathax;
 
+import mathax.client.utils.render.color.Color;
 import mathax.client.gui.renderer.GuiRenderer;
 import mathax.client.gui.utils.BaseWidget;
 import mathax.client.gui.widgets.WWidget;
-import mathax.client.utils.render.color.Color;
 
 public interface MatHaxWidget extends BaseWidget {
     default MatHaxGuiTheme theme() {

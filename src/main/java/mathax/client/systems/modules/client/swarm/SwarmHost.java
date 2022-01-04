@@ -1,7 +1,7 @@
 package mathax.client.systems.modules.client.swarm;
 
-import mathax.client.utils.network.MatHaxExecutor;
 import mathax.client.utils.misc.ChatUtils;
+import mathax.client.utils.network.MatHaxExecutor;
 
 import java.io.IOException;
 import java.net.ServerSocket;

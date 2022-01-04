@@ -1,5 +1,7 @@
 package mathax.client.systems.modules.combat;
 
+import mathax.client.eventbus.EventHandler;
+import mathax.client.eventbus.EventPriority;
 import mathax.client.events.game.GameLeftEvent;
 import mathax.client.events.packets.PacketEvent;
 import mathax.client.events.world.TickEvent;
@@ -10,8 +12,6 @@ import mathax.client.systems.modules.Modules;
 import mathax.client.utils.player.FindItemResult;
 import mathax.client.utils.player.InvUtils;
 import mathax.client.utils.player.PlayerUtils;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.eventbus.EventPriority;
 import net.minecraft.client.gui.screen.ingame.CreativeInventoryScreen;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.entity.Entity;

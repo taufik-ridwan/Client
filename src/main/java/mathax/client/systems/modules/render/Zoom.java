@@ -1,6 +1,7 @@
 package mathax.client.systems.modules.render;
 
 import mathax.client.MatHax;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.mathax.MouseScrollEvent;
 import mathax.client.events.render.GetFovEvent;
 import mathax.client.events.render.Render3DEvent;
@@ -11,7 +12,6 @@ import mathax.client.settings.Setting;
 import mathax.client.settings.SettingGroup;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
-import mathax.client.eventbus.EventHandler;
 import mathax.client.utils.Utils;
 import net.minecraft.item.Items;
 import net.minecraft.util.math.MathHelper;

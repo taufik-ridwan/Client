@@ -1,10 +1,10 @@
 package mathax.client.utils.entity;
 
+import mathax.client.systems.friends.Friends;
+import mathax.client.utils.entity.fakeplayer.FakePlayerEntity;
 import mathax.client.utils.entity.fakeplayer.FakePlayerManager;
 import mathax.client.utils.player.Rotations;
-import mathax.client.systems.friends.Friends;
 import mathax.client.utils.Utils;
-import mathax.client.utils.entity.fakeplayer.FakePlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;

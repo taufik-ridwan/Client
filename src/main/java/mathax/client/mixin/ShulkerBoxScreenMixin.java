@@ -1,7 +1,7 @@
 package mathax.client.mixin;
 
-import mathax.client.utils.render.ContainerButtonWidget;
 import mathax.client.systems.modules.Modules;
+import mathax.client.utils.render.ContainerButtonWidget;
 import mathax.client.systems.modules.misc.InventoryTweaks;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.client.gui.screen.ingame.ShulkerBoxScreen;

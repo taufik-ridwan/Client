@@ -1,9 +1,9 @@
 package mathax.client.gui.screens.settings;
 
+import mathax.client.gui.widgets.containers.WTable;
 import mathax.client.gui.GuiTheme;
 import mathax.client.gui.WindowScreen;
 import mathax.client.gui.widgets.WItemWithLabel;
-import mathax.client.gui.widgets.containers.WTable;
 import mathax.client.gui.widgets.input.WTextBox;
 import mathax.client.gui.widgets.pressable.WButton;
 import mathax.client.settings.ItemSetting;

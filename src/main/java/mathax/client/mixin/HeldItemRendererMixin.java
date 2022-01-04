@@ -1,8 +1,8 @@
 package mathax.client.mixin;
 
 import com.google.common.base.MoreObjects;
-import mathax.client.systems.modules.render.HandView;
 import mathax.client.systems.modules.Modules;
+import mathax.client.systems.modules.render.HandView;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.item.HeldItemRenderer;

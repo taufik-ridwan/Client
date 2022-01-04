@@ -1,16 +1,16 @@
 package mathax.client.systems.modules.render;
 
 import mathax.client.MatHax;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.render.Render3DEvent;
 import mathax.client.renderer.ShapeMode;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.entity.ProjectileEntitySimulator;
 import mathax.client.utils.misc.Pool;
 import mathax.client.utils.misc.Vec3;
 import mathax.client.utils.render.color.SettingColor;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.settings.*;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;

@@ -1,8 +1,8 @@
 package mathax.client.mixin;
 
+import mathax.client.systems.modules.Modules;
 import mathax.client.systems.modules.movement.Slippy;
 import mathax.client.systems.modules.render.Xray;
-import mathax.client.systems.modules.Modules;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

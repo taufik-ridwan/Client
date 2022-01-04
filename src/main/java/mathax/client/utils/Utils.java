@@ -4,22 +4,22 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import it.unimi.dsi.fastutil.objects.Object2BooleanOpenHashMap;
 import it.unimi.dsi.fastutil.objects.Object2IntArrayMap;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
-import mathax.client.MatHax;
 import mathax.client.eventbus.EventHandler;
 import mathax.client.events.world.TickEvent;
-import mathax.client.mixin.ClientPlayNetworkHandlerAccessor;
-import mathax.client.mixin.MinecraftClientAccessor;
-import mathax.client.mixin.MinecraftServerAccessor;
 import mathax.client.mixininterface.IMinecraftClient;
 import mathax.client.systems.modules.Modules;
-import mathax.client.systems.modules.render.BetterTooltips;
-import mathax.client.systems.modules.world.Timer;
 import mathax.client.utils.player.EChestMemory;
 import mathax.client.utils.render.PeekScreen;
 import mathax.client.utils.render.color.Color;
 import mathax.client.utils.world.BlockEntityIterator;
 import mathax.client.utils.world.ChunkIterator;
 import mathax.client.utils.world.Dimension;
+import mathax.client.MatHax;
+import mathax.client.mixin.ClientPlayNetworkHandlerAccessor;
+import mathax.client.mixin.MinecraftClientAccessor;
+import mathax.client.mixin.MinecraftServerAccessor;
+import mathax.client.systems.modules.render.BetterTooltips;
+import mathax.client.systems.modules.world.Timer;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ShulkerBoxBlock;
@@ -76,6 +76,11 @@ public class Utils {
             mc.setScreen(screenToOpen);
             screenToOpen = null;
         }
+    }
+
+    public static boolean isDeveloper(String uuid) {
+        uuid = uuid.replace("-", "");
+        return MatHax.getDeveloperUUIDs().contains(uuid);
     }
 
     public static double getPlayerSpeed() {

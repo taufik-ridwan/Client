@@ -7,6 +7,7 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.exceptions.DynamicCommandExceptionType;
 import com.mojang.brigadier.suggestion.Suggestions;
 import com.mojang.brigadier.suggestion.SuggestionsBuilder;
+import mathax.client.MatHax;
 import net.minecraft.client.network.PlayerListEntry;
 import net.minecraft.command.CommandSource;
 import net.minecraft.text.LiteralText;
@@ -15,15 +16,13 @@ import java.util.Collection;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
-import static mathax.client.MatHax.mc;
-
 public class PlayerListEntryArgumentType implements ArgumentType<PlayerListEntry> {
 
     private static Collection<String> EXAMPLES;
 
     static {
-        if (mc.getNetworkHandler() != null) {
-            EXAMPLES = mc.getNetworkHandler().getPlayerList()
+        if (MatHax.mc.getNetworkHandler() != null) {
+            EXAMPLES = MatHax.mc.getNetworkHandler().getPlayerList()
                 .stream()
                 .limit(3)
                 .map(playerListEntry -> playerListEntry.getProfile().getName())
@@ -47,7 +46,7 @@ public class PlayerListEntryArgumentType implements ArgumentType<PlayerListEntry
         String argument = reader.readString();
         PlayerListEntry playerListEntry = null;
 
-        for (PlayerListEntry p : mc.getNetworkHandler().getPlayerList()) {
+        for (PlayerListEntry p : MatHax.mc.getNetworkHandler().getPlayerList()) {
             if (p.getProfile().getName().equalsIgnoreCase(argument)) {
                 playerListEntry = p;
                 break;
@@ -60,7 +59,7 @@ public class PlayerListEntryArgumentType implements ArgumentType<PlayerListEntry
 
     @Override
     public <S> CompletableFuture<Suggestions> listSuggestions(CommandContext<S> context, SuggestionsBuilder builder) {
-        return CommandSource.suggestMatching(mc.getNetworkHandler().getPlayerList().stream().map(playerListEntry -> playerListEntry.getProfile().getName()), builder);
+        return CommandSource.suggestMatching(MatHax.mc.getNetworkHandler().getPlayerList().stream().map(playerListEntry -> playerListEntry.getProfile().getName()), builder);
     }
 
     @Override

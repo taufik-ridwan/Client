@@ -1,5 +1,6 @@
 package mathax.client.systems.modules.combat;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.mathax.MouseButtonEvent;
 import mathax.client.events.world.TickEvent;
 import mathax.client.settings.BoolSetting;
@@ -12,7 +13,6 @@ import mathax.client.systems.modules.Modules;
 import mathax.client.utils.misc.input.KeyAction;
 import mathax.client.utils.player.FindItemResult;
 import mathax.client.utils.player.InvUtils;
-import mathax.client.eventbus.EventHandler;
 import mathax.client.utils.player.PlayerUtils;
 import net.minecraft.item.*;
 

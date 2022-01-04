@@ -1,7 +1,7 @@
 package mathax.client.events.mathax;
 
-import mathax.client.events.Cancellable;
 import mathax.client.utils.misc.input.KeyAction;
+import mathax.client.events.Cancellable;
 
 public class KeyEvent extends Cancellable {
     private static final KeyEvent INSTANCE = new KeyEvent();

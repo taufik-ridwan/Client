@@ -1,8 +1,8 @@
 package mathax.client.renderer.text;
 
 import mathax.client.renderer.*;
-import mathax.client.utils.Utils;
 import mathax.client.utils.render.color.Color;
+import mathax.client.utils.Utils;
 import net.minecraft.client.util.math.MatrixStack;
 import org.lwjgl.BufferUtils;
 

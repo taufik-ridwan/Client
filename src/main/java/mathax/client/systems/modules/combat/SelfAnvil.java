@@ -1,12 +1,12 @@
 package mathax.client.systems.modules.combat;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.game.OpenScreenEvent;
 import mathax.client.events.world.TickEvent;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.player.InvUtils;
 import mathax.client.utils.world.BlockUtils;
-import mathax.client.eventbus.EventHandler;
 import net.minecraft.block.AnvilBlock;
 import net.minecraft.block.Block;
 import net.minecraft.client.gui.screen.ingame.AnvilScreen;

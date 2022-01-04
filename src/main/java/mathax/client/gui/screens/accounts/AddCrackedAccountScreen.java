@@ -1,8 +1,8 @@
 package mathax.client.gui.screens.accounts;
 
-import mathax.client.gui.GuiTheme;
 import mathax.client.gui.widgets.containers.WTable;
 import mathax.client.gui.widgets.input.WTextBox;
+import mathax.client.gui.GuiTheme;
 import mathax.client.systems.accounts.Accounts;
 import mathax.client.systems.accounts.types.CrackedAccount;
 

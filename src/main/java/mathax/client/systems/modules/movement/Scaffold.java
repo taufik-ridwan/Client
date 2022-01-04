@@ -1,9 +1,11 @@
 package mathax.client.systems.modules.movement;
 
 import mathax.client.MatHax;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.render.Render3DEvent;
 import mathax.client.events.world.TickEvent;
 import mathax.client.renderer.ShapeMode;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.misc.Pool;
@@ -13,8 +15,6 @@ import mathax.client.utils.player.PlayerUtils;
 import mathax.client.utils.render.color.Color;
 import mathax.client.utils.render.color.SettingColor;
 import mathax.client.utils.world.BlockUtils;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.settings.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.FallingBlock;
 import net.minecraft.item.BlockItem;

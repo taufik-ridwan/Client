@@ -1,6 +1,8 @@
 package mathax.client.systems.modules.movement;
 
 import baritone.api.BaritoneAPI;
+import mathax.client.eventbus.EventHandler;
+import mathax.client.eventbus.EventPriority;
 import mathax.client.events.world.TickEvent;
 import mathax.client.settings.EnumSetting;
 import mathax.client.settings.Setting;
@@ -9,8 +11,6 @@ import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.misc.input.Input;
 import mathax.client.utils.world.GoalDirection;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.eventbus.EventPriority;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.item.Items;
 
@@ -106,6 +106,7 @@ public class AutoWalk extends Module {
         goal = new GoalDirection(mc.player.getPos(), mc.player.getYaw());
         BaritoneAPI.getProvider().getPrimaryBaritone().getCustomGoalProcess().setGoalAndPath(goal);
     }
+
     public enum Mode {
         Simple("Simple"),
         Smart("Smart");

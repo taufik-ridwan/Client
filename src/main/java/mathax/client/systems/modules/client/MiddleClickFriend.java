@@ -1,5 +1,6 @@
 package mathax.client.systems.modules.client;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.mathax.MouseButtonEvent;
 import mathax.client.settings.BoolSetting;
 import mathax.client.settings.Setting;
@@ -7,14 +8,13 @@ import mathax.client.settings.SettingGroup;
 import mathax.client.settings.StringSetting;
 import mathax.client.systems.config.Config;
 import mathax.client.systems.enemies.Enemies;
-import mathax.client.systems.modules.Module;
 import mathax.client.systems.friends.Friend;
 import mathax.client.systems.friends.Friends;
 import mathax.client.systems.modules.Categories;
+import mathax.client.systems.modules.Module;
+import mathax.client.utils.misc.ChatUtils;
 import mathax.client.utils.misc.Placeholders;
 import mathax.client.utils.misc.input.KeyAction;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.utils.misc.ChatUtils;
 import mathax.client.utils.render.ToastSystem;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
@@ -66,23 +66,19 @@ public class MiddleClickFriend extends Module {
             if (mc.targetedEntity.getUuidAsString().equals(mc.getSession().getUuid())) return;
             if (!Friends.get().isFriend((PlayerEntity) mc.targetedEntity)) {
                 if (Enemies.get().isEnemy((PlayerEntity) mc.targetedEntity)) {
-                    ChatUtils.error("Friends", "Could not add to friends because this person is on your Enemy list.");
-                    if (Config.get().toastFeedback) mc.getToastManager().add(new ToastSystem(Items.EMERALD_BLOCK, Friends.get().color.getPacked(), "Friends " + Formatting.GRAY + "[" + Formatting.WHITE + mc.targetedEntity.getEntityName() + Formatting.GRAY + "]", null, Formatting.RED + "Person is enemy.", Config.get().toastDuration));
+                    if (Config.get().chatFeedback.get()) ChatUtils.error("Friends", "Could not add to friends because this person is on your Enemy list.");
+                    if (Config.get().toastFeedback.get()) mc.getToastManager().add(new ToastSystem(Items.EMERALD_BLOCK, Friends.get().color.getPacked(), "Friends " + Formatting.GRAY + "[" + Formatting.WHITE + mc.targetedEntity.getEntityName() + Formatting.GRAY + "]", null, Formatting.RED + "Person is enemy.", Config.get().toastDuration.get()));
                 } else {
                     Friends.get().add(new Friend((PlayerEntity) mc.targetedEntity));
-                    if (friendAddMessage.get()) {
-                        mc.player.sendChatMessage("/msg " + mc.targetedEntity.getEntityName() + " " + Placeholders.apply(friendAddMessageText.toString()));
-                    }
-                    if (Config.get().chatFeedback) ChatUtils.info("Friends", "Added (highlight)%s (default)to friends.", mc.targetedEntity.getEntityName());
-                    if (Config.get().toastFeedback) mc.getToastManager().add(new ToastSystem(Items.EMERALD_BLOCK, Friends.get().color.getPacked(), "Friends " + Formatting.GRAY + "[" + Formatting.WHITE + mc.targetedEntity.getEntityName() + Formatting.GRAY + "]", null, Formatting.GRAY + "Added to friends.", Config.get().toastDuration));
+                    if (friendAddMessage.get()) mc.player.sendChatMessage("/msg " + mc.targetedEntity.getEntityName() + " " + Placeholders.apply(friendAddMessageText.toString()));
+                    if (Config.get().chatFeedback.get()) ChatUtils.info("Friends", "Added (highlight)%s (default)to friends.", mc.targetedEntity.getEntityName());
+                    if (Config.get().toastFeedback.get()) mc.getToastManager().add(new ToastSystem(Items.EMERALD_BLOCK, Friends.get().color.getPacked(), "Friends " + Formatting.GRAY + "[" + Formatting.WHITE + mc.targetedEntity.getEntityName() + Formatting.GRAY + "]", null, Formatting.GRAY + "Added to friends.", Config.get().toastDuration.get()));
                 }
             } else {
                 Friends.get().remove(Friends.get().get((PlayerEntity) mc.targetedEntity));
-                if (friendRemoveMessage.get()) {
-                    mc.player.sendChatMessage("/msg " + mc.targetedEntity.getEntityName() + " " + Placeholders.apply(friendRemoveMessageText.toString()));
-                }
-                if (Config.get().chatFeedback) ChatUtils.info("Friends", "Removed (highlight)%s (default)from friends.", mc.targetedEntity.getEntityName());
-                if (Config.get().toastFeedback) mc.getToastManager().add(new ToastSystem(Items.EMERALD_BLOCK, Friends.get().color.getPacked(), "Friends " + Formatting.GRAY + "[" + Formatting.WHITE + mc.targetedEntity.getEntityName() + Formatting.GRAY + "]", null, Formatting.GRAY + "Removed from friends.", Config.get().toastDuration));
+                if (friendRemoveMessage.get()) mc.player.sendChatMessage("/msg " + mc.targetedEntity.getEntityName() + " " + Placeholders.apply(friendRemoveMessageText.toString()));
+                if (Config.get().chatFeedback.get()) ChatUtils.info("Friends", "Removed (highlight)%s (default)from friends.", mc.targetedEntity.getEntityName());
+                if (Config.get().toastFeedback.get()) mc.getToastManager().add(new ToastSystem(Items.EMERALD_BLOCK, Friends.get().color.getPacked(), "Friends " + Formatting.GRAY + "[" + Formatting.WHITE + mc.targetedEntity.getEntityName() + Formatting.GRAY + "]", null, Formatting.GRAY + "Removed from friends.", Config.get().toastDuration.get()));
             }
         }
     }

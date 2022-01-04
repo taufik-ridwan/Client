@@ -3,41 +3,39 @@ package mathax.client.systems.modules;
 import com.google.common.collect.Ordering;
 import com.mojang.serialization.Lifecycle;
 import mathax.client.MatHax;
-import mathax.client.events.game.GameJoinedEvent;
-import mathax.client.events.game.GameLeftEvent;
-import mathax.client.events.game.OpenScreenEvent;
 import mathax.client.events.mathax.ActiveModulesChangedEvent;
 import mathax.client.events.mathax.KeyEvent;
 import mathax.client.events.mathax.ModuleBindChangedEvent;
 import mathax.client.events.mathax.MouseButtonEvent;
+import mathax.client.systems.config.Config;
+import mathax.client.systems.modules.chat.*;
+import mathax.client.systems.modules.client.*;
+import mathax.client.systems.modules.combat.*;
+import mathax.client.systems.modules.crash.*;
+import mathax.client.systems.modules.misc.*;
+import mathax.client.systems.modules.movement.*;
+import mathax.client.systems.modules.player.*;
+import mathax.client.systems.modules.render.*;
+import mathax.client.systems.modules.world.*;
+import mathax.client.systems.modules.world.Timer;
+import mathax.client.utils.misc.input.Input;
+import mathax.client.utils.misc.input.KeyAction;
+import mathax.client.events.game.GameJoinedEvent;
+import mathax.client.events.game.GameLeftEvent;
+import mathax.client.events.game.OpenScreenEvent;
 import mathax.client.eventbus.EventHandler;
 import mathax.client.eventbus.EventPriority;
 import mathax.client.settings.Setting;
 import mathax.client.settings.SettingGroup;
 import mathax.client.systems.System;
 import mathax.client.systems.Systems;
-import mathax.client.systems.config.Config;
-import mathax.client.systems.modules.chat.*;
-import mathax.client.systems.modules.chat.ChatEncryption;
-import mathax.client.systems.modules.client.*;
-import mathax.client.systems.modules.combat.*;
-import mathax.client.systems.modules.crash.*;
-import mathax.client.systems.modules.misc.*;
 import mathax.client.systems.modules.client.swarm.Swarm;
-import mathax.client.systems.modules.movement.*;
 import mathax.client.systems.modules.movement.elytrafly.ElytraFly;
 import mathax.client.systems.modules.movement.speed.Speed;
-import mathax.client.systems.modules.player.*;
-import mathax.client.systems.modules.render.*;
-import mathax.client.systems.modules.render.hud.HUD;
 import mathax.client.systems.modules.render.marker.Marker;
 import mathax.client.systems.modules.render.search.Search;
-import mathax.client.systems.modules.world.*;
-import mathax.client.systems.modules.world.Timer;
 import mathax.client.utils.Utils;
 import mathax.client.utils.misc.ValueComparableMap;
-import mathax.client.utils.misc.input.Input;
-import mathax.client.utils.misc.input.KeyAction;
 import mathax.client.utils.misc.ChatUtils;
 import mathax.client.utils.render.ToastSystem;
 import net.minecraft.nbt.NbtCompound;
@@ -87,9 +85,6 @@ public class Modules extends System<Modules> {
         initCrash();
         initMisc();
         initClient();
-
-        // This is here because some hud elements depend on modules to be initialised before them
-        add(new HUD());
     }
 
     @Override
@@ -230,7 +225,7 @@ public class Modules extends System<Modules> {
             if (value != GLFW.GLFW_KEY_ESCAPE) {
                 moduleToBind.keybind.set(isKey, value);
                 ChatUtils.info("KeyBinds", "Module (highlight)%s (default)bound to (highlight)%s(default).", moduleToBind.title, moduleToBind.keybind);
-                mc.getToastManager().add(new ToastSystem(moduleToBind.icon, moduleToBind.category.color, moduleToBind.title, null, Formatting.GRAY + "Bound to " + Formatting.WHITE + moduleToBind.keybind + Formatting.GRAY + ".", Config.get().toastDuration));
+                mc.getToastManager().add(new ToastSystem(moduleToBind.icon, moduleToBind.category.color, moduleToBind.title, null, Formatting.GRAY + "Bound to " + Formatting.WHITE + moduleToBind.keybind + Formatting.GRAY + ".", Config.get().toastDuration.get()));
             }
 
             MatHax.EVENT_BUS.post(ModuleBindChangedEvent.get(moduleToBind));
@@ -613,6 +608,7 @@ public class Modules extends System<Modules> {
         add(new BookBot());
         add(new CoordinateLogger());
         add(new InventoryTweaks());
+        //add(new LitematicaPrinter());
         add(new MiddleClickExtra());
         add(new MultiTask());
         add(new NameProtect());

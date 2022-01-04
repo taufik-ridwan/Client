@@ -1,13 +1,13 @@
 package mathax.client.systems.modules.player;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.mathax.KeyEvent;
 import mathax.client.events.world.PlaySoundEvent;
 import mathax.client.events.world.TickEvent;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.Utils;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.settings.*;
 import net.minecraft.client.sound.SoundInstance;
 import net.minecraft.entity.projectile.FishingBobberEntity;
 import net.minecraft.item.FishingRodItem;

@@ -4,8 +4,7 @@ import java.io.FilterOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-import static mathax.client.utils.base91.Base91.BASE;
-import static mathax.client.utils.base91.Base91.ENCODING_TABLE;
+import static mathax.client.utils.base91.Base91.*;
 
 public class Base91OutputStream extends FilterOutputStream {
     private int ebq = 0;

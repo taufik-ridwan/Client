@@ -1,17 +1,17 @@
 package mathax.client.systems.modules.render;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.render.Render3DEvent;
-import mathax.client.settings.*;
 import mathax.client.mixin.ClientPlayerInteractionManagerAccessor;
 import mathax.client.mixin.WorldRendererAccessor;
 import mathax.client.renderer.ShapeMode;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.systems.modules.Modules;
-import mathax.client.systems.modules.world.PacketMine;
 import mathax.client.utils.render.color.Color;
 import mathax.client.utils.render.color.SettingColor;
-import mathax.client.eventbus.EventHandler;
+import mathax.client.systems.modules.world.PacketMine;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.render.BlockBreakingInfo;
 import net.minecraft.item.Items;

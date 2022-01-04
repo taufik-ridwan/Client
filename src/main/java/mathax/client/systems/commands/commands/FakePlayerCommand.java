@@ -6,8 +6,8 @@ import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import mathax.client.systems.commands.Command;
 import mathax.client.systems.modules.Modules;
-import mathax.client.systems.modules.client.FakePlayer;
 import mathax.client.utils.entity.fakeplayer.FakePlayerManager;
+import mathax.client.systems.modules.client.FakePlayer;
 import net.minecraft.command.CommandSource;
 
 import static com.mojang.brigadier.Command.SINGLE_SUCCESS;

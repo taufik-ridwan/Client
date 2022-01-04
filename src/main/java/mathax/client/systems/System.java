@@ -1,8 +1,8 @@
 package mathax.client.systems;
 
-import mathax.client.MatHax;
 import mathax.client.utils.files.StreamUtils;
 import mathax.client.utils.misc.ISerializable;
+import mathax.client.MatHax;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtIo;
 

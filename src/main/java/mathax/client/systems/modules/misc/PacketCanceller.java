@@ -1,14 +1,14 @@
 package mathax.client.systems.modules.misc;
 
+import mathax.client.eventbus.EventHandler;
+import mathax.client.eventbus.EventPriority;
 import mathax.client.events.packets.PacketEvent;
 import mathax.client.settings.PacketListSetting;
 import mathax.client.settings.Setting;
 import mathax.client.settings.SettingGroup;
-import mathax.client.systems.modules.Module;
 import mathax.client.systems.modules.Categories;
+import mathax.client.systems.modules.Module;
 import mathax.client.utils.network.PacketUtils;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.eventbus.EventPriority;
 import net.minecraft.item.Items;
 import net.minecraft.network.Packet;
 

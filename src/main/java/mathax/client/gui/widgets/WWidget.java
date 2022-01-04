@@ -1,7 +1,7 @@
 package mathax.client.gui.widgets;
 
-import mathax.client.gui.GuiTheme;
 import mathax.client.gui.renderer.GuiRenderer;
+import mathax.client.gui.GuiTheme;
 import mathax.client.gui.utils.BaseWidget;
 
 public abstract class WWidget implements BaseWidget {

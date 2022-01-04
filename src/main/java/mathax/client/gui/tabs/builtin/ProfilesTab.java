@@ -1,17 +1,17 @@
 package mathax.client.gui.tabs.builtin;
 
-import mathax.client.gui.GuiTheme;
-import mathax.client.gui.WindowScreen;
-import mathax.client.gui.renderer.GuiRenderer;
-import mathax.client.gui.tabs.Tab;
-import mathax.client.gui.tabs.TabScreen;
-import mathax.client.gui.tabs.WindowTabScreen;
 import mathax.client.gui.widgets.containers.WTable;
 import mathax.client.gui.widgets.input.WTextBox;
 import mathax.client.gui.widgets.pressable.WButton;
 import mathax.client.gui.widgets.pressable.WCheckbox;
 import mathax.client.gui.widgets.pressable.WMinus;
 import mathax.client.gui.widgets.pressable.WPlus;
+import mathax.client.gui.GuiTheme;
+import mathax.client.gui.WindowScreen;
+import mathax.client.gui.renderer.GuiRenderer;
+import mathax.client.gui.tabs.Tab;
+import mathax.client.gui.tabs.TabScreen;
+import mathax.client.gui.tabs.WindowTabScreen;
 import mathax.client.systems.profiles.Profile;
 import mathax.client.systems.profiles.Profiles;
 import mathax.client.utils.misc.NbtUtils;

@@ -1,7 +1,7 @@
 package mathax.client.mixin;
 
-import mathax.client.systems.modules.movement.NoSlow;
 import mathax.client.systems.modules.Modules;
+import mathax.client.systems.modules.movement.NoSlow;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SlimeBlock;
 import net.minecraft.entity.Entity;

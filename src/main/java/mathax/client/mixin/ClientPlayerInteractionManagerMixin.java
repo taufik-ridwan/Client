@@ -1,14 +1,14 @@
 package mathax.client.mixin;
 
-import mathax.client.MatHax;
 import mathax.client.events.entity.DropItemsEvent;
 import mathax.client.events.entity.player.*;
 import mathax.client.mixininterface.IClientPlayerInteractionManager;
+import mathax.client.systems.modules.Modules;
+import mathax.client.utils.world.BlockUtils;
+import mathax.client.MatHax;
 import mathax.client.systems.modules.player.NoBreakDelay;
 import mathax.client.systems.modules.player.Reach;
 import mathax.client.systems.modules.world.Nuker;
-import mathax.client.utils.world.BlockUtils;
-import mathax.client.systems.modules.Modules;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.network.ClientPlayerInteractionManager;
 import net.minecraft.client.world.ClientWorld;

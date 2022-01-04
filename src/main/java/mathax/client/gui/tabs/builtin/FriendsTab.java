@@ -1,15 +1,16 @@
 package mathax.client.gui.tabs.builtin;
 
-import mathax.client.gui.GuiTheme;
-import mathax.client.gui.tabs.Tab;
-import mathax.client.gui.tabs.TabScreen;
-import mathax.client.gui.tabs.WindowTabScreen;
 import mathax.client.gui.widgets.containers.WHorizontalList;
 import mathax.client.gui.widgets.containers.WSection;
 import mathax.client.gui.widgets.containers.WTable;
 import mathax.client.gui.widgets.input.WTextBox;
 import mathax.client.gui.widgets.pressable.WMinus;
 import mathax.client.gui.widgets.pressable.WPlus;
+import mathax.client.utils.render.color.SettingColor;
+import mathax.client.gui.GuiTheme;
+import mathax.client.gui.tabs.Tab;
+import mathax.client.gui.tabs.TabScreen;
+import mathax.client.gui.tabs.WindowTabScreen;
 import mathax.client.settings.BoolSetting;
 import mathax.client.settings.ColorSetting;
 import mathax.client.settings.SettingGroup;
@@ -17,7 +18,6 @@ import mathax.client.settings.Settings;
 import mathax.client.systems.friends.Friend;
 import mathax.client.systems.friends.Friends;
 import mathax.client.utils.misc.NbtUtils;
-import mathax.client.utils.render.color.SettingColor;
 import net.minecraft.client.gui.screen.Screen;
 
 public class FriendsTab extends Tab {

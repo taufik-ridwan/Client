@@ -1,17 +1,17 @@
 package mathax.client.systems.modules.movement.speed;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.entity.player.PlayerMoveEvent;
 import mathax.client.events.packets.PacketEvent;
 import mathax.client.events.world.TickEvent;
-import mathax.client.systems.modules.movement.speed.modes.Strafe;
-import mathax.client.systems.modules.movement.speed.modes.Vanilla;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.systems.modules.Modules;
-import mathax.client.systems.modules.world.Timer;
+import mathax.client.systems.modules.movement.speed.modes.Strafe;
+import mathax.client.systems.modules.movement.speed.modes.Vanilla;
 import mathax.client.utils.player.PlayerUtils;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.settings.*;
+import mathax.client.systems.modules.world.Timer;
 import net.minecraft.entity.MovementType;
 import net.minecraft.item.Items;
 import net.minecraft.network.packet.s2c.play.PlayerPositionLookS2CPacket;

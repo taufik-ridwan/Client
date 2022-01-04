@@ -1,7 +1,7 @@
 package mathax.client.mixin;
 
-import mathax.client.systems.modules.world.Ambience;
 import mathax.client.systems.modules.Modules;
+import mathax.client.systems.modules.world.Ambience;
 import net.minecraft.client.color.world.FoliageColors;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

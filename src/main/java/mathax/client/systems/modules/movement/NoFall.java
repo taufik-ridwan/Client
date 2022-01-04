@@ -1,17 +1,17 @@
 package mathax.client.systems.modules.movement;
 
 import baritone.api.BaritoneAPI;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.entity.player.PlayerMoveEvent;
 import mathax.client.events.packets.PacketEvent;
 import mathax.client.events.world.TickEvent;
+import mathax.client.mixin.PlayerMoveC2SPacketAccessor;
 import mathax.client.mixin.PlayerPositionLookS2CPacketAccessor;
 import mathax.client.mixininterface.IPlayerMoveC2SPacket;
 import mathax.client.mixininterface.IVec3d;
 import mathax.client.settings.*;
-import mathax.client.mixin.PlayerMoveC2SPacketAccessor;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
-import mathax.client.eventbus.EventHandler;
 import mathax.client.systems.modules.Modules;
 import mathax.client.utils.entity.EntityUtils;
 import mathax.client.utils.player.FindItemResult;

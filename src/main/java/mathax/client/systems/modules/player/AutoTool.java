@@ -1,17 +1,17 @@
 package mathax.client.systems.modules.player;
 
 
+import mathax.client.eventbus.EventHandler;
+import mathax.client.eventbus.EventPriority;
 import mathax.client.events.entity.player.StartBreakingBlockEvent;
 import mathax.client.events.world.TickEvent;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.systems.modules.Modules;
-import mathax.client.systems.modules.world.InfinityMiner;
 import mathax.client.utils.player.InvUtils;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.eventbus.EventPriority;
 import mathax.client.utils.world.BlockUtils;
-import mathax.client.settings.*;
+import mathax.client.systems.modules.world.InfinityMiner;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.enchantment.EnchantmentHelper;

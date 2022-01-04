@@ -1,19 +1,19 @@
 package mathax.client.gui.screens.settings;
 
+import mathax.client.gui.widgets.containers.WHorizontalList;
+import mathax.client.gui.widgets.containers.WTable;
+import mathax.client.gui.widgets.pressable.WCheckbox;
+import mathax.client.utils.render.color.Color;
+import mathax.client.utils.render.color.SettingColor;
 import mathax.client.gui.GuiTheme;
 import mathax.client.gui.WindowScreen;
 import mathax.client.gui.renderer.GuiRenderer;
 import mathax.client.gui.widgets.WQuad;
 import mathax.client.gui.widgets.WWidget;
-import mathax.client.gui.widgets.containers.WHorizontalList;
-import mathax.client.gui.widgets.containers.WTable;
 import mathax.client.gui.widgets.input.WIntEdit;
 import mathax.client.gui.widgets.pressable.WButton;
-import mathax.client.gui.widgets.pressable.WCheckbox;
 import mathax.client.settings.Setting;
 import mathax.client.utils.Utils;
-import mathax.client.utils.render.color.Color;
-import mathax.client.utils.render.color.SettingColor;
 
 import static mathax.client.MatHax.mc;
 

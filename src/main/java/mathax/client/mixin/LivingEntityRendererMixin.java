@@ -1,13 +1,13 @@
 package mathax.client.mixin;
 
+import mathax.client.systems.modules.Modules;
+import mathax.client.utils.player.PlayerUtils;
+import mathax.client.utils.player.Rotations;
+import mathax.client.utils.render.color.Color;
 import mathax.client.systems.modules.render.Chams;
 import mathax.client.systems.modules.render.Freecam;
 import mathax.client.systems.modules.render.NoRender;
 import mathax.client.systems.modules.render.Rendering;
-import mathax.client.utils.player.PlayerUtils;
-import mathax.client.utils.player.Rotations;
-import mathax.client.utils.render.color.Color;
-import mathax.client.systems.modules.Modules;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.render.RenderLayer;

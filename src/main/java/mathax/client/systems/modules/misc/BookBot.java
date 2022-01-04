@@ -1,19 +1,19 @@
 package mathax.client.systems.modules.misc;
 
 import mathax.client.MatHax;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.world.TickEvent;
 import mathax.client.gui.GuiTheme;
 import mathax.client.gui.widgets.WLabel;
 import mathax.client.gui.widgets.WWidget;
 import mathax.client.gui.widgets.containers.WHorizontalList;
 import mathax.client.gui.widgets.pressable.WButton;
-import mathax.client.eventbus.EventHandler;
 import mathax.client.mixin.TextHandlerAccessor;
 import mathax.client.settings.*;
+import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.player.FindItemResult;
 import mathax.client.utils.player.InvUtils;
-import mathax.client.systems.modules.Categories;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtList;

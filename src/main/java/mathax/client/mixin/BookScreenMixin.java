@@ -1,8 +1,8 @@
 package mathax.client.mixin;
 
 import it.unimi.dsi.fastutil.io.FastByteArrayOutputStream;
-import mathax.client.gui.GuiThemes;
 import mathax.client.gui.screens.EditBookTitleAndAuthorScreen;
+import mathax.client.gui.GuiThemes;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.ingame.BookScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;

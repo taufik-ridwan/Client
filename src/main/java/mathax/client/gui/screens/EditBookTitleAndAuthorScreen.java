@@ -1,9 +1,9 @@
 package mathax.client.gui.screens;
 
-import mathax.client.gui.GuiTheme;
-import mathax.client.gui.WindowScreen;
 import mathax.client.gui.widgets.containers.WTable;
 import mathax.client.gui.widgets.input.WTextBox;
+import mathax.client.gui.GuiTheme;
+import mathax.client.gui.WindowScreen;
 import net.minecraft.client.gui.screen.ingame.BookScreen;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.packet.c2s.play.BookUpdateC2SPacket;

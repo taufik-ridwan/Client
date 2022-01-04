@@ -1,20 +1,20 @@
 package mathax.client.systems.modules.player;
 
 import baritone.api.BaritoneAPI;
+import mathax.client.eventbus.EventHandler;
+import mathax.client.eventbus.EventPriority;
 import mathax.client.events.entity.player.ItemUseCrosshairTargetEvent;
 import mathax.client.events.world.TickEvent;
-import mathax.client.systems.modules.combat.BedAura;
-import mathax.client.systems.modules.combat.KillAura;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.systems.modules.Modules;
-import mathax.client.systems.modules.combat.AnchorAura;
 import mathax.client.systems.modules.combat.CrystalAura;
+import mathax.client.systems.modules.combat.KillAura;
 import mathax.client.utils.Utils;
 import mathax.client.utils.player.InvUtils;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.eventbus.EventPriority;
-import mathax.client.settings.*;
+import mathax.client.systems.modules.combat.BedAura;
+import mathax.client.systems.modules.combat.AnchorAura;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 

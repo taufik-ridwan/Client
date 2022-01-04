@@ -1,14 +1,16 @@
 package mathax.client.systems.modules.render;
 
 import mathax.client.MatHax;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.entity.EntityAddedEvent;
 import mathax.client.events.render.Render2DEvent;
 import mathax.client.events.render.Render3DEvent;
 import mathax.client.events.world.TickEvent;
-import mathax.client.eventbus.EventHandler;
 import mathax.client.renderer.Renderer2D;
 import mathax.client.renderer.ShapeMode;
 import mathax.client.renderer.text.TextRenderer;
+import mathax.client.settings.*;
+import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.misc.Vec3;
 import mathax.client.utils.player.PlayerUtils;
@@ -16,8 +18,6 @@ import mathax.client.utils.render.NametagUtils;
 import mathax.client.utils.render.color.Color;
 import mathax.client.utils.render.color.SettingColor;
 import mathax.client.utils.world.Dimension;
-import mathax.client.systems.modules.Categories;
-import mathax.client.settings.*;
 import net.minecraft.client.network.PlayerListEntry;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;

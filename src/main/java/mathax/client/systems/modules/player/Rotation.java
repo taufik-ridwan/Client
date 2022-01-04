@@ -1,5 +1,6 @@
 package mathax.client.systems.modules.player;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.world.TickEvent;
 import mathax.client.settings.DoubleSetting;
 import mathax.client.settings.EnumSetting;
@@ -7,7 +8,6 @@ import mathax.client.settings.Setting;
 import mathax.client.settings.SettingGroup;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
-import mathax.client.eventbus.EventHandler;
 import net.minecraft.item.Items;
 
 public class Rotation extends Module {

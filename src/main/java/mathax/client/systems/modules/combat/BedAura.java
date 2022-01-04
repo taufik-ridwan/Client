@@ -1,13 +1,14 @@
 package mathax.client.systems.modules.combat;
 
 import mathax.client.MatHax;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.render.Render3DEvent;
 import mathax.client.events.world.TickEvent;
 import mathax.client.renderer.ShapeMode;
-import mathax.client.systems.modules.Modules;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
-import mathax.client.systems.modules.world.AntiGhostBlock;
+import mathax.client.systems.modules.Modules;
 import mathax.client.utils.Utils;
 import mathax.client.utils.entity.EntityUtils;
 import mathax.client.utils.entity.SortPriority;
@@ -16,8 +17,7 @@ import mathax.client.utils.player.*;
 import mathax.client.utils.render.color.SettingColor;
 import mathax.client.utils.world.BlockUtils;
 import mathax.client.utils.world.CardinalDirection;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.settings.*;
+import mathax.client.systems.modules.world.AntiGhostBlock;
 import net.minecraft.block.BedBlock;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;

@@ -1,12 +1,12 @@
 package mathax.client.gui.widgets;
 
 import mathax.client.gui.renderer.GuiRenderer;
-import mathax.client.gui.tabs.Tab;
-import mathax.client.gui.tabs.TabScreen;
-import mathax.client.gui.tabs.Tabs;
 import mathax.client.gui.widgets.containers.WHorizontalList;
 import mathax.client.gui.widgets.pressable.WPressable;
 import mathax.client.utils.render.color.Color;
+import mathax.client.gui.tabs.Tab;
+import mathax.client.gui.tabs.TabScreen;
+import mathax.client.gui.tabs.Tabs;
 import net.minecraft.client.gui.screen.Screen;
 
 import static mathax.client.MatHax.mc;

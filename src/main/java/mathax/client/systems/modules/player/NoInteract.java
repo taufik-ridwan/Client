@@ -1,16 +1,16 @@
 package mathax.client.systems.modules.player;
 
 import it.unimi.dsi.fastutil.objects.Object2BooleanMap;
+import mathax.client.eventbus.EventHandler;
+import mathax.client.eventbus.EventPriority;
 import mathax.client.events.entity.player.AttackEntityEvent;
 import mathax.client.events.entity.player.InteractBlockEvent;
 import mathax.client.events.entity.player.InteractEntityEvent;
 import mathax.client.events.entity.player.StartBreakingBlockEvent;
+import mathax.client.settings.*;
 import mathax.client.systems.friends.Friends;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.eventbus.EventPriority;
-import mathax.client.settings.*;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;

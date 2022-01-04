@@ -1,28 +1,30 @@
 package mathax.client.gui.themes.meteor;
 
-import mathax.client.gui.DefaultSettingsWidgetFactory;
-import mathax.client.gui.GuiTheme;
-import mathax.client.gui.WidgetScreen;
 import mathax.client.gui.renderer.packer.GuiTexture;
-import mathax.client.gui.themes.meteor.widgets.input.*;
-import mathax.client.gui.utils.AlignmentX;
-import mathax.client.gui.utils.CharFilter;
+import mathax.client.gui.themes.meteor.widgets.*;
+import mathax.client.gui.themes.meteor.widgets.input.WMeteorDropdown;
+import mathax.client.gui.themes.meteor.widgets.input.WMeteorSlider;
+import mathax.client.gui.themes.meteor.widgets.input.WMeteorTextBox;
+import mathax.client.gui.themes.meteor.widgets.pressable.*;
+import mathax.client.gui.widgets.*;
 import mathax.client.gui.widgets.containers.WSection;
 import mathax.client.gui.widgets.containers.WView;
 import mathax.client.gui.widgets.containers.WWindow;
 import mathax.client.gui.widgets.input.WDropdown;
 import mathax.client.gui.widgets.input.WSlider;
 import mathax.client.gui.widgets.input.WTextBox;
+import mathax.client.gui.widgets.pressable.*;
+import mathax.client.settings.*;
+import mathax.client.utils.render.color.Color;
+import mathax.client.utils.render.color.SettingColor;
+import mathax.client.gui.DefaultSettingsWidgetFactory;
+import mathax.client.gui.GuiTheme;
+import mathax.client.gui.WidgetScreen;
+import mathax.client.gui.utils.AlignmentX;
+import mathax.client.gui.utils.CharFilter;
 import mathax.client.renderer.text.TextRenderer;
 import mathax.client.systems.accounts.Account;
 import mathax.client.systems.modules.Module;
-import mathax.client.utils.render.color.Color;
-import mathax.client.utils.render.color.SettingColor;
-import mathax.client.gui.themes.meteor.widgets.*;
-import mathax.client.gui.themes.meteor.widgets.pressable.*;
-import mathax.client.gui.widgets.*;
-import mathax.client.gui.widgets.pressable.*;
-import mathax.client.settings.*;
 
 import static mathax.client.MatHax.mc;
 

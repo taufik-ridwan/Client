@@ -1,9 +1,9 @@
 package mathax.client.mixin;
 
+import mathax.client.systems.modules.Modules;
+import mathax.client.utils.render.color.Color;
 import mathax.client.systems.modules.render.Chams;
 import mathax.client.systems.modules.render.HandView;
-import mathax.client.utils.render.color.Color;
-import mathax.client.systems.modules.Modules;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.RenderLayer;

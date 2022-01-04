@@ -1,15 +1,15 @@
 package mathax.client.systems.modules.player;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.world.TickEvent;
 import mathax.client.mixin.ItemStackAccessor;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.systems.modules.Modules;
-import mathax.client.systems.modules.combat.AutoTotem;
 import mathax.client.utils.player.InvUtils;
 import mathax.client.utils.player.SlotUtils;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.settings.*;
+import mathax.client.systems.modules.combat.AutoTotem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;

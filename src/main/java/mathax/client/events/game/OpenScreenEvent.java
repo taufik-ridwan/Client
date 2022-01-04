@@ -1,7 +1,7 @@
 package mathax.client.events.game;
 
-import mathax.client.events.Cancellable;
 import mathax.client.events.packets.PacketEvent;
+import mathax.client.events.Cancellable;
 import net.minecraft.client.gui.screen.Screen;
 
 public class OpenScreenEvent extends Cancellable {

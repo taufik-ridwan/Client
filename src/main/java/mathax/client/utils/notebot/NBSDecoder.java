@@ -1,9 +1,9 @@
 package mathax.client.utils.notebot;
 
-import mathax.client.MatHax;
 import mathax.client.utils.notebot.nbs.Layer;
 import mathax.client.utils.notebot.nbs.Note;
 import mathax.client.utils.notebot.nbs.Song;
+import mathax.client.MatHax;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

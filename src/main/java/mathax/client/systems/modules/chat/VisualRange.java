@@ -18,8 +18,6 @@ import net.minecraft.text.LiteralText;
 import net.minecraft.text.MutableText;
 import net.minecraft.util.Formatting;
 
-import static mathax.client.utils.misc.ChatUtils.formatCoords;
-
 public class VisualRange extends Module {
     private final SettingGroup sgGeneral = settings.getDefaultGroup();
 
@@ -96,7 +94,7 @@ public class VisualRange extends Module {
         } else {
             MutableText text = new LiteralText(event.entity.getType().getName().getString()).formatted(Formatting.WHITE);
             text.append(new LiteralText(" has despawned at ").formatted(Formatting.GRAY));
-            text.append(formatCoords(event.entity.getPos()));
+            text.append(ChatUtils.formatCoords(event.entity.getPos()));
             text.append(new LiteralText(".").formatted(Formatting.GRAY));
             info(text);
         }

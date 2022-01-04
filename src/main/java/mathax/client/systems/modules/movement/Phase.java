@@ -1,18 +1,17 @@
 package mathax.client.systems.modules.movement;
 
 import mathax.client.eventbus.EventHandler;
-import mathax.client.systems.modules.Categories;
+import mathax.client.events.world.CollisionShapeEvent;
+import mathax.client.events.world.TickEvent;
 import mathax.client.settings.DoubleSetting;
 import mathax.client.settings.EnumSetting;
 import mathax.client.settings.Setting;
 import mathax.client.settings.SettingGroup;
+import mathax.client.systems.modules.Categories;
+import mathax.client.systems.modules.Module;
 import net.minecraft.item.Items;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.shape.VoxelShapes;
-
-import mathax.client.events.world.CollisionShapeEvent;
-import mathax.client.events.world.TickEvent;
-import mathax.client.systems.modules.Module;
 
 public class Phase extends Module {
     private double prevX = Double.NaN;

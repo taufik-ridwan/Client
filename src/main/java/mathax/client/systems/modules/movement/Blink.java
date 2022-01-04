@@ -1,6 +1,7 @@
 package mathax.client.systems.modules.movement;
 
 import mathax.client.MatHax;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.packets.PacketEvent;
 import mathax.client.events.render.Render3DEvent;
 import mathax.client.events.world.TickEvent;
@@ -8,7 +9,6 @@ import mathax.client.renderer.ShapeMode;
 import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
-import mathax.client.eventbus.EventHandler;
 import mathax.client.utils.Utils;
 import mathax.client.utils.entity.fakeplayer.FakePlayerEntity;
 import mathax.client.utils.misc.Pool;

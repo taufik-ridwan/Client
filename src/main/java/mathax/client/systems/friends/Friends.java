@@ -1,13 +1,13 @@
 package mathax.client.systems.friends;
 
+import mathax.client.utils.render.color.RainbowColors;
+import mathax.client.utils.render.color.SettingColor;
 import mathax.client.systems.System;
 import mathax.client.systems.Systems;
 import mathax.client.systems.config.Config;
 import mathax.client.utils.misc.NbtUtils;
 import mathax.client.utils.misc.ChatUtils;
 import mathax.client.utils.render.ToastSystem;
-import mathax.client.utils.render.color.RainbowColors;
-import mathax.client.utils.render.color.SettingColor;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
@@ -43,8 +43,8 @@ public class Friends extends System<Friends> implements Iterable<Friend> {
     public boolean add(Friend friend) {
         if (friend.name.isEmpty()) return false;
         if (friend.name.equals(mc.getSession().getUsername())) {
-            ChatUtils.error("Friends", "You can't add yourself to friends!");
-            if (Config.get().toastFeedback) mc.getToastManager().add(new ToastSystem(Items.EMERALD, color.getPacked(), "Friends " + Formatting.GRAY + "[" + Formatting.WHITE + friend.name + Formatting.GRAY + "]", null, Formatting.RED + "You can't add yourself!", Config.get().toastDuration));
+            if (Config.get().chatFeedback.get()) ChatUtils.error("Friends", "You can't add yourself to friends!");
+            if (Config.get().toastFeedback.get()) mc.getToastManager().add(new ToastSystem(Items.EMERALD, color.getPacked(), "Friends " + Formatting.GRAY + "[" + Formatting.WHITE + friend.name + Formatting.GRAY + "]", null, Formatting.RED + "You can't add yourself!", Config.get().toastDuration.get()));
             return false;
         }
 

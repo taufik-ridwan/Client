@@ -1,8 +1,8 @@
 package mathax.client.mixin;
 
-import mathax.client.systems.modules.render.NoRender;
-import mathax.client.utils.misc.EmptyIterator;
 import mathax.client.systems.modules.Modules;
+import mathax.client.utils.misc.EmptyIterator;
+import mathax.client.systems.modules.render.NoRender;
 import net.minecraft.item.map.MapIcon;
 import net.minecraft.item.map.MapState;
 import org.spongepowered.asm.mixin.Mixin;

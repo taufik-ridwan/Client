@@ -1,14 +1,14 @@
 package mathax.client.systems.modules.combat;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.world.TickEvent;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.entity.SortPriority;
 import mathax.client.utils.entity.TargetUtils;
 import mathax.client.utils.player.InvUtils;
 import mathax.client.utils.world.BlockUtils;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.settings.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
 

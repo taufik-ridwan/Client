@@ -1,12 +1,12 @@
 package mathax.client.systems.modules.misc;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.world.PlaySoundEvent;
 import mathax.client.settings.Setting;
 import mathax.client.settings.SettingGroup;
 import mathax.client.settings.SoundEventListSetting;
-import mathax.client.systems.modules.Module;
 import mathax.client.systems.modules.Categories;
-import mathax.client.eventbus.EventHandler;
+import mathax.client.systems.modules.Module;
 import net.minecraft.item.Items;
 import net.minecraft.sound.SoundEvent;
 

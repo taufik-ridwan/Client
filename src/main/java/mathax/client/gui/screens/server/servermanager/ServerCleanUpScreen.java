@@ -1,11 +1,11 @@
 package mathax.client.gui.screens.server.servermanager;
 
-import mathax.client.utils.Version;
 import mathax.client.gui.GuiTheme;
 import mathax.client.gui.WindowScreen;
 import mathax.client.gui.widgets.containers.WTable;
 import mathax.client.gui.widgets.pressable.WCheckbox;
 import mathax.client.mixininterface.IMultiplayerScreen;
+import mathax.client.utils.Version;
 import mathax.client.utils.render.color.Color;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.multiplayer.MultiplayerScreen;

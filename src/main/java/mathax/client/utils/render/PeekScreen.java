@@ -1,9 +1,9 @@
 package mathax.client.utils.render;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import mathax.client.systems.modules.render.BetterTooltips;
-import mathax.client.utils.render.color.Color;
 import mathax.client.systems.modules.Modules;
+import mathax.client.utils.render.color.Color;
+import mathax.client.systems.modules.render.BetterTooltips;
 import mathax.client.utils.Utils;
 import net.minecraft.client.gui.screen.ingame.ShulkerBoxScreen;
 import net.minecraft.client.render.GameRenderer;

@@ -2,11 +2,11 @@ package mathax.client.systems.modules.render;
 
 import it.unimi.dsi.fastutil.objects.Object2BooleanMap;
 import mathax.client.MatHax;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.render.EntityShaders;
 import mathax.client.utils.render.color.SettingColor;
-import mathax.client.settings.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Items;

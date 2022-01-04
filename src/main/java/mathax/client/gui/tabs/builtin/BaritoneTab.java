@@ -3,13 +3,13 @@ package mathax.client.gui.tabs.builtin;
 import baritone.api.BaritoneAPI;
 import baritone.api.Settings$Setting;
 import baritone.api.utils.SettingsUtil;
+import mathax.client.gui.widgets.input.WTextBox;
+import mathax.client.settings.*;
+import mathax.client.utils.render.color.SettingColor;
 import mathax.client.gui.GuiTheme;
 import mathax.client.gui.tabs.Tab;
 import mathax.client.gui.tabs.TabScreen;
 import mathax.client.gui.tabs.WindowTabScreen;
-import mathax.client.gui.widgets.input.WTextBox;
-import mathax.client.settings.*;
-import mathax.client.utils.render.color.SettingColor;
 import net.minecraft.client.gui.screen.Screen;
 
 import java.awt.*;

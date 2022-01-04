@@ -1,10 +1,10 @@
 package mathax.client.systems.waypoints;
 
 import mathax.client.MatHax;
+import mathax.client.utils.render.color.SettingColor;
 import mathax.client.renderer.GL;
 import mathax.client.renderer.Renderer2D;
 import mathax.client.utils.misc.ISerializable;
-import mathax.client.utils.render.color.SettingColor;
 import mathax.client.utils.world.Dimension;
 import net.minecraft.client.texture.AbstractTexture;
 import net.minecraft.nbt.NbtCompound;

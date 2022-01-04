@@ -3,8 +3,8 @@ package mathax.client.systems.modules.render.search;
 import mathax.client.gui.GuiTheme;
 import mathax.client.gui.WindowScreen;
 import mathax.client.renderer.ShapeMode;
-import mathax.client.utils.render.color.SettingColor;
 import mathax.client.settings.*;
+import mathax.client.utils.render.color.SettingColor;
 import net.minecraft.block.Block;
 
 public class SBlockDataScreen extends WindowScreen {

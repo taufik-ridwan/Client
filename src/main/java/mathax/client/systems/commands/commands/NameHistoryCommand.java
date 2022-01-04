@@ -2,12 +2,12 @@ package mathax.client.systems.commands.commands;
 
 import com.google.common.reflect.TypeToken;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
-import mathax.client.systems.commands.arguments.PlayerListEntryArgumentType;
 import mathax.client.systems.commands.Command;
+import mathax.client.systems.commands.arguments.PlayerListEntryArgumentType;
+import mathax.client.utils.misc.ChatUtils;
 import mathax.client.utils.misc.text.TextUtils;
 import mathax.client.utils.network.HTTP;
 import mathax.client.utils.network.MatHaxExecutor;
-import mathax.client.utils.misc.ChatUtils;
 import mathax.client.utils.render.color.Color;
 import net.minecraft.client.network.PlayerListEntry;
 import net.minecraft.command.CommandSource;

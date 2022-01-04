@@ -1,5 +1,6 @@
 package mathax.client.systems.modules.misc;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.entity.player.FinishUsingItemEvent;
 import mathax.client.events.entity.player.StoppedUsingItemEvent;
 import mathax.client.events.mathax.MouseButtonEvent;
@@ -13,7 +14,6 @@ import mathax.client.systems.modules.Module;
 import mathax.client.utils.misc.input.KeyAction;
 import mathax.client.utils.player.FindItemResult;
 import mathax.client.utils.player.InvUtils;
-import mathax.client.eventbus.EventHandler;
 import net.minecraft.item.BowItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;

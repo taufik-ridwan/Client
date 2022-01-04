@@ -1,9 +1,9 @@
 package mathax.client.mixin;
 
-import mathax.client.MatHax;
 import mathax.client.events.entity.BoatMoveEvent;
-import mathax.client.systems.modules.movement.BoatFly;
 import mathax.client.systems.modules.Modules;
+import mathax.client.MatHax;
+import mathax.client.systems.modules.movement.BoatFly;
 import net.minecraft.entity.vehicle.BoatEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;

@@ -1,7 +1,7 @@
 package mathax.client.mixin;
 
-import mathax.client.systems.modules.render.NoRender;
 import mathax.client.systems.modules.Modules;
+import mathax.client.systems.modules.render.NoRender;
 import net.minecraft.client.particle.FireworksSparkParticle;
 import net.minecraft.client.render.Camera;
 import net.minecraft.client.render.VertexConsumer;

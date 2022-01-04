@@ -1,19 +1,19 @@
 package mathax.client.systems.modules.movement.elytrafly;
 
 import mathax.client.MatHax;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.entity.player.PlayerMoveEvent;
 import mathax.client.events.packets.PacketEvent;
 import mathax.client.events.world.TickEvent;
 import mathax.client.mixininterface.IVec3d;
 import mathax.client.settings.*;
-import mathax.client.systems.modules.movement.elytrafly.modes.Packet;
-import mathax.client.systems.modules.movement.elytrafly.modes.Pitch40;
-import mathax.client.systems.modules.movement.elytrafly.modes.Vanilla;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.systems.modules.Modules;
+import mathax.client.systems.modules.movement.elytrafly.modes.Packet;
+import mathax.client.systems.modules.movement.elytrafly.modes.Pitch40;
+import mathax.client.systems.modules.movement.elytrafly.modes.Vanilla;
 import mathax.client.systems.modules.player.ChestSwap;
-import mathax.client.eventbus.EventHandler;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ElytraItem;
 import net.minecraft.item.Items;
@@ -366,7 +366,6 @@ public class ElytraFly extends Module {
     public String getInfoString() {
         return currentMode.getHudString();
     }
-
 
     public enum ChestSwapMode {
         Always("Always"),

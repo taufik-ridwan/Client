@@ -1,6 +1,8 @@
 package mathax.client.systems.modules.world;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.world.TickEvent;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.misc.Pool;
@@ -8,8 +10,6 @@ import mathax.client.utils.player.FindItemResult;
 import mathax.client.utils.player.InvUtils;
 import mathax.client.utils.world.BlockIterator;
 import mathax.client.utils.world.BlockUtils;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.settings.*;
 import net.minecraft.block.*;
 import net.minecraft.item.Items;
 import net.minecraft.util.math.BlockPos;

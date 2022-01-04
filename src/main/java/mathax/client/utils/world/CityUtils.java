@@ -1,10 +1,10 @@
 package mathax.client.utils.world;
 
-import mathax.client.mixin.AbstractBlockAccessor;
 import mathax.client.systems.friends.Friends;
-import mathax.client.utils.Utils;
 import mathax.client.utils.entity.fakeplayer.FakePlayerEntity;
 import mathax.client.utils.entity.fakeplayer.FakePlayerManager;
+import mathax.client.mixin.AbstractBlockAccessor;
+import mathax.client.utils.Utils;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;

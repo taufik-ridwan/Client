@@ -1,9 +1,9 @@
 package mathax.client.gui.themes.meteor;
 
+import mathax.client.utils.render.color.Color;
 import mathax.client.gui.renderer.GuiRenderer;
 import mathax.client.gui.utils.BaseWidget;
 import mathax.client.gui.widgets.WWidget;
-import mathax.client.utils.render.color.Color;
 
 public interface MeteorWidget extends BaseWidget {
     default MeteorGuiTheme theme() {

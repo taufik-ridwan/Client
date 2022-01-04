@@ -1,12 +1,12 @@
 package mathax.client.settings;
 
-import mathax.client.gui.GuiTheme;
 import mathax.client.gui.widgets.containers.WContainer;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.misc.ISerializable;
 import mathax.client.utils.misc.NbtUtils;
 import mathax.client.utils.render.color.RainbowColors;
 import mathax.client.utils.render.color.SettingColor;
+import mathax.client.gui.GuiTheme;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
 import net.minecraft.nbt.NbtList;
@@ -35,6 +35,14 @@ public class Settings implements ISerializable<Settings>, Iterable<SettingGroup>
         }
 
         return null;
+    }
+
+    public void reset() {
+        for (SettingGroup group : groups) {
+            for (Setting<?> setting : group) {
+                setting.reset();
+            }
+        }
     }
 
     public SettingGroup getGroup(String name) {

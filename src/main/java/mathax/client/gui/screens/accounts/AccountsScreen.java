@@ -1,11 +1,11 @@
 package mathax.client.gui.screens.accounts;
 
-import mathax.client.gui.GuiTheme;
-import mathax.client.gui.WindowScreen;
-import mathax.client.gui.widgets.WAccount;
 import mathax.client.gui.widgets.containers.WContainer;
 import mathax.client.gui.widgets.containers.WHorizontalList;
 import mathax.client.gui.widgets.pressable.WButton;
+import mathax.client.gui.GuiTheme;
+import mathax.client.gui.WindowScreen;
+import mathax.client.gui.widgets.WAccount;
 import mathax.client.systems.accounts.Account;
 import mathax.client.systems.accounts.Accounts;
 import mathax.client.systems.accounts.MicrosoftLogin;

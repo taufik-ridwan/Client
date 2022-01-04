@@ -1,13 +1,13 @@
 package mathax.client.settings;
 
-import mathax.client.MatHax;
-import mathax.client.eventbus.EventHandler;
-import mathax.client.eventbus.EventPriority;
 import mathax.client.events.mathax.KeyEvent;
 import mathax.client.events.mathax.MouseButtonEvent;
 import mathax.client.gui.widgets.WKeyBind;
 import mathax.client.utils.misc.KeyBind;
 import mathax.client.utils.misc.input.KeyAction;
+import mathax.client.MatHax;
+import mathax.client.eventbus.EventHandler;
+import mathax.client.eventbus.EventPriority;
 import net.minecraft.nbt.NbtCompound;
 
 import java.util.function.Consumer;

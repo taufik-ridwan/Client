@@ -2,8 +2,8 @@ package mathax.client.utils.world;
 
 import mathax.client.MatHax;
 import mathax.client.events.world.TickEvent;
-import mathax.client.utils.Utils;
 import mathax.client.utils.misc.Pool;
+import mathax.client.utils.Utils;
 import mathax.client.eventbus.EventHandler;
 import mathax.client.eventbus.EventPriority;
 import net.minecraft.block.BlockState;

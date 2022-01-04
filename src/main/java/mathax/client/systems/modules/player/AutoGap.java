@@ -1,6 +1,7 @@
 package mathax.client.systems.modules.player;
 
 import baritone.api.BaritoneAPI;
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.entity.player.ItemUseCrosshairTargetEvent;
 import mathax.client.events.world.TickEvent;
 import mathax.client.settings.BoolSetting;
@@ -10,13 +11,12 @@ import mathax.client.settings.SettingGroup;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.systems.modules.Modules;
-import mathax.client.systems.modules.combat.AnchorAura;
-import mathax.client.systems.modules.combat.BedAura;
 import mathax.client.systems.modules.combat.CrystalAura;
 import mathax.client.systems.modules.combat.KillAura;
 import mathax.client.utils.Utils;
 import mathax.client.utils.player.InvUtils;
-import mathax.client.eventbus.EventHandler;
+import mathax.client.systems.modules.combat.AnchorAura;
+import mathax.client.systems.modules.combat.BedAura;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;

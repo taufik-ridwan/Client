@@ -1,8 +1,8 @@
 package mathax.client.gui.screens.accounts;
 
+import mathax.client.gui.widgets.pressable.WButton;
 import mathax.client.gui.GuiTheme;
 import mathax.client.gui.WindowScreen;
-import mathax.client.gui.widgets.pressable.WButton;
 
 public abstract class AddAccountScreen extends WindowScreen {
     public final AccountsScreen parent;

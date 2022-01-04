@@ -6,14 +6,15 @@ import mathax.client.events.game.GameJoinedEvent;
 import mathax.client.events.game.GameLeftEvent;
 import mathax.client.systems.accounts.Accounts;
 import mathax.client.systems.commands.Commands;
-import mathax.client.systems.enemies.Enemies;
-import mathax.client.systems.macros.Macros;
-import mathax.client.systems.profiles.Profiles;
-import mathax.client.systems.waypoints.Waypoints;
 import mathax.client.systems.config.Config;
+import mathax.client.systems.enemies.Enemies;
 import mathax.client.systems.friends.Friends;
+import mathax.client.systems.macros.Macros;
 import mathax.client.systems.modules.Modules;
+import mathax.client.systems.hud.HUD;
+import mathax.client.systems.profiles.Profiles;
 import mathax.client.systems.proxies.Proxies;
+import mathax.client.systems.waypoints.Waypoints;
 import mathax.client.utils.Version;
 
 import java.io.File;
@@ -44,6 +45,7 @@ public class Systems {
         add(new Waypoints());
         add(new Profiles());
         add(new Proxies());
+        add(new HUD());
 
         MatHax.EVENT_BUS.subscribe(Systems.class);
     }

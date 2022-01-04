@@ -1,5 +1,6 @@
 package mathax.client.gui.themes.meteor.widgets;
 
+import mathax.client.MatHax;
 import mathax.client.gui.renderer.GuiRenderer;
 import mathax.client.gui.themes.meteor.MeteorGuiTheme;
 import mathax.client.gui.themes.meteor.MeteorWidget;
@@ -8,7 +9,6 @@ import mathax.client.gui.widgets.pressable.WPressable;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.Utils;
 
-import static mathax.client.MatHax.mc;
 import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_LEFT;
 import static org.lwjgl.glfw.GLFW.GLFW_MOUSE_BUTTON_RIGHT;
 
@@ -51,7 +51,7 @@ public class WMeteorModule extends WPressable implements MeteorWidget {
     @Override
     protected void onPressed(int button) {
         if (button == GLFW_MOUSE_BUTTON_LEFT) module.toggle();
-        else if (button == GLFW_MOUSE_BUTTON_RIGHT) mc.setScreen(theme.moduleScreen(module));
+        else if (button == GLFW_MOUSE_BUTTON_RIGHT) MatHax.mc.setScreen(theme.moduleScreen(module));
     }
 
     @Override

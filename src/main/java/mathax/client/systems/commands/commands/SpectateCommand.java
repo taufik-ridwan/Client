@@ -2,10 +2,10 @@ package mathax.client.systems.commands.commands;
 
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import mathax.client.MatHax;
-import mathax.client.events.mathax.KeyEvent;
-import mathax.client.systems.commands.arguments.PlayerArgumentType;
-import mathax.client.systems.commands.Command;
 import mathax.client.eventbus.EventHandler;
+import mathax.client.events.mathax.KeyEvent;
+import mathax.client.systems.commands.Command;
+import mathax.client.systems.commands.arguments.PlayerArgumentType;
 import net.minecraft.command.CommandSource;
 import net.minecraft.text.LiteralText;
 

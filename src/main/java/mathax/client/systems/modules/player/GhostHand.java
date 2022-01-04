@@ -1,10 +1,10 @@
 package mathax.client.systems.modules.player;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.world.TickEvent;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.utils.Utils;
-import mathax.client.eventbus.EventHandler;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.item.Items;
 import net.minecraft.util.Hand;

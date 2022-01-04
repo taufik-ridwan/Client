@@ -10,14 +10,14 @@ import mathax.client.events.world.CollisionShapeEvent;
 import mathax.client.events.world.TickEvent;
 import mathax.client.mixin.PlayerPositionLookS2CPacketAccessor;
 import mathax.client.mixininterface.IVec3d;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
 import mathax.client.systems.modules.Modules;
-import mathax.client.systems.modules.world.Timer;
 import mathax.client.utils.entity.EntityUtils;
 import mathax.client.utils.misc.KeyBind;
+import mathax.client.utils.misc.Timer;
 import mathax.client.utils.player.PlayerUtils;
-import mathax.client.settings.*;
 import mathax.client.utils.world.Dimension;
 import net.minecraft.item.Items;
 import net.minecraft.network.packet.c2s.play.ClientCommandC2SPacket;
@@ -36,7 +36,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
 public class PacketFly extends Module {
-    private final mathax.client.utils.misc.Timer intervalTimer = new mathax.client.utils.misc.Timer();
+    private final Timer intervalTimer = new Timer();
 
     private PlayerMoveC2SPacket.PositionAndOnGround startingOutOfBoundsPos;
 
@@ -311,7 +311,7 @@ public class PacketFly extends Module {
             mc.player.getAbilities().allowFlying = false;
         }
 
-        Modules.get().get(Timer.class).setOverride(Timer.OFF);
+        Modules.get().get(mathax.client.systems.modules.world.Timer.class).setOverride(mathax.client.systems.modules.world.Timer.OFF);
     }
 
     // Info Sting
@@ -367,8 +367,8 @@ public class PacketFly extends Module {
 
     @EventHandler
     public void onPreTick(TickEvent.Pre event) {
-        if (boost.get()) Modules.get().get(Timer.class).setOverride(boostTimer.get().floatValue());
-        else Modules.get().get(Timer.class).setOverride(Timer.OFF);
+        if (boost.get()) Modules.get().get(mathax.client.systems.modules.world.Timer.class).setOverride(boostTimer.get().floatValue());
+        else Modules.get().get(mathax.client.systems.modules.world.Timer.class).setOverride(mathax.client.systems.modules.world.Timer.OFF);
 
         if (type.get() == Type.Off_Ground) {
             if (isMoving() && onGround()) {

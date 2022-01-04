@@ -1,12 +1,12 @@
 package mathax.client.systems.modules.render;
 
+import mathax.client.eventbus.EventHandler;
 import mathax.client.events.game.ChangePerspectiveEvent;
 import mathax.client.events.mathax.MouseScrollEvent;
+import mathax.client.settings.*;
 import mathax.client.systems.modules.Categories;
 import mathax.client.systems.modules.Module;
-import mathax.client.eventbus.EventHandler;
 import mathax.client.utils.misc.KeyBind;
-import mathax.client.settings.*;
 import net.minecraft.client.option.Perspective;
 import net.minecraft.item.Items;
 

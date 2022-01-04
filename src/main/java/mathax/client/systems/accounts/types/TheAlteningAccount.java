@@ -15,8 +15,6 @@ import net.minecraft.client.util.Session;
 
 import java.util.Optional;
 
-import static mathax.client.MatHax.mc;
-
 public class TheAlteningAccount extends Account<TheAlteningAccount> {
     private static final String AUTH = "http://authserver.thealtening.com";
     private static final String ACCOUNT = "https://api.mojang.com";
@@ -45,7 +43,7 @@ public class TheAlteningAccount extends Account<TheAlteningAccount> {
 
     @Override
     public boolean login() {
-        YggdrasilMinecraftSessionService service = (YggdrasilMinecraftSessionService) mc.getSessionService();
+        YggdrasilMinecraftSessionService service = (YggdrasilMinecraftSessionService) MatHax.mc.getSessionService();
         AccountUtils.setBaseUrl(service, SESSION + "/session/minecraft/");
         AccountUtils.setJoinUrl(service, SESSION + "/session/minecraft/join");
         AccountUtils.setCheckUrl(service, SESSION + "/session/minecraft/hasJoined");
@@ -65,7 +63,7 @@ public class TheAlteningAccount extends Account<TheAlteningAccount> {
     }
 
     private YggdrasilUserAuthentication getAuth() {
-        YggdrasilUserAuthentication auth = (YggdrasilUserAuthentication) new YggdrasilAuthenticationService(((MinecraftClientAccessor) mc).getProxy(), "", Environment.create(AUTH, ACCOUNT, SESSION, SERVICES, "The Altening")).createUserAuthentication(Agent.MINECRAFT);
+        YggdrasilUserAuthentication auth = (YggdrasilUserAuthentication) new YggdrasilAuthenticationService(((MinecraftClientAccessor) MatHax.mc).getProxy(), "", Environment.create(AUTH, ACCOUNT, SESSION, SERVICES, "The Altening")).createUserAuthentication(Agent.MINECRAFT);
 
         auth.setUsername(name);
         auth.setPassword("MatHax on top!");

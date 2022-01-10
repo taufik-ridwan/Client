@@ -28,7 +28,6 @@ public class HudEditorScreen extends WidgetScreen {
     private final Color INACTIVE_OL_COLOR = new Color(200, 25, 25, 200);
 
     private final HUD hud;
-    private final Screen parent;
 
     private boolean selecting;
     private double mouseStartX, mouseStartY;
@@ -38,18 +37,10 @@ public class HudEditorScreen extends WidgetScreen {
     private HudElement hoveredModule;
     private final List<HudElement> selectedElements = new ArrayList<>();
 
-    public HudEditorScreen(GuiTheme theme, Screen parent) {
+    public HudEditorScreen(GuiTheme theme) {
         super(theme, "Hud Editor");
 
         this.hud = Systems.get(HUD.class);
-        this.parent = parent;
-    }
-
-    @Override
-    protected void init() {
-        super.init();
-
-        mc.options.hudHidden = false;
     }
 
     @Override
@@ -70,13 +61,6 @@ public class HudEditorScreen extends WidgetScreen {
         }
 
         return false;
-    }
-
-    @Override
-    public void onClose() {
-        super.onClose();
-
-        if (theme.hideHUD() && parent instanceof WidgetScreen) mc.options.hudHidden = true;
     }
 
     @Override

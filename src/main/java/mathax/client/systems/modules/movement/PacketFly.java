@@ -35,6 +35,11 @@ import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
+/*/----------------------------------------------------------------------------------------------------------------------------/*/
+/*/ Made by cally72jhb                                                                                                         /*/
+/*/ https://github.com/cally72jhb/vector-addon/blob/main/src/main/java/cally72jhb/addon/system/modules/movement/PacketFly.java /*/
+/*/----------------------------------------------------------------------------------------------------------------------------/*/
+
 public class PacketFly extends Module {
     private final Timer intervalTimer = new Timer();
 
@@ -314,8 +319,6 @@ public class PacketFly extends Module {
         Modules.get().get(mathax.client.systems.modules.world.Timer.class).setOverride(mathax.client.systems.modules.world.Timer.OFF);
     }
 
-    // Info Sting
-
     @Override
     public String getInfoString() {
         String info = "";
@@ -327,8 +330,6 @@ public class PacketFly extends Module {
         return info;
     }
 
-    // For Disabling
-
     @EventHandler
     private void onGameJoin(GameJoinedEvent event) {
         if (autoToggle.get()) toggle();
@@ -339,14 +340,10 @@ public class PacketFly extends Module {
         if (autoToggle.get()) toggle();
     }
 
-    // For Phase
-
     @EventHandler
     public void isCube(CollisionShapeEvent event) {
         if (phase.get() != Phase.None && noCollision.get()) event.shape = VoxelShapes.empty();
     }
-
-    // For Toggling
 
     @EventHandler
     private void onKey(KeyEvent event) {
@@ -362,8 +359,6 @@ public class PacketFly extends Module {
             if (message.get()) info(Text.of(forceAntiKick ? "Activated Anti Kick" : "Disabled Anti Kick"));
         }
     }
-
-    // For Boost
 
     @EventHandler
     public void onPreTick(TickEvent.Pre event) {
@@ -381,8 +376,6 @@ public class PacketFly extends Module {
             }
         }
     }
-
-    // Main Loop
 
     @EventHandler
     public void onPostTick(TickEvent.Post event) {
@@ -548,8 +541,6 @@ public class PacketFly extends Module {
         if (jitterTicks > 7) jitterTicks = 0;
     }
 
-    // Accept Server Packets & Cancel Rotation
-
     @EventHandler
     public void onReceivePacket(PacketEvent.Receive event) {
         if (type.get() == Type.Elytra) return;
@@ -586,8 +577,6 @@ public class PacketFly extends Module {
         }
     }
 
-    // Movement
-
     @EventHandler
     public void onPlayerMove(PlayerMoveEvent event) {
         if (type.get() == Type.Off_Ground) return;
@@ -622,8 +611,6 @@ public class PacketFly extends Module {
             event.cancel();
         }
     }
-
-    // Utils
 
     public void updateFlying(Type type) {
         if (mc.world != null && mc.player != null && type != Type.Elytra) {

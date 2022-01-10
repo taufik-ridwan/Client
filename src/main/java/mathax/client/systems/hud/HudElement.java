@@ -1,7 +1,5 @@
 package mathax.client.systems.hud;
 
-import mathax.client.gui.screens.hud.HudEditorScreen;
-import mathax.client.gui.screens.hud.HudElementScreen;
 import mathax.client.settings.Settings;
 import mathax.client.utils.Utils;
 import mathax.client.utils.misc.ISerializable;
@@ -48,7 +46,7 @@ public abstract class HudElement implements ISerializable<HudElement> {
     public abstract void render(HudRenderer renderer);
 
     protected boolean isInEditor() {
-        return (mc.currentScreen instanceof HudEditorScreen || mc.currentScreen instanceof HudElementScreen || !Utils.canUpdate());
+        return HUD.isEditorScreen() || !Utils.canUpdate();
     }
 
     @Override
@@ -67,7 +65,7 @@ public abstract class HudElement implements ISerializable<HudElement> {
     public HudElement fromTag(NbtCompound tag) {
         active = tag.contains("active") ? tag.getBoolean("active") : defaultActive;
         if (tag.contains("settings")) settings.fromTag(tag.getCompound("settings"));
-        box.fromTag(tag.getCompound("box"));
+        if (tag.contains("box")) box.fromTag(tag.getCompound("box"));
 
         return this;
     }

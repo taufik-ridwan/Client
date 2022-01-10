@@ -10,7 +10,6 @@ import mathax.client.systems.hud.HudElement;
 import mathax.client.utils.Utils;
 import mathax.client.utils.misc.NbtUtils;
 import mathax.client.utils.render.color.Color;
-import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.nbt.NbtCompound;
 import org.lwjgl.glfw.GLFW;
@@ -28,7 +27,6 @@ public class HudEditorScreen extends WidgetScreen {
     private final Color INACTIVE_OL_COLOR = new Color(200, 25, 25, 200);
 
     private final HUD hud;
-    private final Screen parent;
 
     private boolean selecting;
     private double mouseStartX, mouseStartY;
@@ -38,18 +36,10 @@ public class HudEditorScreen extends WidgetScreen {
     private HudElement hoveredModule;
     private final List<HudElement> selectedElements = new ArrayList<>();
 
-    public HudEditorScreen(GuiTheme theme, Screen parent) {
+    public HudEditorScreen(GuiTheme theme) {
         super(theme, "Hud Editor");
 
         this.hud = Systems.get(HUD.class);
-        this.parent = parent;
-    }
-
-    @Override
-    protected void init() {
-        super.init();
-
-        mc.options.hudHidden = false;
     }
 
     @Override
@@ -70,13 +60,6 @@ public class HudEditorScreen extends WidgetScreen {
         }
 
         return false;
-    }
-
-    @Override
-    public void onClose() {
-        super.onClose();
-
-        if (theme.hideHUD() && parent instanceof WidgetScreen) mc.options.hudHidden = true;
     }
 
     @Override
@@ -153,8 +136,7 @@ public class HudEditorScreen extends WidgetScreen {
 
                 if (isInSelection(mouseX, mouseY, mX, mY) || isInSelection(mouseX, mouseY, mX + mW, mY) || (isInSelection(mouseX, mouseY, mX, mY + mH) || isInSelection(mouseX, mouseY, mX + mW, mY + mH))) selectedElements.add(module);
             }
-        }
-        else if (dragging) {
+        } else if (dragging) {
             for (HudElement element : selectedElements) {
                 element.box.addPos(mouseX - lastMouseX, mouseY - lastMouseY);
             }

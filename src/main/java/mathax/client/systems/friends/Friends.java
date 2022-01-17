@@ -91,8 +91,8 @@ public class Friends extends System<Friends> implements Iterable<Friend> {
         return friends.size();
     }
 
-    @Override
-    public @NotNull Iterator<Friend> iterator() {
+    @NotNull
+    public Iterator<Friend> iterator() {
         return friends.iterator();
     }
 

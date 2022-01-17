@@ -19,6 +19,8 @@ public abstract class ShulkerBoxScreenMixin extends HandledScreen<ShulkerBoxScre
 
     @Override
     protected void init() {
+        super.init();
+
         InventoryTweaks invTweaks = Modules.get().get(InventoryTweaks.class);
 
         if (invTweaks.isActive() && invTweaks.showButtons()) {

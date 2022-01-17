@@ -94,8 +94,6 @@ public class Modules extends System<Modules> {
                 for (Setting<?> setting : group) setting.reset();
             }
         }
-
-        super.load(folder);
     }
 
     public void sortModules() {
@@ -204,8 +202,6 @@ public class Modules extends System<Modules> {
         }
     }
 
-    // Binding
-
     public void setModuleToBind(Module moduleToBind) {
         this.moduleToBind = moduleToBind;
     }
@@ -259,8 +255,6 @@ public class Modules extends System<Modules> {
             }
         }
     }
-
-    // End of binding
 
     @EventHandler(priority = EventPriority.HIGHEST + 1)
     private void onOpenScreen(OpenScreenEvent event) {
@@ -335,15 +329,9 @@ public class Modules extends System<Modules> {
         return this;
     }
 
-    // INIT MODULES
-
     public void add(Module module) {
-        // Check if the module's category is registered
-        if (!CATEGORIES.contains(module.category)) {
-            throw new RuntimeException("Modules.addModule - Module's category was not registered.");
-        }
+        if (!CATEGORIES.contains(module.category)) throw new RuntimeException("Modules.addModule - Module's category was not registered.");
 
-        // Remove the previous module with the same name
         AtomicReference<Module> removedModule = new AtomicReference<>();
         if (moduleInstances.values().removeIf(module1 -> {
             if (module1.name.equals(module.name)) {
@@ -357,12 +345,10 @@ public class Modules extends System<Modules> {
             getGroup(removedModule.get().category).remove(removedModule.get());
         }
 
-        // Add the module
         moduleInstances.put(module.getClass(), module);
         modules.add(module);
         getGroup(module.category).add(module);
 
-        // Register color settings for the module
         module.settings.registerColorSettings(module);
     }
 

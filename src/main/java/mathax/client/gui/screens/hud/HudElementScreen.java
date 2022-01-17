@@ -1,6 +1,5 @@
 package mathax.client.gui.screens.hud;
 
-import mathax.client.events.render.Render2DEvent;
 import mathax.client.gui.renderer.GuiRenderer;
 import mathax.client.gui.widgets.containers.WContainer;
 import mathax.client.gui.widgets.containers.WHorizontalList;
@@ -41,7 +40,7 @@ public class HudElementScreen extends WindowScreen {
         // Bottom
         WHorizontalList bottomList = add(theme.horizontalList()).expandX().widget();
 
-        // Active
+        //   Active
         bottomList.add(theme.label("Active:"));
         WCheckbox active = bottomList.add(theme.checkbox(element.active)).widget();
         active.action = () -> {
@@ -63,7 +62,7 @@ public class HudElementScreen extends WindowScreen {
 
     @Override
     protected void onRenderBefore(float delta) {
-        if (!Utils.canUpdate()) Systems.get(HUD.class).onRender(Render2DEvent.get(0, 0, delta));
+        if (!Utils.canUpdate()) Systems.get(HUD.class).render(delta, hudElement -> true);
     }
 
     @Override

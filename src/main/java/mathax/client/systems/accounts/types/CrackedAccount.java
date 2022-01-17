@@ -19,8 +19,6 @@ public class CrackedAccount extends Account<CrackedAccount> {
 
     @Override
     public boolean login() {
-        super.login();
-
         setSession(new Session(name, "", "", "mojang"));
         return true;
     }

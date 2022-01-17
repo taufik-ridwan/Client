@@ -1,6 +1,5 @@
 package mathax.client.gui.screens.hud;
 
-import mathax.client.events.render.Render2DEvent;
 import mathax.client.gui.GuiTheme;
 import mathax.client.gui.WidgetScreen;
 import mathax.client.renderer.Renderer2D;
@@ -135,10 +134,11 @@ public class HudEditorScreen extends WidgetScreen {
                 double mW = module.box.width;
                 double mH = module.box.height;
 
-                if (isInSelection(mouseX, mouseY, mX, mY) || isInSelection(mouseX, mouseY, mX + mW, mY) || (isInSelection(mouseX, mouseY, mX, mY + mH) || isInSelection(mouseX, mouseY, mX + mW, mY + mH))) selectedElements.add(module);
+                if (isInSelection(mouseX, mouseY, mX, mY) || isInSelection(mouseX, mouseY, mX + mW, mY) || (isInSelection(mouseX, mouseY, mX, mY + mH) || isInSelection(mouseX, mouseY, mX + mW, mY + mH))) {
+                    selectedElements.add(module);
+                }
             }
-        }
-        else if (dragging) {
+        } else if (dragging) {
             for (HudElement element : selectedElements) {
                 element.box.addPos(mouseX - lastMouseX, mouseY - lastMouseY);
             }
@@ -244,20 +244,16 @@ public class HudEditorScreen extends WidgetScreen {
 
     @Override
     public void render(MatrixStack matrices, int mouseX, int mouseY, float delta) {
+        if (!Utils.canUpdate()) renderBackground(matrices);
+
         double s = mc.getWindow().getScaleFactor();
 
         mouseX *= s;
         mouseY *= s;
 
-        if (!Utils.canUpdate()) {
-            renderBackground(matrices);
+        Utils.unscaledProjection();
 
-            Utils.unscaledProjection();
-            hud.onRender(Render2DEvent.get(0, 0, delta));
-        } else {
-            Utils.unscaledProjection();
-            if (!hud.active) hud.onRender(Render2DEvent.get(0, 0, delta));
-        }
+        if (!Utils.canUpdate()) hud.render(delta, hudElement -> true);
 
         Renderer2D.COLOR.begin();
 

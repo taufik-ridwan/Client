@@ -201,7 +201,6 @@ public class InteractionScreen extends Screen {
     }
 
     public void init() {
-        super.init();
         this.cursorMode(GLFW.GLFW_CURSOR_HIDDEN);
         yaw = client.player.getYaw();
         pitch = client.player.getPitch();
@@ -229,7 +228,7 @@ public class InteractionScreen extends Screen {
         else client.setScreen(null);
     }
 
-    public boolean isPauseScreen() {
+    public boolean shouldPause() {
         return false;
     }
 

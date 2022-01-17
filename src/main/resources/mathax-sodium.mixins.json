@@ -4,9 +4,10 @@
   "compatibilityLevel": "JAVA_16",
   "plugin": "mathax.client.MixinPlugin",
   "client": [
-    "SodiumBlockOcclusionCacheMixin",
-    "SodiumBlockRendererMixin",
-    "SodiumFluidRendererMixin"
+    "BlockOcclusionCacheMixin",
+    "BlockRendererMixin",
+    "FluidRendererMixin",
+    "LightDataAccessMixin"
   ],
   "injectors": {
     "defaultRequire": 1

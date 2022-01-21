@@ -103,7 +103,6 @@
     "LivingEntityMixin",
     "LivingEntityRendererMixin",
     "LlamaEntityMixin",
-    "LoginHelloC2SPacketMixin",
     "MapRendererAccessor",
     "MapRendererMixin",
     "Matrix4fMixin",

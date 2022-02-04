@@ -1,29 +1,12 @@
 package mathax.client.mixin;
 
-import com.mojang.blaze3d.platform.GlStateManager;
-import com.mojang.blaze3d.systems.RenderSystem;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.gui.screen.SplashOverlay;
-import net.minecraft.client.render.GameRenderer;
-import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.resource.ResourceReload;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.Util;
-import net.minecraft.util.math.MathHelper;
-import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Mutable;
-import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import java.util.Optional;
-import java.util.function.Consumer;
+// TODO: Fix.
 
 @Mixin(SplashOverlay.class)
-public abstract class SplashOverlayMixin {
+public abstract class SplashOverlayMixin {/*
     @Mutable
     @Shadow
     @Final
@@ -60,7 +43,9 @@ public abstract class SplashOverlayMixin {
 
     @Inject(method = "init(Lnet/minecraft/client/MinecraftClient;)V", at = @At("HEAD"), cancellable = true)
     private static void init(MinecraftClient client, CallbackInfo info) {
-        LOGO = new Identifier("mathax", "textures/blank.png");
+        client.getTextureManager().registerTexture(MATHAX_LOGO, new ResourceTexture(new Identifier("mathax", "textures/icons/icon.png")));
+        client.getTextureManager().registerTexture(LOGO, new ResourceTexture(new Identifier("mathax", "textures/blank.png")));
+
         info.cancel();
     }
 
@@ -69,12 +54,12 @@ public abstract class SplashOverlayMixin {
         int width = client.getWindow().getScaledWidth();
         int height = client.getWindow().getScaledHeight();
 
-        long time = Util.getMeasuringTimeMs();
+        long time = Util.getMeasuringTimeMs() + 2500;
 
-        if (reloading && reloadStartTime == -1L) reloadStartTime = time;
+        if (reloading && reloadStartTime == -1L) reloadStartTime = time - 2500;
 
-        float completeTime = reloadCompleteTime > -1L ? (float)(time - reloadCompleteTime) / 1000.0F : -1.0F;
-        float startTime = reloadStartTime > -1L ? (float)(time - reloadStartTime) / 500.0F : -1.0F;
+        float completeTime = reloadCompleteTime > -1L ? (float) (time - reloadCompleteTime) / 1000.0F : -1.0F;
+        float startTime = reloadStartTime > -1L ? (float) ((time - 2500) - reloadStartTime) / 500.0F : -1.0F;
 
         int color;
         float floatTime;
@@ -148,5 +133,5 @@ public abstract class SplashOverlayMixin {
 
     private static int withAlpha(int color, int alpha) {
         return color | alpha << 24;
-    }
+    }*/
 }

@@ -586,6 +586,7 @@ public class Modules extends System<Modules> {
         add(new PacketCanceller());
         add(new PacketSpammer());
         add(new PingSpoof());
+        add(new ResourcePackSpoof());
         add(new SoundBlocker());
         add(new SoundLocator());
         add(new SpinBot());
@@ -601,7 +602,6 @@ public class Modules extends System<Modules> {
         add(new DiscordRPC());
         add(new FakePlayer());
         add(new MiddleClickFriend());
-        add(new Panic());
         add(new Swarm());
     }
 

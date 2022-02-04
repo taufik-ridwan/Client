@@ -1,6 +1,7 @@
 package mathax.client.systems.profiles;
 
 import mathax.client.systems.enemies.Enemies;
+import mathax.client.systems.hud.HUD;
 import mathax.client.systems.waypoints.Waypoints;
 import mathax.client.systems.System;
 import mathax.client.systems.accounts.Accounts;

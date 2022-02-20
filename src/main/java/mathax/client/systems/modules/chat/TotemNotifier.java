@@ -73,9 +73,7 @@ public class TotemNotifier extends Module {
 
     @EventHandler
     private void onReceivePacket(PacketEvent.Receive event) {
-        if (!(event.packet instanceof EntityStatusS2CPacket)) return;
-
-        EntityStatusS2CPacket packet = (EntityStatusS2CPacket) event.packet;
+        if (!(event.packet instanceof EntityStatusS2CPacket packet)) return;
         if (packet.getStatus() != 35) return;
 
         Entity entity = packet.getEntity(mc.world);
@@ -113,6 +111,6 @@ public class TotemNotifier extends Module {
     }
 
     private int getChatId(Entity entity) {
-        return chatIdMap.computeIntIfAbsent(entity.getUuid(), value -> random.nextInt());
+        return chatIdMap.computeIfAbsent(entity.getUuid(), value -> random.nextInt());
     }
 }

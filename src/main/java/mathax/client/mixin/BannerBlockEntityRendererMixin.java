@@ -32,16 +32,16 @@ public class BannerBlockEntityRendererMixin {
 
     @Inject(method = "render", at = @At("HEAD"), cancellable = true)
     private void render(BannerBlockEntity bannerBlockEntity, float f, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i, int j, CallbackInfo info) {
-        if (bannerBlockEntity.getWorld() != null) { //Don't modify banners in item form
+        if (bannerBlockEntity.getWorld() != null) {
             NoRender.BannerRenderMode renderMode = Modules.get().get(NoRender.class).getBannerRenderMode();
             if (renderMode == NoRender.BannerRenderMode.None) info.cancel();
             else if (renderMode == NoRender.BannerRenderMode.Pillar) {
                 BlockState blockState = bannerBlockEntity.getCachedState();
-                if (blockState.getBlock() instanceof BannerBlock) { //Floor banner
+                if (blockState.getBlock() instanceof BannerBlock) {
                     this.pillar.visible = true;
                     this.crossbar.visible = false;
                     renderPillar(bannerBlockEntity, matrixStack, vertexConsumerProvider, i, j);
-                } else { // Wall banner
+                } else {
                     this.pillar.visible = false;
                     this.crossbar.visible = true;
                     renderCrossbar(bannerBlockEntity, matrixStack, vertexConsumerProvider, i, j);
@@ -56,7 +56,7 @@ public class BannerBlockEntityRendererMixin {
         matrixStack.push();
         BlockState blockState = bannerBlockEntity.getCachedState();
         matrixStack.translate(0.5D, 0.5D, 0.5D);
-        float h = (float)(-(Integer)blockState.get(BannerBlock.ROTATION) * 360) / 16.0F;
+        float h = -blockState.get(WallBannerBlock.FACING).asRotation();
         matrixStack.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(h));
         matrixStack.push();
         matrixStack.scale(0.6666667F, -0.6666667F, -0.6666667F);
